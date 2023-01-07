@@ -4,7 +4,6 @@ import Logo from "./logo/logo"
 let Header = ()=>{
     return <div className={s.header}>
          <HorisontMenu/>
-         <Logo/> 
     </div> 
 }
 export default Header

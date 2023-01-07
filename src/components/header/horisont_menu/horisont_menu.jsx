@@ -1,36 +1,36 @@
 import s from "./horisont_menu.module.css";
-import HorisontMenuElement from "./horisont_menu_element/horisont_menu_element";
-import React, { useState } from "react";
+import React, { Suspense, useRef, useState } from "react";
+import HexagonMenuElement from "./hexagon/hexagon";
+import { Canvas } from "@react-three/fiber";
+import { ContactShadows, Environment } from "@react-three/drei";
 
 let HorisontMenu = (props) => {
-  const [isActivLink, setIsActivLink] = useState({
-    "/": false,
-    "wiki": false,
-    "contacts": false,
-  });
-  function MenuElement(name, id) {
-    this.name = name;
-    this.id = id;
-    this.isActivLink = isActivLink[this.id];
-    this.setActivLink = function (i) {
-      let obj = {};
-      for (let key in isActivLink) {
-        if (key == i) {
-          obj[key] = true;
-        } else {
-          obj[key] = false;
-        }
-      }
-      setIsActivLink(obj);     
-    };
-  }
-  console.log(isActivLink);
+  const [anim, setAnim] = useState(true);
   return (
     <div className={s.main}>
-      <HorisontMenuElement element={new MenuElement("HOME", "/")} />
-      <HorisontMenuElement element={new MenuElement("WIKI", "wiki")} />
-      {/* <HorisontMenuElement element ={new MenuElement("ABOUT","about")}/> */}
-      <HorisontMenuElement element={new MenuElement("CONTACTS", "contacts")} />
+      <Suspense fallback={null}>
+        <Canvas
+          shadows
+          camera={{ position: [0, 0, 7] }}
+          onPointerOver={() => {
+            setAnim(false);
+          }}
+          onPointerOut={() => {
+            setAnim(true);
+          }}
+        >
+          <ambientLight intensity={0.6} />
+          <Environment preset="dawn" />
+          <ContactShadows
+            position={[0, -1, 0]}
+            opacity={0.5}
+            scale={10}
+            blur={1.5}
+            far={1}
+          />
+          <HexagonMenuElement anim={anim} />
+        </Canvas>
+      </Suspense>
     </div>
   );
 };
