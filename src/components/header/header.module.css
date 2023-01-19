@@ -1,11 +1,9 @@
 .header {
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
     min-height: 200px;
-    /* background-color: #e2e5e8;
-    box-shadow: 10px 5px 15px  rgba(0,0,0,0.4), -3px 0px 15px white ; */
     position: fixed;
     top: 10px;
-    left: 5%;
+    left: 0;
 }

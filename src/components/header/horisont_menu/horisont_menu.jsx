@@ -1,11 +1,21 @@
 import s from "./horisont_menu.module.css";
 import React, { Suspense, useRef, useState } from "react";
-import HexagonMenuElement from "./hexagon/hexagon";
 import { Canvas } from "@react-three/fiber";
-import { ContactShadows, Environment } from "@react-three/drei";
+import { Box, ContactShadows, Environment, Sphere } from "@react-three/drei";
+import DodecahedronMy from "../elements/dodecahedron/dodecahedron";
+import { useNavigate } from "react-router-dom";
 
 let HorisontMenu = (props) => {
   const [anim, setAnim] = useState(true);
+  const [colors, setColors] = useState({ home: 0, wiki: 0, contacts: 0 });
+  const ref = useRef();
+  const navigate = useNavigate();
+  let setColor = (obj) => {
+    setColors(obj);
+  };
+  let fun = (link) => {
+    navigate(link);
+  };
   return (
     <div className={s.main}>
       <Suspense fallback={null}>
@@ -28,7 +38,41 @@ let HorisontMenu = (props) => {
             blur={1.5}
             far={1}
           />
-          <HexagonMenuElement anim={anim} />
+          <group ref={ref}>
+            <DodecahedronMy
+              elPos={[-5, 1, -1]}
+              link="home"
+              textPos={[-5.3, 2.2, 0.5]}
+              anim={props.anim}
+              colors={colors}
+              fun={() => fun("/")}
+              setColor={setColor}
+              ar={[1.5, 1.5, 1, 6]}
+              textSize={0.5}
+            />
+            <DodecahedronMy
+              elPos={[0, 0.8, -3]}
+              link="wiki"
+              textPos={[-0.8, 2.2, -1.4]}
+              anim={props.anim}
+              colors={colors}
+              fun={() => fun("wiki")}
+              setColor={setColor}
+              ar={[1.5, 1.5, 1, 6]}
+              textSize={0.5}
+            />
+            <DodecahedronMy
+              elPos={[4, 1, 1]}
+              link="contacts"
+              textPos={[1.6, 2.2, 2.5]}
+              anim={props.anim}
+              colors={colors}
+              fun={() => fun("contacts")}
+              setColor={setColor}
+              ar={[1.5, 1.5, 1, 6]}
+              textSize={0.5}
+            />
+          </group>
         </Canvas>
       </Suspense>
     </div>

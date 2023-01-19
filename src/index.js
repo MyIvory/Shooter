@@ -1,9 +1,22 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import store from "./redux/redux";
+import { Provider } from "react-redux";
+import i18n from './i18n';
+
+i18n.loadLanguages(['en', 'ua'])
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+
+root.render(
+    <Provider store={store} >
+        <Suspense fallback={<div>Loading....</div>}>
+            <App />
+        </Suspense>
+    </Provider>
+
+);
 reportWebVitals();

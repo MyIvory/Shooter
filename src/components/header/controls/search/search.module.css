@@ -1,0 +1,25 @@
+.main {
+    position: absolute;
+    top:80px;
+    display: flex;
+    width: 200px;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+
+}
+
+/* .search_input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}
+
+.search_input:focus {
+    outline: none;
+}
+
+.search_but {
+    background-color: transparent;
+    border: none;
+} */
