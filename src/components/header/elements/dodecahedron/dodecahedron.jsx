@@ -11,16 +11,17 @@ import {
 } from "@react-three/drei";
 import { Group } from "three";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useTranslation,Trans } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 
 const DodecahedronMy = ({ time, ...props }) => {
-  const { t,i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const ref = useRef();
   const [hovered, setHovered] = useState(false);
   useFrame(() => {
     if (!hovered) {
+      let xrot = 0
+      ref.current.rotation.x += 0.01;
       ref.current.rotation.y -= 0.01;
-      ref.current.rotation.x -= 0.01;
       ref.current.scale.x = 1;
       ref.current.scale.y = 1;
       ref.current.scale.z = 1;
@@ -70,7 +71,7 @@ const DodecahedronMy = ({ time, ...props }) => {
           />
         </Icosahedron> */}
         <Cylinder args={props.ar}>
-        <meshStandardMaterial
+          <meshStandardMaterial
             roughness={0.4}
             metalness={0.5}
             blur={[300, 100]}
@@ -92,10 +93,10 @@ const DodecahedronMy = ({ time, ...props }) => {
         lineHeight={0.2}
         letterSpacing={0.03}
         size={props.textSize}
-        font="/fonts/Hind_Siliguri_Regular.json"
+        font="/fonts/Inter_Light_Regular.json"
         position={props.textPos}
       >
-       {t(`horisont_menu.${props.link}`).toUpperCase()}
+        {t(`horisont_menu.${props.link}`).toUpperCase()}
         <meshStandardMaterial
           blur={[300, 100]}
           resolution={248}

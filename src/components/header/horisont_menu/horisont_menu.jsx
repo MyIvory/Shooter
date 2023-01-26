@@ -3,11 +3,29 @@ import React, { Suspense, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Box, ContactShadows, Environment, Sphere } from "@react-three/drei";
 import DodecahedronMy from "../elements/dodecahedron/dodecahedron";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 let HorisontMenu = (props) => {
   const [anim, setAnim] = useState(true);
-  const [colors, setColors] = useState({ home: 0, wiki: 0, contacts: 0 });
+  const loc = useLocation();
+  let defColors = () => {
+    let obj = {};
+    if (loc.pathname === "/") {
+      obj.home = 1;
+      obj.wiki = 0;
+      obj.contacts = 0;
+    } else if(loc.pathname === "/wiki") {
+      obj.home = 0;
+      obj.wiki = 1;
+      obj.contacts = 0;
+    }else if(loc.pathname === "/contacts"){
+      obj.home = 0;
+      obj.wiki = 0;
+      obj.contacts = 1;
+    }
+    return obj;
+  };
+  const [colors, setColors] = useState(defColors());
   const ref = useRef();
   const navigate = useNavigate();
   let setColor = (obj) => {
@@ -42,7 +60,7 @@ let HorisontMenu = (props) => {
             <DodecahedronMy
               elPos={[-5, 1, -1]}
               link="home"
-              textPos={[-5.3, 2.2, 0.5]}
+              textPos={[-5.5, 2.2, 0.5]}
               anim={props.anim}
               colors={colors}
               fun={() => fun("/")}
@@ -53,7 +71,7 @@ let HorisontMenu = (props) => {
             <DodecahedronMy
               elPos={[0, 0.8, -3]}
               link="wiki"
-              textPos={[-0.8, 2.2, -1.4]}
+              textPos={[-1.8, 2.2, -1.4]}
               anim={props.anim}
               colors={colors}
               fun={() => fun("wiki")}

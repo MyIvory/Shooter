@@ -9,10 +9,13 @@ import {
     GiTesla,
 } from "react-icons/gi";
 import { FaBinoculars } from "react-icons/fa"
+import { useTranslation, Trans } from "react-i18next";
+
 
 const CLICK_MENU = "CLICK_MENU"
 
 let initialState = {
+    
     items: [
         getItem("Зброя", "guns", <GiAk47 style={{"fontSize":"25px"}}/>, [
             getItem(
@@ -65,6 +68,7 @@ const leftMenuReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case CLICK_MENU:
+            
             console.log("click ", action.e)
             break
     }
@@ -79,6 +83,7 @@ export const leftMenuActionCreater =(e)=>{
     }
 }
 function getItem(label, key, icon, children, type) {
+    
     return {
         key,
         icon,

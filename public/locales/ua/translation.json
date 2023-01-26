@@ -5,5 +5,104 @@
         "contacts":"Контакти",
         "ua":"UA",
         "en":"EN"
-    }
+    },
+    "left_menu": {
+        "weapons": {
+          "title": "Зброя",
+          "rifled": {
+            "title": "Нарізна зброя",
+            "bolt": "Болтова",
+            "sa_rifle": "Напівавтоматична",
+            "a_rifle": "Автоматична"
+          },
+          "smooth": {
+            "title": "Гладкоствольна",
+            "sa_rifle": "Напівавтоматична",
+            "pump": "Помпа",
+            "opening": "Переломна"
+          }
+        },
+        "ammunition": {
+          "title": "Боеприпаси",
+          "bullets": {
+            "title": "Кулі",
+            "types": {
+              "title": "Типи",
+              "rifled": {
+                "title": "Нарізні",
+                "fmg": "FMG",
+                "sp": "SP",
+                "tm": "TM",
+                "hp": "HP",
+                "jhp": "JHP",
+                "bt": "BT",
+                "rn": "RN",
+                "fp": "FP/FN",
+                "hb": "HB",
+                "dk": "DK",
+                "hm": "HM"
+              },
+              "smooth": {
+                "title": "Гладкоствольні",
+                "caliber": {
+                  "title": "Каліберні кулі",
+                  "sheddit": "Шеддит",
+                  "azot": "Азот",
+                  "diabolo": "Діаболо",
+                  "bp": "B&P",
+                  "zala": "Zala"
+                },
+                "subcaliber": {
+                  "title": "Підкаліберні кулі",
+                  "poleva": "Полева",
+                  "leningradka": "Ленінградка",
+                  "sport": "Спорт-С",
+                  "sputnik": "Супутник",
+                  "tandem": "Тандем",
+                  "strela": "Стріла"
+                },
+                "paradox": {
+                  "title": "Парадокс",
+                  "brenneke": "Brenneke",
+                  "paradox": "Paradox",
+                  "mayer": "Майера",
+                  "gualandi": "Gualandi",
+                  "baibak": "Байбак",
+                  "grizzly": "Грізлі-35",
+                  "swift": "Стриж",
+                  "dary": "Дэри",
+                  "kion": "Кион"
+                }
+              }
+            },
+            "geometry": "Геометрія",
+            "material": "Матеріал"
+          },
+          "cases": {
+            "title": "Гільзи",
+            "geometry": "Геометрія",
+            "material": "Матеріал"
+          },
+          "primers": {
+            "title": "Капсуля",
+            "open": "Відкрити",
+            "closed": "Закрити"
+          },
+          "powder": {
+            "title": "Порох",
+            "black": "Димний порох",
+            "smokeless": {
+              "title": "Бездимний порох",
+              "slow": "Повільний",
+              "medium": "Середній",
+              "fast": "Швидкий"
+            }
+          },
+          "calibers":{
+            "title":"Калібри",
+            "rifled":"Нарізні калібри",
+            "smooth":"Гладкоствольні калібри"
+          }
+        }
+      }
 }

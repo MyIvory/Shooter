@@ -1,9 +1,108 @@
 {
-    "horisont_menu":{
-        "home":"Home",
-        "wiki":"Library",
-        "contacts":"Contacts",
-        "ua":"UA",
-        "en":"EN"
+  "horisont_menu": {
+    "home": "Home",
+    "wiki": "Library",
+    "contacts": "Contacts",
+    "ua": "UA",
+    "en": "EN"
+  },
+  "left_menu": {
+    "weapons": {
+      "title": "Weapons",
+      "rifled": {
+        "title": "Rifled weapons",
+        "bolt": "Bolt action",
+        "sa_rifle": "Semi-automatic",
+        "a_rifle": "Automatic"
+      },
+      "smooth": {
+        "title": "Smooth-bore",
+        "sa_rifle": "Semi-automatic",
+        "pump": "Pump action",
+        "opening": "Opening gun"
+      }
+    },
+    "ammunition": {
+      "title": "Ammunition",
+      "bullets": {
+        "title": "Bullets",
+        "types": {
+          "title": "Types",
+          "rifled": {
+            "title": "Rifleds bullet",
+            "fmg": "FMG",
+            "sp": "SP",
+            "tm": "TM",
+            "hp": "HP",
+            "jhp": "JHP",
+            "bt": "BT",
+            "rn": "RN",
+            "fp": "FP/FN",
+            "hb": "HB",
+            "dk": "DK",
+            "hm": "HM"
+          },
+          "smooth": {
+            "title": "Smooth-bore",
+            "caliber": {
+              "title": "Caliber bullets",
+              "sheddit": "Sheddit",
+              "azot": "Azot",
+              "diabolo": "Diabolo",
+              "bp": "B&P",
+              "zala": "Zala"
+            },
+            "subcaliber": {
+              "title": "Sub-caliber",
+              "poleva": "Poleva",
+              "leningradka": "Leningradka",
+              "sport": "Sport-S",
+              "sputnik": "Sputnik",
+              "tandem": "Tandem",
+              "strela": "Strela"
+            },
+            "paradox": {
+              "title": "Paradox",
+              "brenneke": "Brenneke",
+              "paradox": "Paradox",
+              "mayer": "Mayer",
+              "gualandi": "Gualandi",
+              "baibak": "Baibak",
+              "grizzly": "Grizzly-35",
+              "swift": "Swift",
+              "dary": "Dary",
+              "kion": "Kion"
+            }
+          }
+        },
+        "geometry": "Geometry",
+        "material": "Material"
+      },
+      "cases": {
+        "title": "Case",
+        "geometry": "Geometry",
+        "material": "Material"
+      },
+      "primers": {
+        "title": "Primers",
+        "open": "Open",
+        "closed": "Closed"
+      },
+      "powder": {
+        "title": "Powder",
+        "black": "Black powder",
+        "smokeless": {
+          "title": "Smokeless powder",
+          "slow": "Slow",
+          "medium": "Medium",
+          "fast": "Fast"
+        }
+      },
+      "calibers":{
+        "title":"Calibers",
+        "rifled":"Rifled calibers",
+        "smooth":"Smooth-bore calibers"
+      }
     }
+  }
 }

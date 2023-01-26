@@ -9,18 +9,6 @@ const Leng = (props) => {
   const { t, i18n } = useTranslation();
   const [anim, setAnim] = useState(true);
   let defLeng = () => {
-    // switch (i18n.language){
-    //   case "en":
-    //     return {
-    //       en:1,
-    //       ua:0
-    //     }
-    //   case "ua":
-    //     return{
-    //       en:0,
-    //       ua:1
-    //     }
-    // }
     let obj = {};
     if (i18n.language === "ua") {
       obj.en = 0;

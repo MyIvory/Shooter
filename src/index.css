@@ -28,3 +28,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.ant-menu> .ant-menu-submenu:hover,
+.ant-menu> .ant-menu-submenu-open{
+  border-left: 1px solid red;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  
+}
