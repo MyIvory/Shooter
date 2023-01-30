@@ -14,19 +14,24 @@ import {
 import { FaBinoculars } from "react-icons/fa";
 import { useTranslation, Trans } from "react-i18next";
 import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const LeftMenu = (props) => {
   const { t } = useTranslation();
   let items = [
     getItem(
-      <span className={s.item_level_1}>{t("left_menu.weapons.title")}</span>,
+      <NavLink to="weapons">
+        <span className={s.item_level_1}>{t("left_menu.weapons.title")}</span>
+      </NavLink>,
       "weapons",
       <GiAk47 style={{ fontSize: "25px" }} />,
       [
         getItem(
-          <span className={s.item_level_1}>
-            {t("left_menu.weapons.rifled.title")}
-          </span>,
+          <NavLink to="rifled_weapons">
+            <span className={s.item_level_1}>
+              {t("left_menu.weapons.rifled.title")}
+            </span>
+          </NavLink>,
           "rifled_weapons",
           null,
           [
@@ -409,10 +414,10 @@ const LeftMenu = (props) => {
           if (submenuLevel_4.indexOf(latestOpenKey) === -1) {
             if (submenuLevel_5.indexOf(latestOpenKey) === -1) {
               setOpenKeys(keys);
-            }else{
+            } else {
               setOpenKeys(
                 latestOpenKey
-                  ? [keys[0], keys[1], keys[2],keys[3], latestOpenKey]
+                  ? [keys[0], keys[1], keys[2], keys[3], latestOpenKey]
                   : [keys[0]]
               );
             }
@@ -434,18 +439,6 @@ const LeftMenu = (props) => {
     } else {
       setOpenKeys(latestOpenKey ? [latestOpenKey] : []);
     }
-
-    //  if (submenuLevel_1.indexOf(latestOpenKey) !== -1) {
-    //    setOpenKeys(latestOpenKey ? [latestOpenKey] : []);
-    //  }
-
-    //  else if(submenuLevel_2.indexOf(latestOpenKey) !== -1){
-    //    setOpenKeys(latestOpenKey ? [keys[0],latestOpenKey] : [keys[0]]);
-    //  }else if(submenuLevel_3.indexOf(latestOpenKey) !== -1){
-    //    setOpenKeys(latestOpenKey ? [keys[0],keys[1],latestOpenKey] : [keys[0],keys[1]]);
-    //  }else if(submenuLevel_4.indexOf(latestOpenKey) !== -1){
-    //    setOpenKeys(latestOpenKey ? [keys[0],keys[1],keys[2],latestOpenKey] : [keys[0],keys[1],keys[2]]);
-    //  }
   };
   return (
     <Menu
@@ -476,6 +469,9 @@ function getItem(label, key, icon, children, type) {
     children,
     label,
     type,
-    onTitleClick: () => {},
+    onTitleClick: (e) => {
+      console.log(e);
+      <Link to={e.key}></Link>;
+    },
   };
 }
