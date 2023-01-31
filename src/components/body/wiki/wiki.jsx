@@ -11,7 +11,7 @@ let Wiki = (props) => {
       <div className={s.menu}>
         <LeftMenu />
       </div>
-      <Info />
+      <Info/>
     </div>
   );
 };

@@ -21,62 +21,81 @@ const LeftMenu = (props) => {
   let items = [
     getItem(
       <NavLink to="weapons">
-        <span className={s.item_level_1}>{t("left_menu.weapons.title")}</span>
+        <h4 className={s.item_level_1}>{t("left_menu.weapons.title")}</h4>
       </NavLink>,
       "weapons",
       <GiAk47 style={{ fontSize: "25px" }} />,
       [
         getItem(
-          <NavLink to="rifled_weapons">
-            <span className={s.item_level_1}>
+          <NavLink to="rifled-weapons">
+            <h4 className={s.item_level_1}>
               {t("left_menu.weapons.rifled.title")}
-            </span>
+            </h4>
           </NavLink>,
           "rifled_weapons",
           null,
           [
-            getItem(t("left_menu.weapons.rifled.bolt"), "bolt"),
-            getItem(t("left_menu.weapons.rifled.sa_rifle"), "sa_rifled"),
-            getItem(t("left_menu.weapons.rifled.a_rifle"), "a_rifle"),
+            getItem(
+              <NavLink to="rifled-bolt">
+                {t("left_menu.weapons.rifled.bolt")}
+              </NavLink>,
+              "bolt"
+            ),
+            getItem(
+              <NavLink to="rifled-semi-automatic">
+                {t("left_menu.weapons.rifled.sa_rifle")}
+              </NavLink>,
+              "sa_rifled"
+            ),
+            getItem(
+              <NavLink to="rifled-automatic">
+                {t("left_menu.weapons.rifled.a_rifle")}
+              </NavLink>,
+              "a_rifle"
+            ),
           ]
         ),
         getItem(
-          <span className={s.item_level_1}>
-            {t("left_menu.weapons.smooth.title")}
-          </span>,
+          <NavLink to="smooth-weapons">
+            <h4 className={s.item_level_1}>
+              {t("left_menu.weapons.smooth.title")}
+            </h4>
+          </NavLink>,
           "smooth_weapons",
           null,
           [
-            getItem(t("left_menu.weapons.smooth.sa_rifle"), "sa_smooth"),
-            getItem(t("left_menu.weapons.smooth.pump"), "pump"),
-            getItem(t("left_menu.weapons.smooth.opening"), "opening"),
+            getItem(<NavLink to = "smooth-semi-automatic">{t("left_menu.weapons.smooth.sa_rifle")}</NavLink>, "sa_smooth"),
+            getItem(<NavLink to = "smooth-pump">{t("left_menu.weapons.smooth.pump")}</NavLink>, "pump"),
+            getItem(<NavLink to = "smooth-automatic">{t("left_menu.weapons.smooth.opening")}</NavLink>, "opening"),
           ]
         ),
       ]
     ),
     getItem(
-      <span className={s.item_level_1}>{t("left_menu.ammunition.title")}</span>,
+      <NavLink>
+        <h4 className={s.item_level_1}>{t("left_menu.ammunition.title")}</h4>
+      </NavLink>,
       "ammunition",
       <GiMachineGunMagazine style={{ fontSize: "25px" }} />,
       [
         getItem(
-          <span className={s.item_level_1}>
+          <h4 className={s.item_level_1}>
             {t("left_menu.ammunition.bullets.title")}
-          </span>,
+          </h4>,
           "bullets",
           null,
           [
             getItem(
-              <span className={s.item_level_1}>
+              <h4 className={s.item_level_1}>
                 {t("left_menu.ammunition.bullets.types.title")}
-              </span>,
+              </h4>,
               "bullets_types",
               null,
               [
                 getItem(
-                  <span className={s.item_level_1}>
+                  <h4 className={s.item_level_1}>
                     {t("left_menu.ammunition.bullets.types.rifled.title")}
-                  </span>,
+                  </h4>,
                   "bullets_types_rifled",
                   null,
                   [
@@ -127,18 +146,18 @@ const LeftMenu = (props) => {
                   ]
                 ),
                 getItem(
-                  <span className={s.item_level_1}>
+                  <h4 className={s.item_level_1}>
                     {t("left_menu.ammunition.bullets.types.smooth.title")}
-                  </span>,
+                  </h4>,
                   "bullets_types_smooth",
                   null,
                   [
                     getItem(
-                      <span className={s.item_level_1}>
+                      <h4 className={s.item_level_1}>
                         {t(
                           "left_menu.ammunition.bullets.types.smooth.caliber.title"
                         )}
-                      </span>,
+                      </h4>,
                       "bullets_types_smooth_caliber",
                       null,
                       [
@@ -175,11 +194,11 @@ const LeftMenu = (props) => {
                       ]
                     ),
                     getItem(
-                      <span className={s.item_level_1}>
+                      <h4 className={s.item_level_1}>
                         {t(
                           "left_menu.ammunition.bullets.types.smooth.subcaliber.title"
                         )}
-                      </span>,
+                      </h4>,
                       "bullets_types_smooth_subcaliber",
                       null,
                       [
@@ -222,11 +241,11 @@ const LeftMenu = (props) => {
                       ]
                     ),
                     getItem(
-                      <span className={s.item_level_1}>
+                      <h4 className={s.item_level_1}>
                         {t(
                           "left_menu.ammunition.bullets.types.smooth.paradox.title"
                         )}
-                      </span>,
+                      </h4>,
                       "bullets_types_smooth_paradox",
                       null,
                       [
@@ -301,9 +320,9 @@ const LeftMenu = (props) => {
           ]
         ),
         getItem(
-          <span className={s.item_level_1}>
+          <h4 className={s.item_level_1}>
             {t("left_menu.ammunition.cases.title")}
-          </span>,
+          </h4>,
           "cases",
           null,
           [
@@ -312,9 +331,9 @@ const LeftMenu = (props) => {
           ]
         ),
         getItem(
-          <span className={s.item_level_1}>
+          <h4 className={s.item_level_1}>
             {t("left_menu.ammunition.primers.title")}
-          </span>,
+          </h4>,
           "primers",
           null,
           [
@@ -323,17 +342,17 @@ const LeftMenu = (props) => {
           ]
         ),
         getItem(
-          <span className={s.item_level_1}>
+          <h4 className={s.item_level_1}>
             {t("left_menu.ammunition.powder.title")}
-          </span>,
+          </h4>,
           "powder",
           null,
           [
             getItem(t("left_menu.ammunition.powder.black"), "powder_black"),
             getItem(
-              <span className={s.item_level_1}>
+              <h4 className={s.item_level_1}>
                 {t("left_menu.ammunition.powder.smokeless.title")}
-              </span>,
+              </h4>,
               "powder_smokeless",
               null,
               [
