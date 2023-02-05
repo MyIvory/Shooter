@@ -98,10 +98,49 @@
           "fast": "Fast"
         }
       },
-      "calibers":{
-        "title":"Calibers",
-        "rifled":"Rifled calibers",
-        "smooth":"Smooth-bore calibers"
+      "calibers": {
+        "title": "Calibers",
+        "rifled": "Rifled calibers",
+        "smooth": "Smooth-bore calibers"
+      }
+    }
+  },
+  "buttons": {
+    "edit_page": "Suggest editing"
+  },
+  "search": {
+    "weapons": {
+      "p1": "Weapons - the name of devices and objects (products), structurally intended for the destruction of a living or other target, as well as for sending signals. Used for warfare, hunting, and sports. Weapons are offensive or defensive and can be either lethal or non-lethal.",
+      "p2": "By purpose, weapons can be combat, service and civilian.",
+      "l1": {
+        "l1h": "Military weapons include:",
+        "l1p1": "Conventional weapons (firearms, melee weapons, pneumatic weapons, traumatic weapons, projectile weapons, incendiary weapons, mines, artillery weapons, missile weapons, torpedo weapons).",
+        "l1p2": "Weapons of mass destruction (nuclear weapons, chemical weapons, biological weapons).",
+        "l1p3": "Unconventional weapons, weapons based on new physical principles: (genetic weapons, geophysical weapons, infrasonic weapons, climatic weapons, laser weapons, non-lethal weapons, ozone weapons, plasma weapons, psychotronic weapons, radiological weapons, ultra-high-frequency weapons, acceleration weapons, electromagnetic weapons)."
+      },
+      "p3": "Service weapons include firearms used by employees of state bodies and persons who are legally allowed to keep, carry and use these weapons for the purpose of performing their official duties. Compared to melee weapons, it has limitations in terms of range, impact, and caliber.",
+      "p4": "Civilian weapons include weapons intended for use in self-defense, sports and hunting. It is divided into: self-defense weapons, sports weapons, hunting weapons, signal weapons - weapons designed only to emit light, smoke or sound signals; cold bladed weapon, collectible weapon.",
+      "l2": {
+        "l2h": "According to the principle of damaging effect, weapons are classified into:",
+        "l2p1": "A firearm is a weapon designed for mechanical damage to a target at a distance with a projectile that receives directional movement due to the energy of a powder or other chemical charge.",
+        "l2p2": "Pneumatic weapon - a weapon designed to hit a target at a distance with a projectile that receives directional movement due to the energy of compressed, liquefied or approved gas.",
+        "l2p3": "Melee weapons are weapons designed to hit a target with the help of human muscle power in direct contact with the target.",
+        "l2p4": "Projectile weapons - a weapon designed to hit a target at a distance with a projectile, receiving directed movement with the help of human muscle power or a mechanical device.",
+        "l2p5": "A gas weapon is a weapon designed to temporarily destroy a living target by using tear or irritant substances.",
+        "l2p6": "An incendiary weapon is a weapon whose damaging effect is based on the use of inflammatory agents.",
+        "l2p7": "Missile weapons - rockets and rockets - unmanned weapons whose trajectories from the starting point to the hit target are realized using rocket or jet engines and guidance means.",
+        "l2p8": "A mine is an explosive device consisting of a fuse or detonator, an explosive charge (BB), submunitions (not always) and in some cases a timer, secretly set, exploding under certain circumstances.",
+        "l2p9": "Torpedo - an underwater warhead propelled by a jet nozzle or propellers."
+      }
+    },
+    "rifled-weapons": {
+      "p1": "Weapons - the name of devices and objects (products), structurally intended for the destruction of a living or other target, as well as for sending signals. Used for warfare, hunting, and sports. Weapons are offensive or defensive and can be either lethal or non-lethal.",
+      "p2": "By purpose, weapons can be combat, service and civilian.",
+      "l1": {
+        "l1h": "Military weapons include:",
+        "l1p1": "Conventional weapons (firearms, melee weapons, pneumatic weapons, traumatic weapons, projectile weapons, incendiary weapons, mines, artillery weapons, missile weapons, torpedo weapons).",
+        "l1p2": "Weapons of mass destruction (nuclear weapons, chemical weapons, biological weapons).",
+        "l1p3": "Unconventional weapons, weapons based on new physical principles: (genetic weapons, geophysical weapons, infrasonic weapons, climatic weapons, laser weapons, non-lethal weapons, ozone weapons, plasma weapons, psychotronic weapons, radiological weapons, ultra-high-frequency weapons, acceleration weapons, electromagnetic weapons)."
       }
     }
   }

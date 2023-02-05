@@ -10,10 +10,10 @@ import WeaponsSmooth from "../pages/weapons/smooth/smooth";
 import Weapons from "../pages/weapons/weapons";
 import s from "./info.module.css";
 let Info = (props) => {
-  console.log("Info");
   return (
     <div className={s.main}>
       <Routes>
+        <Route path="/" element={<Weapons />} />
         <Route index path="weapons" element={<Weapons />} />
         <Route path="rifled-weapons" element={<WeaponsRifled />} />
         <Route path="rifled-bolt" element={<WeaponsRifledBolt />} />
@@ -21,7 +21,7 @@ let Info = (props) => {
         <Route path="rifled-automatic" element={<AutomaticRifled />} />
         <Route path="smooth-weapons" element={<WeaponsSmooth />} />
         <Route path="smooth-semi-automatic" element={<SemiAutomaticSmooth />} />
-        <Route path="smooth-pump" element={<Pump/>} />
+        <Route path="smooth-pump" element={<Pump />} />
         <Route path="smooth-automatic" element={<OpeningSmooth />} />
       </Routes>
     </div>

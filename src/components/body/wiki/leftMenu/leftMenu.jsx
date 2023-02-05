@@ -1,6 +1,7 @@
 import { Menu, SubMenuProps } from "antd";
 import { connect } from "react-redux";
 import s from "./leftMenu.module.css";
+import "./left_menu.css";
 import {
   GiWinchesterRifle,
   GiAk47,
@@ -20,14 +21,14 @@ const LeftMenu = (props) => {
   const { t } = useTranslation();
   let items = [
     getItem(
-      <NavLink to="weapons">
+      <NavLink to="weapons" className={active}>
         <h4 className={s.item_level_1}>{t("left_menu.weapons.title")}</h4>
       </NavLink>,
       "weapons",
-      <GiAk47 style={{ fontSize: "25px" }} />,
+      <GiAk47 style={{ fontSize: "25px" }} className={active} />,
       [
         getItem(
-          <NavLink to="rifled-weapons">
+          <NavLink to="rifled-weapons" className={active}>
             <h4 className={s.item_level_1}>
               {t("left_menu.weapons.rifled.title")}
             </h4>
@@ -36,27 +37,33 @@ const LeftMenu = (props) => {
           null,
           [
             getItem(
-              <NavLink to="rifled-bolt">
-                {t("left_menu.weapons.rifled.bolt")}
+              <NavLink to="rifled-bolt" className={active}>
+                <h4 className={s.item_level_2}>
+                  {t("left_menu.weapons.rifled.bolt")}
+                </h4>
               </NavLink>,
               "bolt"
             ),
             getItem(
-              <NavLink to="rifled-semi-automatic">
+              <NavLink to="rifled-semi-automatic" className={active}>
+                <h4 className={s.item_level_2}>
                 {t("left_menu.weapons.rifled.sa_rifle")}
+                </h4>
               </NavLink>,
               "sa_rifled"
             ),
             getItem(
-              <NavLink to="rifled-automatic">
+              <NavLink to="rifled-automatic" className={active}>
+                <h4 className={s.item_level_2}>
                 {t("left_menu.weapons.rifled.a_rifle")}
+                </h4>
               </NavLink>,
               "a_rifle"
             ),
           ]
         ),
         getItem(
-          <NavLink to="smooth-weapons">
+          <NavLink to="smooth-weapons" className={active}>
             <h4 className={s.item_level_1}>
               {t("left_menu.weapons.smooth.title")}
             </h4>
@@ -64,15 +71,36 @@ const LeftMenu = (props) => {
           "smooth_weapons",
           null,
           [
-            getItem(<NavLink to = "smooth-semi-automatic">{t("left_menu.weapons.smooth.sa_rifle")}</NavLink>, "sa_smooth"),
-            getItem(<NavLink to = "smooth-pump">{t("left_menu.weapons.smooth.pump")}</NavLink>, "pump"),
-            getItem(<NavLink to = "smooth-automatic">{t("left_menu.weapons.smooth.opening")}</NavLink>, "opening"),
+            getItem(
+              <NavLink to="smooth-semi-automatic" className={active}>
+                <h4 className={s.item_level_2}>
+                {t("left_menu.weapons.smooth.sa_rifle")}
+                </h4>
+              </NavLink>,
+              "sa_smooth"
+            ),
+            getItem(
+              <NavLink to="smooth-pump" className={active}>
+                <h4 className={s.item_level_2}>
+                {t("left_menu.weapons.smooth.pump")}
+                </h4>
+              </NavLink>,
+              "pump"
+            ),
+            getItem(
+              <NavLink to="smooth-automatic" className={active}>
+                <h4 className={s.item_level_2}>
+                {t("left_menu.weapons.smooth.opening")}
+                </h4>
+              </NavLink>,
+              "opening"
+            ),
           ]
         ),
       ]
     ),
     getItem(
-      <NavLink>
+      <NavLink to="smooth-automatic" className={active}>
         <h4 className={s.item_level_1}>{t("left_menu.ammunition.title")}</h4>
       </NavLink>,
       "ammunition",
@@ -460,21 +488,23 @@ const LeftMenu = (props) => {
     }
   };
   return (
-    <Menu
-      selectable={false}
-      style={{
-        width: 350,
-        color: "red",
-        fontSize: "16px",
-        textTransform: "uppercase",
-      }}
-      mode="inline"
-      items={items}
-      inlineIndent={10}
-      onClick={selectPage}
-      openKeys={openKeys}
-      onOpenChange={onOpenChange}
-    />
+    <div className={s.main}>
+      <Menu
+        selectable={false}
+        style={{
+          width: 350,
+          color: "red",
+          fontSize: "16px",
+          textTransform: "uppercase",
+        }}
+        mode="inline"
+        items={items}
+        inlineIndent={10}
+        onClick={selectPage}
+        openKeys={openKeys}
+        onOpenChange={onOpenChange}
+      />
+    </div>
   );
 };
 export default LeftMenu;
@@ -493,4 +523,7 @@ function getItem(label, key, icon, children, type) {
       <Link to={e.key}></Link>;
     },
   };
+}
+function active({ isActive }) {
+  return isActive ? "active_item_menu" : undefined;
 }

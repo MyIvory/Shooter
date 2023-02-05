@@ -1,4 +1,15 @@
+.main{
+    margin-top: -4px;
+}
 .item_level_1{
     font-weight:600;
-    color: red;   
+    color: red; 
+    padding-left: 10px;  
+    
+}
+.item_level_2{
+    font-weight:400;
+    color: red; 
+    padding-left: 10px;  
+    
 }

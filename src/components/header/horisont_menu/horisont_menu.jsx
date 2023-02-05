@@ -2,8 +2,9 @@ import s from "./horisont_menu.module.css";
 import React, { Suspense, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Box, ContactShadows, Environment, Sphere } from "@react-three/drei";
-import DodecahedronMy from "../elements/dodecahedron/dodecahedron";
+
 import { useNavigate, useLocation } from "react-router-dom";
+import DodecahedronMy from "../../../elements/dodecahedron/dodecahedron";
 
 let HorisontMenu = (props) => {
   const [anim, setAnim] = useState(true);

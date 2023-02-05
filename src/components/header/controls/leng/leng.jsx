@@ -1,7 +1,7 @@
 import { ContactShadows, Environment } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useRef, useState } from "react";
-import DodecahedronMy from "../../elements/dodecahedron/dodecahedron";
+import DodecahedronMy from "../../../../elements/dodecahedron/dodecahedron";
 import s from "./leng.module.css";
 import { useTranslation, Trans } from "react-i18next";
 

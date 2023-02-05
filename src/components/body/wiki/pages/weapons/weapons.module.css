@@ -1,5 +1,39 @@
-.main{
-    width: 100%;
-    height: 300px;
+.main {
+    padding: 20px 100px 20px 10px;
+}
+
+.header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    right: 10px;
     background-color: red;
+    height: 40px;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+}
+
+.header span {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.main li {
+    list-style-type: none;
+}
+
+.edit_but {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: red;
+    margin: 0;
+    font-weight: 400;
+}
+.edit_but:hover {
+    background-color: red !important;
+    font-weight: 400;
 }
