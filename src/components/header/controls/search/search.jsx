@@ -5,6 +5,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { AudioOutlined } from "@ant-design/icons";
 import { Input, Space } from "antd";
 import { useTranslation } from "react-i18next";
+import { FaSearch } from "react-icons/fa"
 
 const { Search } = Input;
 const SearchField = (props) => {
@@ -35,18 +36,11 @@ const SearchField = (props) => {
     console.log(findkeysinobject(translate, value));
   }
   return (
-    <div className={s.main}>
-      <Search
-        id="search_input"
-        placeholder="input search text"
-        allowClear
-        // bordered ={false}
-        onSearch={onSearch}
-        style={{
-          width: 200,
-        }}
-      />
-    </div>
+      <div className={s.main}>
+              <input type="text" className={s.input} placeholder="Search in Wiki"></input>
+              <FaSearch className={s.icon} aria-hidden="true"/>
+              {/* <i className="fas fa-search" aria-hidden="true"></i> */}
+      </div>
   );
 };
 export default SearchField;

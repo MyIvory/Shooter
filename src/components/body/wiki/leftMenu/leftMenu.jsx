@@ -492,7 +492,7 @@ const LeftMenu = (props) => {
       <Menu
         selectable={false}
         style={{
-          width: 350,
+          //width: 300,
           color: "red",
           fontSize: "16px",
           textTransform: "uppercase",

@@ -6,7 +6,6 @@ const Controls = (props) => {
   return (
     <div className={s.main}>
       <Leng />
-      <SearchField />
     </div>
   );
 };

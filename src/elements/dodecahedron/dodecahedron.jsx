@@ -20,8 +20,8 @@ const DodecahedronMy = ({ time, ...props }) => {
   useFrame(() => {
     if (!hovered) {
       let xrot = 0
-      ref.current.rotation.x += 0.01;
-      ref.current.rotation.y -= 0.01;
+      ref.current.rotation.x =1.7;
+      ref.current.rotation.y += 0.01;
       ref.current.scale.x = 1;
       ref.current.scale.y = 1;
       ref.current.scale.z = 1;

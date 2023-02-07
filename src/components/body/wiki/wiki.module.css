@@ -1,19 +1,42 @@
 .main {
     display: flex;
-    width: 80%;
     margin: auto;
+    height: 100%;
+    width: 80%;
 }
 
 .menu {
-    height: 70vh;
+    height: 100%;
+    width: 300px !important;
     overflow: scroll;
     background-color: transparent;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    background-color: rgba(255, 255, 255, 0.7);
-    
-    
+    background-color: rgba(255, 255, 255, 0.7);    
 }
+.info{
+    width: 100%;
+}
+/* .info{
+    height:100%;
+    
+    overflow: scroll;
+    width: 100vh;
+    -ms-overflow-style: none;
+    scrollbar-width: 5px;
+    background-color: rgba(255, 255, 255, 0.7)
+}
+.info::-webkit-scrollbar {
+    width: 5px;
+    height: 0px;
+
+}
+
+.info::-webkit-scrollbar-thumb {
+    background-color: #e01e14;
+    box-shadow: 0 0 30px white,
+
+} */
 
 .menu::-webkit-scrollbar {
     display: none;
