@@ -20,7 +20,7 @@ const DodecahedronMy = ({ time, ...props }) => {
   useFrame(() => {
     if (!hovered) {
       let xrot = 0
-      ref.current.rotation.x += 0.01;
+      ref.current.rotation.x = 1.7;
       ref.current.rotation.y -= 0.01;
       ref.current.scale.x = 1;
       ref.current.scale.y = 1;
@@ -55,22 +55,8 @@ const DodecahedronMy = ({ time, ...props }) => {
         onPointerOver={() => setHovered(true)}
         onPointerOut={() => setHovered(false)}
       >
-        {/* <Icosahedron args={props.ar}>
-          <meshStandardMaterial
-            roughness={0.4}
-            metalness={0.5}
-            blur={[300, 100]}
-            mixBlur={1}
-            mixStrength={0}
-            depthScale={1.2}
-            minDepthThreshold={0.4}
-            maxDepthThreshold={1.4}
-            color={props.colors[props.link] === 1 ? "#e01e14" : "#f5f0f0"}
-            wireframe={false}
-            flatShading
-          />
-        </Icosahedron> */}
         <Cylinder args={props.ar}>
+          
           <meshStandardMaterial
             roughness={0.4}
             metalness={0.5}

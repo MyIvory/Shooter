@@ -5,7 +5,7 @@ import Body from "./components/body/body";
 import i18n from './i18n';
 
 
-function App(props) {
+function App(props) { 
   return (
     <BrowserRouter>
       <Header />

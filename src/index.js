@@ -10,7 +10,6 @@ import i18n from './i18n';
 i18n.loadLanguages(['en', 'ua'])
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
 root.render(
     <Provider store={store} >
         <Suspense fallback={<div>Loading....</div>}>

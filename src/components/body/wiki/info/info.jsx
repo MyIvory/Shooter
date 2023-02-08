@@ -1,4 +1,5 @@
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
+import SearchResultContainer from "../pages/search_result/search_result_container";
 import AutomaticRifled from "../pages/weapons/rifled/automatic_rifled/automatic_rifled";
 import WeaponsRifledBolt from "../pages/weapons/rifled/bolt/bolt";
 import WeaponsRifled from "../pages/weapons/rifled/rifled";
@@ -23,6 +24,8 @@ let Info = (props) => {
         <Route path="smooth-semi-automatic" element={<SemiAutomaticSmooth />} />
         <Route path="smooth-pump" element={<Pump />} />
         <Route path="smooth-automatic" element={<OpeningSmooth />} />
+        <Route path="search-result" element={<SearchResultContainer />} />
+
       </Routes>
     </div>
   );
