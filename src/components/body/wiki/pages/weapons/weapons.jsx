@@ -6,12 +6,12 @@ const Weapons = (props) => {
   const { t } = useTranslation();
   return (
     <>
-      <div className={s.header}>
+      {/* <div className={s.header}>
         <Button type="primary" className={s.edit_but}>
           {t("buttons.edit_page")}
         </Button>
         <span>{t("left_menu.weapons.title")}</span>
-      </div>
+      </div> */}
       <div className={s.main}>
         <p>{t("search.weapons.p1")}</p>
         <p>{t("search.weapons.p2")}</p>

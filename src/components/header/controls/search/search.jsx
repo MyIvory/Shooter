@@ -5,53 +5,79 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { AudioOutlined } from "@ant-design/icons";
 import { Input, Space } from "antd";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
+import { useNavigate } from "react-router";
 
 const { Search } = Input;
 const SearchField = (props) => {
   const [t, i18n] = useTranslation();
   const navigate = useNavigate();
-  // function findkeysinobject(obj, str) {
-  //   let found = {};
-  //   for (let key in obj) {
-  //     found[key] = [];
-  //     if (typeof obj[key] === "string") {
-  //       if (obj[key].toLowerCase().includes(str.toLowerCase().trim())) {
-  //         found[key].push(key);
-  //       }
-  //     } else if (typeof obj[key] === "object") {
-  //       let innerkeys = findkeysinobject(obj[key], str);
-  //       for (let item of Object.values(innerkeys)) {
-  //         found[key].push(...item);
-  //       }
-  //     }
-  //   }
-  //   return found;
-  // }
-  // function onSearch() {
-  //   let value = document.getElementById("search_input").value;
-  //   let translate = t("search", { returnObjects: true });
-  //   if (Array.from(value).length > 3){
-  //     console.log(findkeysinobject(translate, value));
-  //     navigate("/wiki/search-result");
-  //   }
-     
-  //}
-  function onSearch() {
-    navigate("/wiki/search-result")
+  const [saerchTern, setSearchTern] = useState("");
+  const [translate, setTranslate] = useState(
+    t("search", { returnObjects: true })
+  );
+  // const [filtered,setFiltered] = useState({})
+  //let translate = t("search", { returnObjects: true });
+  useEffect(() => {
+    const Debounse = setTimeout(() => {
+      const fil = findkeysinobject(translate, saerchTern);
+      // setTranslate(fil)
+      //console.log(translate)
+    }, 300);
+    return () => clearTimeout(Debounse);
+  }, [saerchTern]);
+
+  function findkeysinobject(obj, str) {
+    if (str == "") return obj;
+    let found = {};
+    for (let key in obj) {
+      found[key] = [];
+      if (typeof obj[key] === "string") {
+        let words = obj[key].split(" ");
+        // if (obj[key].toLowerCase().includes(str.toLowerCase().trim())) {
+        //   found[key].push(key);
+        // }
+        for (let w of words) {
+          if (w.toLowerCase().includes(str)) {
+            found[key].push(key);
+            console.log(found);
+          }
+        }
+      } else if (typeof obj[key] === "object") {
+        // let innerkeys = findkeysinobject(obj[key], str);
+        // for (let item of Object.values(innerkeys)) {
+        //   found[key].push(...item);
+        // }
+        continue;
+      }
+    }
+    //console.log(found)
+    return found;
   }
+  function cloneObj(obj,temp =[]) {
+    let cloneArr = [...temp];
+    for (let key in obj) {
+      for (let k in obj[key]) {
+        //console.log(obj[key][k]);
+        if (typeof obj[key][k] === "string") {
+          cloneArr.push({ category: key, paragrath: k });
+        } else if (typeof obj[key][k] === "object") {
+         cloneObj(obj[key][k],cloneArr);        
+        }
+      }
+    }
+    return [...cloneArr];
+  }
+  console.log(cloneObj(translate));
   return (
     <div className={s.main}>
-      <Search
-        id="search_input"
-        placeholder="input search text"
-        allowClear
-        // bordered ={false}
-        onSearch={onSearch}
-        style={{
-          width: 200,
-        }}
-      />
+      <input
+        type="text"
+        className={s.input}
+        placeholder="Search in Wiki"
+        onChange={(e) => setSearchTern(e.target.value)}
+      ></input>
+      <FaSearch className={s.icon} aria-hidden="true" />
     </div>
   );
 };

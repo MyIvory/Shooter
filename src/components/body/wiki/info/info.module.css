@@ -1,7 +1,7 @@
 .main {
-    height: 70vh;
+
+    height: 100%;
     overflow: scroll;
-    width: 100%;
     -ms-overflow-style: none;
     scrollbar-width: 5px;
     background-color: rgba(255, 255, 255, 0.7)
@@ -17,4 +17,49 @@
     background-color: #e01e14;
     box-shadow: 0 0 30px white,
 
+}
+
+.header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    right: 10px;
+    background-color: red;
+    height: 40px;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+}
+
+.header span {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.edit_but {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: red;
+    margin: 0;
+    font-weight: 400;
+}
+
+.edit_but:hover {
+    background-color: red !important;
+    font-weight: 400;
+}
+
+.search {
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    height: 32px;
+    font-size: 20px;
+    padding: 0 5px;
+}
+.search:focus {
+    outline: none;
 }
