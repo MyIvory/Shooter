@@ -15,25 +15,25 @@ const Weapons = (props) => {
       <div className={s.main}>
         <p>{t("search.weapons.p1")}</p>
         <p>{t("search.weapons.p2")}</p>
-        <p>{t("search.weapons.l1.l1h")}</p>
+        <p>{t("search.weapons.l1h")}</p>
         <ul>
-          <li>{t("search.weapons.l1.l1p1")}</li>
-          <li>{t("search.weapons.l1.l1p2")}</li>
-          <li>{t("search.weapons.l1.l1p3")}</li>
+          <li>{t("search.weapons.l1p1")}</li>
+          <li>{t("search.weapons.l1p2")}</li>
+          <li>{t("search.weapons.l1p3")}</li>
         </ul>
         <p>{t("search.weapons.p3")}</p>
         <p>{t("search.weapons.p4")}</p>
-        <p>{t("search.weapons.l2.l2h")}</p>
+        <p>{t("search.weapons.l2h")}</p>
         <ul>
-          <li>{t("search.weapons.l2.l2p1")}</li>
-          <li>{t("search.weapons.l2.l2p2")}</li>
-          <li>{t("search.weapons.l2.l2p3")}</li>
-          <li>{t("search.weapons.l2.l2p4")}</li>
-          <li>{t("search.weapons.l2.l2p5")}</li>
-          <li>{t("search.weapons.l2.l2p6")}</li>
-          <li>{t("search.weapons.l2.l2p7")}</li>
-          <li>{t("search.weapons.l2.l2p8")}</li>
-          <li>{t("search.weapons.l2.l2p9")}</li>
+          <li>{t("search.weapons.l2p1")}</li>
+          <li>{t("search.weapons.l2p2")}</li>
+          <li>{t("search.weapons.l2p3")}</li>
+          <li>{t("search.weapons.l2p4")}</li>
+          <li>{t("search.weapons.l2p5")}</li>
+          <li>{t("search.weapons.l2p6")}</li>
+          <li>{t("search.weapons.l2p7")}</li>
+          <li>{t("search.weapons.l2p8")}</li>
+          <li>{t("search.weapons.l2p9")}</li>
         </ul>
       </div>
     </>
