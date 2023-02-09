@@ -14,6 +14,7 @@ import s from "./info.module.css";
 import { useTranslation } from "react-i18next";
 import SearchField from "../../../header/controls/search/search";
 import { useEffect } from "react";
+import SearchContainer from "../../../header/controls/search/searchContainer";
 
 let Info = (props) => {
   const { t } = useTranslation();
@@ -23,13 +24,13 @@ let Info = (props) => {
         <Button type="primary" className={s.edit_but}>
           {t("buttons.edit_page")}
         </Button>
-        <SearchField/>
+        <SearchContainer/>
         {/* <span>{t("left_menu.weapons.title")}</span> */}
       </div>
       <div className={s.info}>
         <Routes>
           <Route path="/" element={<Weapons />} />
-          <Route index path="weapons" element={<Weapons />} />
+          <Route index path="weapons/" element={<Weapons />} />
           <Route path="rifled-weapons" element={<WeaponsRifled />} />
           <Route path="rifled-bolt" element={<WeaponsRifledBolt />} />
           <Route
@@ -44,6 +45,7 @@ let Info = (props) => {
           />
           <Route path="smooth-pump" element={<Pump />} />
           <Route path="smooth-automatic" element={<OpeningSmooth />} />
+          <Route path="search-result" element={<SearchResultContainer />} />
         </Routes>
       </div>
     </div>

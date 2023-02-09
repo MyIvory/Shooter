@@ -5,7 +5,7 @@ import { searchActionCreater } from "../../../../../redux/reducers/serch_reduser
 
 let mapStateToProps = (state)=>{
   return {
-    found:state
+    searchPage: state.searchPage
   };
 };
 let mapDispatchToProps = (dispatch) => {

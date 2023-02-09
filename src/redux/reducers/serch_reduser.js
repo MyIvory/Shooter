@@ -1,11 +1,11 @@
-let initialState = {a:1,b:2}
-const CLICK_SEARCH = "CLICK_SEARCH"
+let initialState = []
+const SET_FOUND = "SET_FOUND"
 
 
-let searchReduser = (state = initialState, action)=>{
+let searchReduser = (state = [], action)=>{
     switch (action.type) {
-        case CLICK_SEARCH:            
-            console.log("click ", action.obj)
+        case SET_FOUND:            
+            state = action.obj
             break
     }
     return state
@@ -15,7 +15,7 @@ export default searchReduser
 
 export const searchActionCreater =(obj)=>{
     return{
-        type:CLICK_SEARCH,
+        type:SET_FOUND,
         obj:obj
     }
 }

@@ -11,15 +11,16 @@ let HorisontMenu = (props) => {
   const loc = useLocation();
   let defColors = () => {
     let obj = {};
+
     if (loc.pathname === "/") {
       obj.home = 1;
       obj.wiki = 0;
       obj.contacts = 0;
-    } else if(loc.pathname === "/wiki") {
+    } else if(loc.pathname.concat("wiki")) {
       obj.home = 0;
       obj.wiki = 1;
       obj.contacts = 0;
-    }else if(loc.pathname === "/contacts"){
+    }else if(loc.pathname.concat("contacts")){
       obj.home = 0;
       obj.wiki = 0;
       obj.contacts = 1;

@@ -9,6 +9,7 @@ import { FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router";
 
 const SearchField = (props) => {
+  // console.log(props)
   const [t, i18n] = useTranslation();
   const navigate = useNavigate();
   const [saerchTern, setSearchTern] = useState("");
@@ -17,6 +18,9 @@ const SearchField = (props) => {
     return item.text.toLowerCase().includes(saerchTern.toLowerCase());
   });
 
+  useEffect(() => {
+    ft.length>0?props.updateState(ft):props.updateState([{text:"Not found"}])
+  }, [saerchTern]);
   return (
     <div className={s.main}>
       <input
@@ -26,22 +30,16 @@ const SearchField = (props) => {
         placeholder="Search in Wiki"
         value={saerchTern}
         onChange={(e) => {
-          navigate("/wiki/search-result/")
-          console.log(e.target.value)
           setSearchTern(e.target.value);
-          setTranslate(cloneObj(t("search", { returnObjects: true })));
-          if (e.target.value === "") setTranslate([]);
-          
+          navigate("/wiki/search-result/");
+          if (e.target.value === "") {
+            setTranslate([{text:"Input search"}]);
+          } else {
+            setTranslate(cloneObj(t("search", { returnObjects: true })));
+          }
         }}
       ></input>
       <FaSearch className={s.icon} aria-hidden="true" />
-      {/* <div className={s.test}>
-        <ul>
-          {ft.map((item, i) => {
-            return <li key={i}>{item.text}</li>;
-          })}
-        </ul>
-      </div> */}
     </div>
   );
 };

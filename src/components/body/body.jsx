@@ -10,7 +10,7 @@ let Body = (props) => {
     <div className={s.main}>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="wiki/*" element={<Wiki />}/>
+        <Route path="wiki/*" element={<Wiki />} />
         <Route path="contacts" element={<Contacts />} />
       </Routes>
     </div>
