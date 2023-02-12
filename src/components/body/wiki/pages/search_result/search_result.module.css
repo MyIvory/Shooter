@@ -1,0 +1,13 @@
+.main div {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 2px 2px 2px #898989,
+        -2px -2px 2px #ffffff;
+
+}
+.main a {
+    text-decoration: none;
+    color :black;
+} 

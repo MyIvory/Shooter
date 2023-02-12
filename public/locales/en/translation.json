@@ -110,6 +110,7 @@
   },
   "search": {
     "weapons": {
+      "title": "Weapons",
       "p1": "Weapons - the name of devices and objects (products), structurally intended for the destruction of a living or other target, as well as for sending signals. Used for warfare, hunting, and sports. Weapons are offensive or defensive and can be either lethal or non-lethal.",
       "p2": "By purpose, weapons can be combat, service and civilian.",
       "l1h": "Military weapons include:",
@@ -130,6 +131,7 @@
       "l2p9": "Torpedo - an underwater warhead propelled by a jet nozzle or propellers."
     },
     "rifled-weapons": {
+      "title": "Rifled weapons",
       "p1": "Weapons - the name of devices and objects (products), structurally intended for the destruction of a living or other target, as well as for sending signals. Used for warfare, hunting, and sports. Weapons are offensive or defensive and can be either lethal or non-lethal.",
       "p2": "By purpose, weapons can be combat, service and civilian.",
       "l1h": "Military weapons include:",
