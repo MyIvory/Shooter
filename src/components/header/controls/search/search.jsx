@@ -35,7 +35,7 @@ const SearchField = (props) => {
           if (e.target.value === "") {
             setTranslate([{text:"Input search"}]);
           } else {
-            setTranslate(cloneObj(t("search", { returnObjects: true })));
+            setTranslate(cloneObj(t("search", { returnObjects: true }),e.target.value));
           }
         }}
       ></input>
@@ -45,11 +45,11 @@ const SearchField = (props) => {
 };
 export default SearchField;
 
-function cloneObj(obj) {
+function cloneObj(obj,sub) {
   let cloneArr = [];
   for (let key in obj) {
     for (let k in obj[key]) {
-      cloneArr.push({ category: key, paragrath: k, text: obj[key][k] });
+      cloneArr.push({ category: key,sub:sub, paragrath: k, text: obj[key][k] });
     }
   }
   return cloneArr;

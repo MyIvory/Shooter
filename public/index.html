@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+  <html xmlns="http://www.w3.org/1999/xhtml"></html>
 
 <head>
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <!-- <link rel="preload" as="video" href="video/hw.mp4"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
@@ -12,20 +14,12 @@
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div>
-    <video autoplay muted loop id="myVideo" preload="auto" playsinline>
-      <source src="video/hw.mp4" type="video/mp4">
-    </video>
-  </div>
-
-  <div id="root">
-    <div>
-      <video autoPlay muted loop id="myVideo"  controls="controls">
-        <source src="video/hw.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-      </video>
-    </div>
-  </div>
+  <video autoplay muted loop id="myVideo" controls preload="metadata" >
+    <source src="video/hw.mp4" type="video/mp4">
+    <source src="video/hw.mp4" type="video/webm">
+    <source src="video/hw.mp4" type="video/ogg">
+  </video>
+  <div id="root"> </div>
 </body>
 
 </html>

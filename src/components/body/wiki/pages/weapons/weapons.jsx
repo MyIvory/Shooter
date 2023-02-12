@@ -2,6 +2,7 @@ import React from "react";
 import s from "./weapons.module.css";
 import { useTranslation } from "react-i18next";
 import { Button, Divider } from "antd";
+
 const Weapons = (props) => {
   const { t } = useTranslation();
   return (
