@@ -1,4 +1,12 @@
 .main {
-    width:20vh;
-    margin-right: 20px;
+    width:30vh;
+    grid-area: controls;
+}
+@media (max-width:600px) {
+    .main {
+        width:auto;
+        height: 50px;
+        
+    }
+
 }

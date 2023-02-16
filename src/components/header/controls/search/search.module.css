@@ -8,7 +8,7 @@
 
 .input {
     font-size: 18px;
-    font-weight:100;
+    font-weight: 100;
     border: none;
     border-bottom: 1px solid white;
     color: white;
@@ -20,21 +20,25 @@
     color: #fff;
     font-size: 22px;
     position: relative;
-    top: 0px;
+    top: 3px;
     right: 22px;
     font-weight: 100;
 }
-.test{
+
+.test {
     width: 500px;
     height: 500px;
     position: absolute;
-    top:100px;
-    left:100px;
+    top: 100px;
+    left: 100px;
     background-color: white;
-    color:black;
-    
+    color: black;
+
 }
 
+.clearBut{
+    cursor: pointer;
+}
 
 .input:focus {
     outline: none;
@@ -85,34 +89,10 @@ input:focus:-ms-input-placeholder {
     transition: text-indent 0.3s ease;
 }
 
+
 @media(max-width: 800px) {
     .main {
         margin-left: 0;
 
     }
 }
-/* .main {
-     position: absolute;
-    top:80px; 
-    display: flex;
-    width: 200px;
-    border-radius: 5px;
-    background: linear-gradient(145deg, #f0f0f0, #cacaca);
-
-} */
-
-/* .search_input {
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    font-size: 20px;
-}
-
-.search_input:focus {
-    outline: none;
-}
-
-.search_but {
-    background-color: transparent;
-    border: none;
-} */

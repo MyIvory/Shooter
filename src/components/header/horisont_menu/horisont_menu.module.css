@@ -1,5 +1,16 @@
 .main {
-    width:80vh;
-    min-width: 400px;
+    width: 80vh;
+    min-width: 450px;
     height: 300px;
+    grid-area: horisont_menu;
+}
+
+@media (max-width:600px) {
+    .main {
+        height: 250px;
+        width: auto;
+        margin-left: -30px;
+        margin-top: 30px;
+    }
+
 }

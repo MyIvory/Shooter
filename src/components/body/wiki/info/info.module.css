@@ -1,13 +1,14 @@
 .main {
 
     height: 100%;
-    overflow: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: 5px;
-    background-color: rgba(255, 255, 255, 0.7)
+
+    /* overflow: scroll; */
+    /* -ms-overflow-style: none; */
+    /* scrollbar-width: 5px; */
+    /* background-color: rgba(255, 255, 255, 0.7) */
 }
 
-.main::-webkit-scrollbar {
+/* .main::-webkit-scrollbar {
     width: 5px;
     height: 0px;
 
@@ -17,7 +18,7 @@
     background-color: #e01e14;
     box-shadow: 0 0 30px white,
 
-}
+} */
 
 .header {
     display: flex;
@@ -60,6 +61,27 @@
     font-size: 20px;
     padding: 0 5px;
 }
+
 .search:focus {
     outline: none;
+}
+
+.info {
+    height: 100%;
+    overflow: scroll !important;
+    -ms-overflow-style: none;
+    scrollbar-width: 5px;
+    background-color: rgba(255, 255, 255, 0.7)
+}
+
+.info::-webkit-scrollbar {
+    width: 5px;
+    height: 0px;
+
+}
+
+.info::-webkit-scrollbar-thumb {
+    background-color: #e01e14;
+    box-shadow: 0 0 30px white,
+
 }

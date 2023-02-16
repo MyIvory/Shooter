@@ -1,6 +1,10 @@
 .main{
     margin-top: -4px;
-    width: 350px;
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
 }
 .item_level_1{
     font-weight:600;

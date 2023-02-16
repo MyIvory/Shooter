@@ -5,9 +5,14 @@
     background: rgba(255, 255, 255, 0.7);
     box-shadow: 2px 2px 2px #898989,
         -2px -2px 2px #ffffff;
+        z-index: -1;
 
 }
 .main a {
     text-decoration: none;
     color :black;
 } 
+.noFoundBox{
+    color: red;
+    text-align: center;
+}
