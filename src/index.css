@@ -21,8 +21,8 @@ body {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  width:2000px
- 
+  width:2000px;
+ z-index: -10;
 }
 
 code {
