@@ -6,13 +6,13 @@
 }
 
 .main{
-    width:350px;
+    width:100%;
 }
-.anticon-down{
+/* .anticon-down{
     display: none;
 }
 .ant-dropdown-menu-submenu{
     width:95%;
     margin:auto;
     left:0;
-}
+} */

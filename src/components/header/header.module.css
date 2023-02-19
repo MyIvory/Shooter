@@ -9,7 +9,7 @@
 }
 @media (max-width:600px) {
     .header{
-        
+        justify-content: center;
         display: grid;
         grid-template-areas:
         "controls",

@@ -1,5 +1,10 @@
+.main{
+    height: 100%;
+    margin-bottom: 100px;
+}
 .main div {
-    margin: 20px;
+   margin: 15px;
+   
     padding: 10px;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.7);
