@@ -15,6 +15,7 @@ import { useTranslation } from "react-i18next";
 import SearchField from "../../../header/controls/search/search";
 import { useEffect } from "react";
 import SearchContainer from "../../../header/controls/search/searchContainer";
+import VideoBackground from "../../../../elements/videoBackGround/videoBackGround";
 
 let Info = (props) => {
   const { t } = useTranslation();
@@ -28,6 +29,7 @@ let Info = (props) => {
         {/* <span>{t("left_menu.weapons.title")}</span> */}
       </div>
       <div className={s.info}>
+      <VideoBackground/>
         <Routes>
           <Route path="/" element={<Weapons />} />
           <Route index path="weapons/" element={<Weapons />} />

@@ -2,6 +2,8 @@ import React from "react";
 import s from "./weapons.module.css";
 import { useTranslation } from "react-i18next";
 import { Button, Divider } from "antd";
+import Shield from "../../../../../elements/shield/shield";
+import VideoBackground from "../../../../../elements/videoBackGround/videoBackGround";
 
 const Weapons = (props) => {
   const { t } = useTranslation();
@@ -13,6 +15,8 @@ const Weapons = (props) => {
         </Button>
         <span>{t("left_menu.weapons.title")}</span>
       </div> */}
+     
+    
       <div className={s.main}>
         <p>{t("search.weapons.p1")}</p>
         <p>{t("search.weapons.p2")}</p>
