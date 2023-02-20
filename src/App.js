@@ -7,13 +7,12 @@ import VideoBackGround from "./elements/videoBackGround/videoBackGround";
 
 function App(props) {
   return (
-    <>
-    <VideoBackGround />
+    
     <BrowserRouter>     
       <Header />
       <Body />
     </BrowserRouter>
-    </>
+    
   );
 }
 

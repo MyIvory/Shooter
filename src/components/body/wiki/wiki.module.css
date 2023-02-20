@@ -13,7 +13,7 @@
 
 .menu {
     grid-area: men;
-    height: 100%;  
+    height: 100%;
     overflow: scroll;
     background-color: transparent;
     -ms-overflow-style: none;
@@ -23,8 +23,8 @@
 
 .info {
     grid-area: info;
-    /* width: 100%; */
     overflow: hidden;
+    max-width: 1000px;
 }
 
 .menu::-webkit-scrollbar {
@@ -43,13 +43,14 @@
             "men"
             "info"
         ;
-        min-width: 0; 
+        min-width: 0;
         width: 95%;
         gap: 0;
         grid-template-rows: auto auto;
-        grid-template-columns: 100% ;
+        grid-template-columns: 100%;
     }
-    .menu{
+
+    .menu {
         background-color: inherit;
     }
 
