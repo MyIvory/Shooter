@@ -6,11 +6,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(".././public/img/hex.jpeg");
+  background-image: url(".././public/img/hex-rotate.jpeg");
   background-repeat:no-repeat;
   background-color: #e2e5e8;
   background-size:cover;
   background-attachment: fixed;
+  
 
 }
 
@@ -20,8 +21,8 @@ body {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  width:2000px
- 
+  width:2000px;
+ z-index: -10;
 }
 
 code {
@@ -34,5 +35,7 @@ code {
   border-left: 1px solid red;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  
+}
+.ant-menu-submenu-title{
+  background-color: rgba(0,0,0,0.03);
 }

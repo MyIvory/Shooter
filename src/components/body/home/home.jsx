@@ -5,7 +5,7 @@ let Home = (props) => {
     <>
     <VideoBackground/>
     <div className={s.main}>
- {fun(10000,"h")} 
+ {fun(10000,"h")} end
     </div>
     </>
   )

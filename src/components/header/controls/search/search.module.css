@@ -1,5 +1,5 @@
 .main {
-    width: 250px;
+    width: 100%;
     grid-area: s;
     display: flex;
     justify-content: center;
@@ -14,6 +14,7 @@
     color: white;
     background: transparent;
     width: 200px;
+    text-align: center;
 }
 
 .main .icon {

@@ -1,5 +1,23 @@
+.main{
+    height: 90%;
+    margin-bottom: 10px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+}
+.main::-webkit-scrollbar {
+    width: 5px;
+    height: 0px;
+
+}
+
+.main::-webkit-scrollbar-thumb {
+    background-color: #e01e14;
+    box-shadow: 0 0 30px white,
+
+}
 .main div {
-    margin: 20px;
+   margin: 15px;
+   
     padding: 10px;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.7);
@@ -15,4 +33,9 @@
 .noFoundBox{
     color: red;
     text-align: center;
+}
+@media (max-width:600px) {
+    .main {
+      height: 80%;
+    }
 }

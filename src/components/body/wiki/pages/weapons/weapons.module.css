@@ -1,13 +1,45 @@
 .main {
-    /* padding: 20px 100px 20px 10px;   */
-    padding: 30px;
+    padding: 10px 30px 10px 30px;
     width: auto;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    height: 90%;
+    display: grid;
 }
+
+.main::-webkit-scrollbar {
+    width: 5px;
+    height: 0px;
+
+}
+
+.main::-webkit-scrollbar-thumb {
+    background-color: #e01e14;
+    box-shadow: 0 0 30px white,
+
+}
+
 .main li {
     list-style-type: none;
 }
 
-.shield{
-    width: 200px;
-    height: 200px;
+.img {
+    margin: 20px;
+}
+.block{
+    margin-bottom: 20px;
+}
+
+@media (max-width:600px) {
+    .main {
+        height: 80%;
+        padding: 5px;
+        
+    }
+    .main ul{
+        padding: 0;
+    }
+    .img {
+        margin: 0;
+    }
 }

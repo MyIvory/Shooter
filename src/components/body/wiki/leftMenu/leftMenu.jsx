@@ -440,31 +440,70 @@ const LeftMenu = (props) => {
       ),
     ])];
 
-  const submenuLevel_1 = ["weapons", "ammunition"];
-  const submenuLevel_2 = [
-    "rifled_weapons",
-    "smooth_weapons",
-    "bullets",
-    "cases",
-    "primers",
-    "powder",
-  ];
-  const submenuLevel_3 = ["bullets_types"];
-  const submenuLevel_4 = ["bullets_types_rifled", "bullets_types_smooth"];
-  const submenuLevel_5 = [
-    "bullets_types_smooth_caliber",
-    "bullets_types_smooth_subcaliber",
-    "bullets_types_smooth_paradox",
-  ];
-  const [openKeys, setOpenKeys] = useState([]);
-  const onOpenChange = (keys) => {
+  const submenu = {
+    submenuLevel_0: ["menu"],
+    submenuLevel_1: ["weapons", "ammunition"],
+    submenuLevel_2: [
+      "rifled_weapons",
+      "smooth_weapons",
+      "bullets",
+      "cases",
+      "primers",
+      "powder",
+    ],
+    submenuLevel_3: ["bullets_types"],
+    submenuLevel_4: ["bullets_types_rifled", "bullets_types_smooth"],
+    submenuLevel_5: [
+      "bullets_types_smooth_caliber",
+      "bullets_types_smooth_subcaliber",
+      "bullets_types_smooth_paradox",
+    ]
+  };
+  //!--------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  const [openKeys, setOpenKeys] = useState(window.screen.availWidth > 600 ? ["menu"] : []);
+  const onOpenChange = (keys, submenu) => {
+    const submenuLevels = []
+    for (let i = 0; i < Object.keys(submenu).length; i++) {
+      const key = `submenuLevel_${i}`;
+      if (key in submenu) {
+        submenuLevels.push(submenu[key]);
+      }
+    }
     const latestOpenKey = keys.find((key) => openKeys.indexOf(key) === -1);
-    if (submenuLevel_1.indexOf(latestOpenKey) === -1) {
-      if (submenuLevel_2.indexOf(latestOpenKey) === -1) {
-        if (submenuLevel_3.indexOf(latestOpenKey) === -1) {
-          if (submenuLevel_4.indexOf(latestOpenKey) === -1) {
-            if (submenuLevel_5.indexOf(latestOpenKey) === -1) {
-              setOpenKeys(keys);
+    console.log(submenuLevels)
+    //----------------------
+    // loop1: for (let i = 0; i < submenuLevels.length; i++) {
+    //   if (submenuLevels[i].indexOf(latestOpenKey) === -1) {
+    //     if (latestOpenKey) {
+    //       keysArr = [...keys.slice(0, i), latestOpenKey]
+    //     } else {
+    //       keysArr = keys[0]
+    //     }
+
+    //   } else {
+    //     if (latestOpenKey) {
+    //       keysArr = [...keys.slice(-1), latestOpenKey]
+    //     } else {
+    //       keysArr = keys[0]
+    //     }
+    //   }
+    //   console.log(keysArr)
+    //   setOpenKeys(keysArr)
+    //----------------------
+    if (submenuLevels[0].indexOf(latestOpenKey) === -1) {
+      if (submenuLevels[1].indexOf(latestOpenKey) === -1) {
+        if (submenuLevels[2].indexOf(latestOpenKey) === -1) {
+          if (submenuLevels[3].indexOf(latestOpenKey) === -1) {
+            if (submenuLevels[4].indexOf(latestOpenKey) === -1) {
+              if (submenuLevels[5].indexOf(latestOpenKey) === -1) {
+                setOpenKeys(keys);
+              } else {
+                setOpenKeys(
+                  latestOpenKey
+                    ? [keys[0], keys[1], keys[2], keys[3], keys[4], latestOpenKey]
+                    : [keys[0]]
+                );
+              }
             } else {
               setOpenKeys(
                 latestOpenKey
@@ -474,22 +513,19 @@ const LeftMenu = (props) => {
             }
           } else {
             setOpenKeys(
-              latestOpenKey
-                ? [keys[0], keys[1], keys[2], latestOpenKey]
-                : [keys[0]]
+              latestOpenKey ? [keys[0], keys[1], keys[2], latestOpenKey] : [keys[0]]
             );
           }
         } else {
-          setOpenKeys(
-            latestOpenKey ? [keys[0], keys[1], latestOpenKey] : [keys[0]]
-          );
+          setOpenKeys(latestOpenKey ? [keys[0], keys[1], latestOpenKey] : [keys[0]]);
         }
       } else {
         setOpenKeys(latestOpenKey ? [keys[0], latestOpenKey] : [keys[0]]);
       }
     } else {
-      setOpenKeys(latestOpenKey ? [latestOpenKey] : []);
+      setOpenKeys(latestOpenKey ? [latestOpenKey] : [keys[0]]);
     }
+
   };
   //!---------------------------------------------------------
   const mob_menu = (
@@ -497,21 +533,24 @@ const LeftMenu = (props) => {
       multiple={true}
       selectable={false}
       items={items}
-      style={{
-        width: 350,
-      }}
       inlineIndent={10}
       onClick={selectPage}
       openKeys={openKeys}
-      onOpenChange={onOpenChange}
+      onOpenChange={(keys) => onOpenChange(keys, submenu)}
+      // onOpenChange={onOpenChange}
       mode="inline"
+      style={{
+        color: "red",
+        fontSize: "16px",
+        textTransform: "uppercase",
+
+      }}
     />
   );
   const desk_menu = (
     <Menu
       selectable={false}
       style={{
-        //width: 300,
         color: "red",
         fontSize: "16px",
         textTransform: "uppercase",
@@ -521,25 +560,9 @@ const LeftMenu = (props) => {
       inlineIndent={10}
       onClick={selectPage}
       openKeys={openKeys}
-      onOpenChange={onOpenChange}
+      onOpenChange={(keys) => onOpenChange(keys, submenu)}
+    //onOpenChange={onOpenChange}
     />
-  );
-  //
-  const drop_menu = (
-    <Dropdown menu={{ items }} type="primary" placement="topCenter" overlayStyle={{ width: "95%" }}>
-      <a onClick={(e) => e.preventDefault()}>
-        <Space>
-          <MenuOutlined
-            style={{
-              width: "100%",
-              color: "red",
-              fontSize: 45,
-            }}
-          />
-          <DownOutlined />
-        </Space>
-      </a>
-    </Dropdown>
   );
   //!---------------------------------------------------------
   return (
@@ -560,7 +583,7 @@ function getItem(label, key, icon, children, type) {
     label,
     type,
     onTitleClick: (e) => {
-      console.log(e);
+      //  console.log(e);
       <Link to={e.key}></Link>;
     },
   };

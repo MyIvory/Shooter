@@ -1,11 +1,13 @@
-import React from 'react';
-import s from "./videoBackGround.module.css"
-const VideoBackground = () => {
-  return (
-    <video autoPlay muted="muted" loop  className={s.myVideo}>
-      <source src="video/hw.mp4" type="video/mp4" />
-    </video>
-  );
-};
+const VideoBackGround = () => {
+    return (
+        <>
+            <video autoPlay muted="muted" loop id="myVideo">
+                <source src="video/hw.mp4" type="video/mp4"></source>
+            </video>
+        </>
+    );
+}
 
-export default VideoBackground;
+export default VideoBackGround;
+
+export default VideoBackGround;
