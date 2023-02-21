@@ -11,12 +11,12 @@ const Weapons = (props) => {
         <h1>{t("search.weapons.title")}</h1>
         <div className={s.block}>
 
-          <p>{toStrong(t("search.weapons.p1"), 0, 2)}</p>
+          <p>{toStrong(t("search.weapons.p1"), 1)}</p>
           <p>{t("search.weapons.p2")}</p>
         </div>
         <p>{t("search.weapons.l1h")}</p>
         <div className={s.block}>
-          <div className={s.img} style={{ float: 'right' }}>
+          <div className={s.img} style={{ float: 'right' }}>тз
             <Image width={350} src="/img/pages/weapons/w2.jpg" />
           </div>
 
@@ -58,25 +58,7 @@ const Weapons = (props) => {
 export default Weapons;
 
 function toStrong(str, ...indexs) {
-  let arr = str.split("/s")
-  console.log(arr)
-  return arr.map((item) => {
-    for(let i of indexs){
-      if (arr[i] == item){
-        return <strong>{item}</strong>
-      }else{
-        return item
-      }
-    }
-    //return indexs.map((i) => {
-      //console.log( `Item-> ${item} ||| I->${arr[i]}`)      
-      //return arr[i] == item ? <strong>{item}</strong> : "item"
-      //if (arr[i] == item) {
-
-      //  return <strong>{item}</strong>
-      // } else {
-      //   return item
-      // }
-    //})
+  return str.split("/s").map((item,index) => {
+   return indexs.includes(index)?<strong>{item}</strong>:item
   })
 }
