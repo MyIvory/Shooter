@@ -29,7 +29,7 @@ let Info = (props) => {
         {/* <span>{t("left_menu.weapons.title")}</span> */}
       </div>
       <div className={s.info}>
-      <VideoBackground/>
+     
         <Routes>
           <Route path="/" element={<Weapons />} />
           <Route index path="weapons/" element={<Weapons />} />

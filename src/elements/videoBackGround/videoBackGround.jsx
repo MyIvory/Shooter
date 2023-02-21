@@ -10,4 +10,3 @@ const VideoBackGround = () => {
 
 export default VideoBackGround;
 
-export default VideoBackGround;

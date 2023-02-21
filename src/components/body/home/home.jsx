@@ -3,7 +3,6 @@ import s from "./home.module.css"
 let Home = (props) => {
   return (
     <>
-    <VideoBackground/>
     <div className={s.main}>
  {fun(10000,"h")} end
     </div>

@@ -10,7 +10,6 @@ let Wiki = (props) => {
   return (
 
     <div className={s.main}>
-      <VideoBackground/>
       <div className={s.menu}>
         <LeftMenu />
       </div>
