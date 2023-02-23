@@ -1,5 +1,5 @@
-import { Button } from "antd";
-import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
+import { Button, Tooltip } from "antd";
+import { BrowserRouter, Outlet, Route, Routes, useLocation } from "react-router-dom";
 import SearchResultContainer from "../pages/search_result/search_result_container";
 import AutomaticRifled from "../pages/weapons/rifled/automatic_rifled/automatic_rifled";
 import WeaponsRifledBolt from "../pages/weapons/rifled/bolt/bolt";
@@ -12,24 +12,29 @@ import WeaponsSmooth from "../pages/weapons/smooth/smooth";
 import Weapons from "../pages/weapons/weapons";
 import s from "./info.module.css";
 import { useTranslation } from "react-i18next";
-import SearchField from "../../../header/controls/search/search";
-import { useEffect } from "react";
 import SearchContainer from "../../../header/controls/search/searchContainer";
-import VideoBackground from "../../../../elements/videoBackGround/videoBackGround";
+import { EditOutlined } from "@ant-design/icons";
+import { useEffect, useState } from "react";
 
 let Info = (props) => {
   const { t } = useTranslation();
+  const location = useLocation()
+  const [title, setTitle] = useState("")
+  useEffect(() => {
+    setTitle(location.pathname.split("/").pop())
+  }, [location])
+
   return (
     <div className={s.main}>
       <div className={s.header}>
-        <Button type="primary" className={s.edit_but}>
-          {t("buttons.edit_page")}
-        </Button>
-        <SearchContainer/>
-        {/* <span>{t("left_menu.weapons.title")}</span> */}
+        <span className={s.title}>{t(`search.${title}.title`)}</span>
+        <SearchContainer />
+        <Tooltip title={t("buttons.edit_page")} placement="topLeft">
+          <EditOutlined className={s.edit_but} style={{ fontSize: 32 }} onClick={clickEdit} />
+        </Tooltip>
       </div>
       <div className={s.info}>
-     
+
         <Routes>
           <Route path="/" element={<Weapons />} />
           <Route index path="weapons/" element={<Weapons />} />
@@ -56,7 +61,7 @@ let Info = (props) => {
 export default Info;
 
 function findkeysinobject(obj, str) {
-  if (Object.keys(obj).length<=0) return obj
+  if (Object.keys(obj).length <= 0) return obj
   let found = {};
   for (let key in obj) {
     found[key] = [];
@@ -73,4 +78,8 @@ function findkeysinobject(obj, str) {
   }
 
   return found;
+}
+function clickEdit(e) {
+  console.log("Edit")
+  e.stopPropagation();
 }

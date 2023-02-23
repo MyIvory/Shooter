@@ -1,43 +1,14 @@
 .main {
-
      height: 100%; 
-    
-
-    /* overflow: scroll; */
-    /* -ms-overflow-style: none; */
-    /* scrollbar-width: 5px; */
-    /* background-color: rgba(255, 255, 255, 0.7) */
 }
-
-/* .main::-webkit-scrollbar {
-    width: 5px;
-    height: 0px;
-
-}
-
-.main::-webkit-scrollbar-thumb {
-    background-color: #e01e14;
-    box-shadow: 0 0 30px white,
-
-} */
-
 .header {
     display: grid;
     grid-template-areas:
-        "e_but a s"
+        "title s e_but"
     ;
     background-color: red;
     color: white;
-    grid-template-columns: auto 1fr auto;
-    /* position: sticky; */
-    /* top: 0;
-    right: 10px; */
-
-    /* height: 40px; */
-
-    /* align-items: center;
-    justify-content: space-between;
-    padding: 0 20px 0 20px; */
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 5px;
 }
 
@@ -49,20 +20,10 @@
 
 .edit_but {
     grid-area: e_but;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    color: red;
-    margin: 0;
-    font-weight: 400;
+    cursor: pointer;
+    width: 50px;
+   justify-self: end;
 }
-
-.edit_but:hover {
-    background-color: red !important;
-    font-weight: 400;
-}
-
 .search {
     grid-area: s;
     width: 100%;
@@ -76,7 +37,10 @@
 .search:focus {
     outline: none;
 }
-
+.title{
+    grid-area: title;
+    margin-left: 10px;
+}
 .info {
     height: 100%;
     /* overflow: scroll !important; */
@@ -100,10 +64,15 @@
 @media (max-width:600px) {
     .header {
         grid-template-areas:
-            "e_but"
-            "s"
+            "title e_but"
+            "s s"
         ;
+        grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr;
         row-gap: 10px;
     }
+    /* .title{
+        justify-self: center;
+    } */
+   
 }

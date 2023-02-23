@@ -189,8 +189,16 @@
       "p52":"Mandreled barrels are made by Anschutz, Benchmark, Broughton, Criterion, Douglas, Hart, Lilja, Lothar Walther, Schneider, Shilen, Spencer, Wilson Arms and many others. Of the manufacturers of factory rifles, this is, for example, Savage Arms.",
       "p53":"Finally, during the Second World War in Europe, an ultra-fast method of obtaining rifled barrels in industrial quantities was born and spread - cold forging (hammer forging). It was invented and developed, of course, by the Germans, who needed to produce a huge number of barrels for the MG42 and other machine guns. In the process of cold forging, a drilled blank is subjected to rotational forging around a mandrel with a mirror image of rifling, during this process it lengthens by a good third, also “thinning” by about a third and acquiring a complete barrel contour. Modern forging machines allow you to make the barrel of the required contour immediately with the chamber of the desired caliber - and all this literally in a matter of minutes.",
       "p54":"The deformation of steel during forging, on the one hand, strengthens it, due to which forged trunks are distinguished by enviable survivability. On the other hand, forging introduces a monstrous amount of stress into the steel of the barrel, which will be very difficult to remove even by double tempering or cryogenic treatment. As a result, in the shooting sport, the attitude towards forged barrels has developed ambiguously: someone considers them the best barrels of all, while others do not take them seriously at all. Also note that forged barrels are usually made of chromium-molybdenum steel - the 416th “stainless steel” is poorly cold forged, and instead of it steel grade 410 with a slightly reduced chromium content is used.",
-      "p55":"It should be noted in particular that barrel forging is the lot of large arms corporations that need maximum productivity and a large number of barrels. After all, cold forging cannot be done in a small workshop: a modern forging machine costs up to a million dollars! Therefore, forging barrels is made only by companies that produce weapons in large quantities. These are Remington, Ruger, Steyr, Sako, FN, Heckler & Koch, Sauer, Blaser and a number of others."
-
+      "p55":"It should be noted in particular that barrel forging is the lot of large arms corporations that need maximum productivity and a large number of barrels. After all, cold forging cannot be done in a small workshop: a modern forging machine costs up to a million dollars! Therefore, forging barrels is made only by companies that produce weapons in large quantities. These are Remington, Ruger, Steyr, Sako, FN, Heckler & Koch, Sauer, Blaser and a number of others.",
+      "ides1":"Rifled barrel",
+      "ides2":"Cross section of a rifled bore",
+      "ides3":"Rifling of constant steepness",
+      "ides4":"Rifling of progressive steepness",
+      "ides5":"Examples of different twist",
+      "ides6":"Muzzle chamfer",
+      "ides7":"Button rifling",
+      "ides8":"Grooving by cold forging ",
+      "ides9":"Machine for rotary cold forging of trunks "
     }
   }
 }

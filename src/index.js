@@ -9,7 +9,7 @@ import i18n from './i18n';
 import $ from "jquery"
 
 i18n.loadLanguages(['en', 'ua'])
-//window.screen.width<600?$("#myVideo").hide():$("#myVideo").show()
+window.screen.width<600?$("#myVideo").hide():$("#myVideo").show()
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <Provider store={store} >
