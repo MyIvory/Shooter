@@ -26,7 +26,7 @@ let Info = (props) => {
           {t("buttons.edit_page")}
         </Button>
         <SearchContainer/>
-        {/* <span>{t("left_menu.weapons.title")}</span> */}
+      
       </div>
       <div className={s.info}>
      
