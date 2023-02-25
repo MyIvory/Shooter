@@ -3,6 +3,7 @@ import s from "./rifled.module.css";
 import { useTranslation } from "react-i18next";
 import { Button, Divider, Image } from "antd";
 import { toStrong } from "../../../../../../redux/reducers/wiki_reduser";
+import VideoPlayer from "../../../../../../elements/youtube_player/youtube_player";
 const WeaponsRifled = (props) => {
   const { t } = useTranslation();
 
@@ -19,7 +20,8 @@ const WeaponsRifled = (props) => {
               <h4>{t("search.rifled-weapons.ides1")}</h4>
             </figcaption>
           </figure>
-          <p>{toStrong(t("search.rifled-weapons.p1"),0)}</p>
+          <p>{toStrong(t("search.rifled-weapons.p1"), 0)}</p>
+
         </div>
         <div className={s.block}>
           <figure className={s.img} style={{ float: "left", width: 250 }}>
@@ -35,6 +37,10 @@ const WeaponsRifled = (props) => {
           <p>{t("search.rifled-weapons.p3")}</p>
           <p>{t("search.rifled-weapons.p4")}</p>
           <p>{t("search.rifled-weapons.p5")}</p>
+          <div>
+            <VideoPlayer id="M8ODXkYaJo8" />
+            <h4><p className={s.headers}>{t("search.rifled-weapons.vdes1")}</p></h4>
+          </div>
         </div>
 
         <div className={s.block}>
@@ -49,7 +55,7 @@ const WeaponsRifled = (props) => {
               alt={t("search.rifled-weapons.title")}
             />
           </figure>
-          <p>{toStrong(t("search.rifled-weapons.p7"),0)}</p>
+          <p>{toStrong(t("search.rifled-weapons.p7"), 0)}</p>
         </div>
         <div className={s.block}>
           <p></p>
@@ -60,7 +66,7 @@ const WeaponsRifled = (props) => {
               alt={t("search.rifled-weapons.title")}
             />
           </figure>
-          <p>{toStrong(t("search.rifled-weapons.p8"),0)}</p>       
+          <p>{toStrong(t("search.rifled-weapons.p8"), 0)}</p>
         </div>
         <p>{t("search.rifled-weapons.p9")}</p>
         <div className={s.block}>
@@ -72,7 +78,7 @@ const WeaponsRifled = (props) => {
               alt={t("search.rifled-weapons.title")}
             />
           </figure>
-          <p>{toStrong(t("search.rifled-weapons.p10"),1)}</p>
+          <p>{toStrong(t("search.rifled-weapons.p10"), 1)}</p>
         </div>
         <div className={s.block}>
           <p></p>
@@ -83,7 +89,7 @@ const WeaponsRifled = (props) => {
               alt={t("search.rifled-weapons.title")}
             />
           </figure>
-          <p>{toStrong(t("search.rifled-weapons.p11"),1)}</p>
+          <p>{toStrong(t("search.rifled-weapons.p11"), 1)}</p>
         </div>
         <div className={s.block}>
           <h2> <p className={s.headers}>
@@ -109,8 +115,8 @@ const WeaponsRifled = (props) => {
               <figcaption className={s.img_des}><h4>{t("search.rifled-weapons.ides3")}</h4></figcaption>
 
             </figure>
-            <p>{toStrong(t("search.rifled-weapons.p12"),1)}</p>
-            <p>{toStrong(t("search.rifled-weapons.p13"),1)}</p>
+            <p>{toStrong(t("search.rifled-weapons.p12"), 1)}</p>
+            <p>{toStrong(t("search.rifled-weapons.p13"), 1)}</p>
           </div>
           <div className={s.block}>
             <figure className={s.groupImg} style={{ float: "right" }}>
@@ -140,56 +146,68 @@ const WeaponsRifled = (props) => {
           <h2><p className={s.headers}>
             {t("search.rifled-weapons.h3")}
           </p></h2>
-          <figure className={s.img} style={{ float: "left",width:250 }}>
+          <figure className={s.img} style={{ float: "left", width: 250 }}>
             <Image className={s.antImg}
-              
+
               src="/img/pages/rifled_weapons/rw10.jpg"
               alt={t("search.rifled-weapons.ides5")}
             />
             <figcaption className={s.img_des}><h4>{t("search.rifled-weapons.ides5")}</h4></figcaption>
           </figure>
-          <p>{toStrong(t("search.rifled-weapons.p17"),1)}</p>
+          <p>{toStrong(t("search.rifled-weapons.p17"), 1)}</p>
           <p>{t("search.rifled-weapons.p18")}</p>
           <p>{t("search.rifled-weapons.p19")}</p>
           <h2><p className={s.headers}>{t("search.rifled-weapons.p20")}</p></h2>
           <p>{t("search.rifled-weapons.p21")}</p>
           <p>{t("search.rifled-weapons.p22")}</p>
-          <p>{toStrong(t("search.rifled-weapons.p23"),1)}</p>
+          <p>{toStrong(t("search.rifled-weapons.p23"), 1)}</p>
+
           <h2><p className={s.headers}>{t("search.rifled-weapons.p28")}</p></h2>
-          <p>{toStrong(t("search.rifled-weapons.p24"),0)}</p>
-          <p>{toStrong(t("search.rifled-weapons.p25"),0)}</p>
-          <p>{toStrong(t("search.rifled-weapons.p26"),0)}</p>
-          <p>{toStrong(t("search.rifled-weapons.p27"),0)}</p>
+          <p>{toStrong(t("search.rifled-weapons.p24"), 0)}</p>
+          <p>{toStrong(t("search.rifled-weapons.p25"), 0)}</p>
+          <p>{toStrong(t("search.rifled-weapons.p26"), 0)}</p>
+          <p>{toStrong(t("search.rifled-weapons.p27"), 0)}</p>
           <p>{t("search.rifled-weapons.p30")}</p>
           <p>{t("search.rifled-weapons.p31")}</p>
-          <p>{toStrong(t("search.rifled-weapons.p32"),1)}</p>
+          <p>{toStrong(t("search.rifled-weapons.p32"), 1)}</p>
           <h2><p className={s.headers}>{t("search.rifled-weapons.p38")}</p></h2>
-          <p>{toStrong(t("search.rifled-weapons.p34"),0)}</p>
-          <p>{toStrong(t("search.rifled-weapons.p35"),0)}</p>
-          <p>{toStrong(t("search.rifled-weapons.p36"),0)}</p>
-          <p>{toStrong(t("search.rifled-weapons.p37"),0)}</p>
+          <p>{toStrong(t("search.rifled-weapons.p34"), 0)}</p>
+          <p>{toStrong(t("search.rifled-weapons.p35"), 0)}</p>
+          <p>{toStrong(t("search.rifled-weapons.p36"), 0)}</p>
+          <p>{toStrong(t("search.rifled-weapons.p37"), 0)}</p>
           <p>{t("search.rifled-weapons.p39")}</p>
           <p>{t("search.rifled-weapons.p40")}</p>
+          <div>
+            <VideoPlayer id="ZxdUrDic8nc" />
+            <h4><p className={s.headers}>{t("search.rifled-weapons.vdes2")}</p></h4>
+          </div>
         </div>
         <div className={s.block}>
           <h2> <p className={s.headers}>{t("search.rifled-weapons.h4")}</p></h2>
+          <p>{t("search.rifled-weapons.p41")}</p>
           <figure className={s.img} style={{ float: "left", width: 350 }}>
             <Image className={s.antImg}
-              
+
               src="/img/pages/rifled_weapons/rw11.jpg"
               alt={t("search.rifled-weapons.ides6")}
             />
             <figcaption className={s.img_des}><h4>{t("search.rifled-weapons.ides6")}</h4></figcaption>
           </figure>
-          <p>{t("search.rifled-weapons.p41")}</p>
-          <p>{toStrong(t("search.rifled-weapons.p42"),1)}</p>
+
+          <p>{toStrong(t("search.rifled-weapons.p42"), 1)}</p>
           <p>{t("search.rifled-weapons.p43")}</p>
         </div>
         <div className={s.block}>
           <h2><p className={s.headers}>{t("search.rifled-weapons.p44")}</p></h2>
-          <p>{toStrong(t("search.rifled-weapons.p45"),1)}</p>
+          <p>{toStrong(t("search.rifled-weapons.p45"), 1)}</p>
           <p>{t("search.rifled-weapons.p46")}</p>
           <p>{t("search.rifled-weapons.p47")}</p>
+          <div>
+            <VideoPlayer id="exxiDfzoRC0" />
+            <h4><p className={s.headers}>{t("search.rifled-weapons.vdes3")}</p></h4>
+          </div>
+          <p></p>
+          <p>{toStrong(t("search.rifled-weapons.p48"), 1)}</p>
           <figure className={s.img} style={{ float: "right", width: 250 }}>
             <Image className={s.antImg}
               src="/img/pages/rifled_weapons/rw12.jpg"
@@ -197,13 +215,19 @@ const WeaponsRifled = (props) => {
             />
             <figcaption className={s.img_des}><h4>{t("search.rifled-weapons.ides7")}</h4></figcaption>
           </figure>
-          <p>{toStrong(t("search.rifled-weapons.p48"),1)}</p>
+
           <p>{t("search.rifled-weapons.p49")}</p>
           <p>{t("search.rifled-weapons.p50")}</p>
           <p>{t("search.rifled-weapons.p51")}</p>
           <p>{t("search.rifled-weapons.p52")}</p>
+          <div>
+            <VideoPlayer id="VsWfeIc92dE" />
+            <h4><p className={s.headers}>{t("search.rifled-weapons.vdes4")}</p></h4>
+          </div>
+          <p></p>
         </div>
         <div className={s.block}>
+          <p>{toStrong(t("search.rifled-weapons.p53"), 1)}</p>
           <figure className={s.img} style={{ float: "left", width: 250 }}>
             <Image className={s.antImg}
               src="/img/pages/rifled_weapons/rw13.jpg"
@@ -211,17 +235,21 @@ const WeaponsRifled = (props) => {
             />
             <figcaption className={s.img_des}><h4>{t("search.rifled-weapons.ides8")}</h4></figcaption>
           </figure>
-          <p>{toStrong(t("search.rifled-weapons.p53"),1)}</p>
+
           <p>{t("search.rifled-weapons.p54")}</p>
-          <figure className={s.img} style={{ float: "right", width: 250 }}>
+          {/* <figure className={s.img} style={{ float: "right", width: 250 }}>
             <Image className={s.antImg}
-             
+
               src="/img/pages/rifled_weapons/rw14.jpg"
               alt={t("search.rifled-weapons.ides9")}
             />
             <figcaption className={s.img_des}><h4>{t("search.rifled-weapons.ides9")}</h4></figcaption>
-          </figure>
+          </figure> */}
           <p>{t("search.rifled-weapons.p55")}</p>
+          <div>
+          <VideoPlayer id="jnYYrdX1F0k" />
+          <h4><p className={s.headers}>{t("search.rifled-weapons.vdes5")}</p></h4>
+          </div>
         </div>
       </div>
     </>

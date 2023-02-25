@@ -50,8 +50,12 @@ let Info = (props) => {
                 sources: i18next.t(`search.${title}.sources`, {
                   returnObjects: true,
                 }),
+                titles:i18next.t(`forms.sources_form`, {
+                  returnObjects: true,
+                }),
               });
             }}
+
           />
         </Tooltip>
       </div>

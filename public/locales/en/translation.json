@@ -109,6 +109,13 @@
     "edit_page": "Suggest editing",
     "sources_but": "Sources"
   },
+  "forms":{
+    "sources_form":{
+      "sources":"Source",
+      "author":"Author"
+    },
+    "search":"Library search"
+  },
   "search": {
     "weapons": {
       "title": "Weapons",
@@ -200,26 +207,23 @@
       "ides7": "Button rifling",
       "ides8": "Grooving by cold forging ",
       "ides9": "Machine for rotary cold forging of trunks ",
+      "vdes1":"The principle of operation of a rifled barrel",
+      "vdes2":"What is a twist",
+      "vdes3":"Cut rifling method",
+      "vdes4":"Button rifling method",
+      "vdes5":"Hammer forging method",
       "sources": [
         {
-          "name": "name_1",
-          "site": "site_1",
-          "author": "author_1"
+          "site": "wikipedia.org",
+          "author": "Wikipedia"
         },
         {
-          "name": "name_2",
-          "site": "site_2",
-          "author": "author_2"
+          "site": "gunmag.com.ua",
+          "author": "Taras Oleinik"
         },
         {
-          "name": "name_3",
-          "site": "site_3",
-          "author": "author_3"
-        },
-        {
-          "name": "name_4",
-          "site": "site_4",
-          "author": "author_4"
+          "site": "The art of the sniper",
+          "author": "Alexey Potapov"
         }
       ]
     }
