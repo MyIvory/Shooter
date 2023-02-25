@@ -5,3 +5,9 @@
     height: 70%;
     overflow: hidden;
 }
+@media (max-width:600px) {
+    .main {
+        top:180px;
+        height: 75%;
+    }  
+}

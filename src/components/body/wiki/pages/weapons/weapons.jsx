@@ -8,7 +8,6 @@ const Weapons = (props) => {
   return (
     <>
       <div className={s.main}>
-        <h1>{t("search.weapons.title")}</h1>
         <div className={s.block}>
           <p>{toStrong(t("search.weapons.p1"), 1)}</p>
           <p>{t("search.weapons.p2")}</p>

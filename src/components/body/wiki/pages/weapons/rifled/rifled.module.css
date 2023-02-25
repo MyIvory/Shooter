@@ -16,33 +16,55 @@
     width: 100%;
     display: inline-block;
 }
+.block p{
+    margin:0 0 20px 0;
+}
 .main::-webkit-scrollbar-thumb {
     background-color: #e01e14;
     box-shadow: 0 0 30px white,
 
 }
 
-.img {
-    margin: 20px;
-}
-
-.img_des{
+.img_des h4{
     text-align: center;
+    margin: 5px;
 }
 .headers{
     text-align: center;
+}
+.groupImg{
+    width:auto;
 }
 
 @media (max-width:600px) {
     .main {
         height: 80%;
         padding: 5px;
-        
+        margin: auto;
     }
     .main ul{
         padding: 0;
     }
-    .img {
+     .antImg {
         margin: 0;
+        padding: 0;
+        width: 100%;
+    } 
+    .img{
+        width: auto !important;
     }
+    .block p{
+        padding: 0 5px 0 5px;
+        margin:20px 0 20px 0;
+    }
+    .groupImg{
+        margin: 0;
+        width:100%;   
+    }
+    .groupImg div{
+        width: 100%;
+        display: flex;
+        justify-content:space-around;
+    }
+    
 }
