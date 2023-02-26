@@ -18,17 +18,19 @@ import { useEffect, useState } from "react";
 import SourcesModal from "../../../../elements/sources_modal/sources_modal";
 import { clickEdit } from "../../../../redux/reducers/wiki_reduser";
 import i18next from "i18next";
+import EditModal from "../../../../elements/edit_modal/edit_modal";
 
 let Info = (props) => {
   const { t } = useTranslation();
   const location = useLocation();
   const [title, setTitle] = useState("");
-  const [sourcesObj, setSourchesObj] = useState({});
+  const [isModalOpen, setIsModalOpen] = useState(false);
   useEffect(() => {
     setTitle(location.pathname.split("/").pop());
   }, [location]);
   return (
     <div className={s.main}>
+      <EditModal isModalOpen = {isModalOpen} closeModal ={()=>setIsModalOpen(false)} />
       <div className={s.header}>
         <span className={s.title}>
           {title === "wiki" ? "" : t(`search.${title}.title`)}
@@ -38,7 +40,7 @@ let Info = (props) => {
           <EditOutlined
             className={s.edit_but}
             style={{ fontSize: 32 }}
-            onClick={clickEdit}
+            onClick={()=>{setIsModalOpen(true)}}
           />
         </Tooltip>
         <Tooltip title={t("buttons.sources_but")} placement="topLeft">
@@ -50,7 +52,7 @@ let Info = (props) => {
                 sources: i18next.t(`search.${title}.sources`, {
                   returnObjects: true,
                 }),
-                titles:i18next.t(`forms.sources_form`, {
+                titles: i18next.t(`forms.sources_form`, {
                   returnObjects: true,
                 }),
               });

@@ -15,16 +15,16 @@ const SourcesModal = (props) => {
     },
   ];
 
-  const data = props.sources.reduce((acum, item, index) => {
+  const data = typeof props.sources==="object"? props.sources.reduce((acum, item, index) => {
     acum[index] = {
       key: index,
       site: item.site,
       author: item.author,
     };
     return acum
-  }, []);
+  }, []):[]
   return Modal.info({
-    title: "Vertically centered modal dialog",
+    title:<div style={{textAlign:"center",fontSize:20}}>{props.titles.title.toUpperCase()}</div>,
     width: window.screen.width < 600 ? "100%" : 700,
     content: <Table columns={columns} dataSource={data} />,
     onOk: () => console.log("OK"),

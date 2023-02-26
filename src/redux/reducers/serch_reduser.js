@@ -4,12 +4,14 @@ const SET_FOUND = "SET_FOUND"
 
 let searchReduser = (state = [], action)=>{
     switch (action.type) {
-        case SET_FOUND:            
-            state = action.obj
-            break
-    }
-    return state
-
+        case SET_FOUND:
+          return action.obj.map(item => {
+            let text = item.text.split("/s").join("");
+            return { ...item, text };
+          });
+        default:
+          return state;
+      }
 }
 export default searchReduser
 

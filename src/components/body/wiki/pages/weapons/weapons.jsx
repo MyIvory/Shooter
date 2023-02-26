@@ -9,7 +9,7 @@ const Weapons = (props) => {
     <>
       <div className={s.main}>
         <div className={s.block}>
-          <p>{toStrong(t("search.weapons.p1"), 1)}</p>
+          <p>{toStrong(t("search.weapons.p1"), 0)}</p>
           <p>{t("search.weapons.p2")}</p>
         </div>
         <p>{t("search.weapons.l1h")}</p>

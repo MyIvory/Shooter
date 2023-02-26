@@ -16,13 +16,13 @@ const SearchField = (props) => {
   const [saerchTern, setSearchTern] = useState("");
   const [translate, setTranslate] = useState([]);
   const ft = translate.filter((item) => {
-    return item.text.toLowerCase().includes(saerchTern.toLowerCase());
+    return item.text.toLowerCase().split("/s").join("").includes(saerchTern.toLowerCase());
   });
   useEffect(() => {
     if (ft.length > 0) {
       props.updateState(ft)     
     } else {
-      props.updateState([{ text: "Not found" }])
+      props.updateState([{ text: t("forms.not_found") }])
     }
   }, [saerchTern])
   return (
@@ -32,13 +32,13 @@ const SearchField = (props) => {
         id="input_search_field"
         className={s.input}
         autoComplete="off"
-        placeholder="Search in Wiki"
+        placeholder={t("forms.search")}
         value={saerchTern}
         onChange={(e) => {
           setSearchTern(e.target.value);
           navigate("/wiki/search-result/");
           if (e.target.value === "") {
-            setTranslate([{ text: "Input search" }]);
+            setTranslate([{ text: t("forms.input_search") }]);
           } else {
             setTranslate(
               cloneObj(t("search", { returnObjects: true }), e.target.value)
@@ -51,7 +51,7 @@ const SearchField = (props) => {
           className={s.icon}
           onClick={() => {
             setSearchTern("");
-            setTranslate([{ text: "Input search" }]);
+            setTranslate([{ text: t("forms.input_search") }]);
           }}
         />
       </motion.div>
@@ -64,7 +64,8 @@ function cloneObj(obj, sub) {
   let cloneArr = [];
   for (let key in obj) {
     for (let k in obj[key]) {
-      if (k !== "title") {
+      console.log()
+      if (k !== "title" && typeof obj[key][k] ==="string" ) {
         cloneArr.push({
           category: key,
           sub: sub,

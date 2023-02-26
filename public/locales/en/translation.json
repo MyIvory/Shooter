@@ -111,10 +111,13 @@
   },
   "forms":{
     "sources_form":{
+      "title":"Sources",
       "sources":"Source",
       "author":"Author"
     },
-    "search":"Library search"
+    "search":"Library search",
+    "input_search":"Start entering text for search",
+    "not_found":"Nothing found"
   },
   "search": {
     "weapons": {
