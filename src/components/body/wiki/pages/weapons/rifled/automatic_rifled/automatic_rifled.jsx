@@ -6,7 +6,7 @@ const AutomaticRifled = props => {
     return (
         <div>
             <h1>AutomaticRifled</h1>
-            <Shield/>
+            
         </div>
     );
 };

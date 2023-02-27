@@ -14,23 +14,27 @@ import s from "./info.module.css";
 import { useTranslation } from "react-i18next";
 import SearchContainer from "../../../header/controls/search/searchContainer";
 import { EditOutlined, InfoCircleOutlined } from "@ant-design/icons";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import SourcesModal from "../../../../elements/sources_modal/sources_modal";
 import { clickEdit } from "../../../../redux/reducers/wiki_reduser";
 import i18next from "i18next";
 import EditModal from "../../../../elements/edit_modal/edit_modal";
+import HomeWiki from "../pages/home_wiki/home_wiki";
 
 let Info = (props) => {
   const { t } = useTranslation();
   const location = useLocation();
   const [title, setTitle] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const ref1 = useRef(null)
   useEffect(() => {
     setTitle(location.pathname.split("/").pop());
   }, [location]);
   return (
     <div className={s.main}>
-      <EditModal isModalOpen = {isModalOpen} closeModal ={()=>setIsModalOpen(false)} />
+      <EditModal isModalOpen={isModalOpen} closeModal={() => setIsModalOpen(false)} data={i18next.t(`forms.sources_form`, {
+        returnObjects: true,
+      })} />
       <div className={s.header}>
         <span className={s.title}>
           {title === "wiki" ? "" : t(`search.${title}.title`)}
@@ -40,7 +44,7 @@ let Info = (props) => {
           <EditOutlined
             className={s.edit_but}
             style={{ fontSize: 32 }}
-            onClick={()=>{setIsModalOpen(true)}}
+            onClick={() => { setIsModalOpen(true) }}
           />
         </Tooltip>
         <Tooltip title={t("buttons.sources_but")} placement="topLeft">
@@ -63,7 +67,7 @@ let Info = (props) => {
       </div>
       <div className={s.info}>
         <Routes>
-          <Route path="/" element={<Weapons />} />
+          <Route path="/" element={<HomeWiki/>} />
           <Route index path="weapons/" element={<Weapons />} />
           <Route path="rifled-weapons" element={<WeaponsRifled />} />
           <Route path="rifled-bolt" element={<WeaponsRifledBolt />} />

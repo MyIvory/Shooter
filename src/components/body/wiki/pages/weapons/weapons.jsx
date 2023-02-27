@@ -10,11 +10,11 @@ const Weapons = (props) => {
       <div className={s.main}>
         <div className={s.block}>
           <p>{toStrong(t("search.weapons.p1"), 0)}</p>
-          <p>{t("search.weapons.p2")}</p>
+          <p>{toStrong(t("search.weapons.p2"), 1,2,3)}</p>
         </div>
         <p>{t("search.weapons.l1h")}</p>
         <div className={s.block}>
-          <div className={s.img} style={{ float: 'right' }}>тз
+          <div className={s.img} style={{ float: 'right' }}>
             <Image width={350} src="/img/pages/weapons/w2.jpg" />
           </div>
 
@@ -28,8 +28,8 @@ const Weapons = (props) => {
           <div className={s.img} style={{ float: "left" }}>
             <Image width={350} src="/img/pages/weapons/w1.jpg" />
           </div>
-          <p>{t("search.weapons.p3")}</p>
-          <p>{t("search.weapons.p4")}</p>
+          <p>{toStrong(t("search.weapons.p3"), 0)}</p>
+          <p>{toStrong(t("search.weapons.p4"), 0)}</p>
         </div>
         <div className={s.block}>
           <p>{t("search.weapons.l2h")}</p>
@@ -37,15 +37,15 @@ const Weapons = (props) => {
             <Image width={350} src="/img/pages/weapons/w3.jpg" />
           </div>
           <ul>
-            <li>{t("search.weapons.l2p1")}</li>
-            <li>{t("search.weapons.l2p2")}</li>
-            <li>{t("search.weapons.l2p3")}</li>
-            <li>{t("search.weapons.l2p4")}</li>
-            <li>{t("search.weapons.l2p5")}</li>
-            <li>{t("search.weapons.l2p6")}</li>
-            <li>{t("search.weapons.l2p7")}</li>
-            <li>{t("search.weapons.l2p8")}</li>
-            <li>{t("search.weapons.l2p9")}</li>
+            <li>{toStrong(t("search.weapons.l2p1"),0)}</li>
+            <li>{toStrong(t("search.weapons.l2p2"),0)}</li>
+            <li>{toStrong(t("search.weapons.l2p3"),0)}</li>
+            <li>{toStrong(t("search.weapons.l2p4"),0)}</li>
+            <li>{toStrong(t("search.weapons.l2p5"),0)}</li>
+            <li>{toStrong(t("search.weapons.l2p6"),0)}</li>
+            <li>{toStrong(t("search.weapons.l2p7"),0)}</li>
+            <li>{toStrong(t("search.weapons.l2p8"),0)}</li>
+            <li>{toStrong(t("search.weapons.l2p9"),0)}</li>
           </ul>
         </div>
       </div>
