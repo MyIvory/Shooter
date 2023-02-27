@@ -125,6 +125,14 @@
     "input_search":"Start entering text for search",
     "not_found":"Nothing found"
   },
+  "home_page":{
+    "p1":"Welcome to the online library about weapons!",
+    "p2":"Our library provides a wide selection of articles on various types of weapons, their history, technology, and application. Whether you are a novice in the world of weapons or an expert, we are ready to provide information that will help you expand your knowledge.",
+    "p3":"We offer a broad range of articles covering various aspects of weapons, including history, technology, application, as well as specific types of weapons such as firearms, combat knives, ammunition, and much more. We have collected articles written by experts in their field, offering readers engaging and informative stories.",
+    "p4":"We strive to provide our readers with the most up-to-date and accurate information. Our articles are regularly updated to reflect the latest technological advancements in this field. We also work with authors to provide exclusive content only available in our library",
+    "p5":"We aim to provide high-quality content about weapons to our readers for free. However, to maintain and develop our project, we need your help. Our library is open to everyone, and we are proud to provide free access to our collection of articles. We hope our articles will help you expand your knowledge of weapons and bring new ideas and ideals into your life. If you value our work and want us to continue adding new articles and improving our content, please support us. There are many ways to help: you can share a link to our library with your friends, leave a review or recommendation, and make a donation to our project. We will be very grateful for any help you can provide and promise to continue sharing our knowledge about weapons with you.",
+    "qr_link":"Link to Monobank"
+  },
   "search": {
     "weapons": {
       "title": "Weapons",

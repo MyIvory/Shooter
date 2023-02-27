@@ -1,24 +1,74 @@
-.main{
-    height: 70vh;
-    overflow: scroll;
-    width: 80%;
-    margin: auto;
-     -ms-overflow-style: none;
-    scrollbar-width: 5px;background-color: rgba(255,255,255,0.5)
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:wght@300;400;600;800&display=swap');
+
+.main {
+   height: 65vh;
+   overflow: scroll;
+   max-width: 1000px;
+   min-width: 600px;
+   margin: auto;
+   padding: 10px 20px 10px 20px;
+   font-size: 18px;
+   font-family: 'Inter', sans-serif;
+   font-weight: 500;
+   -ms-overflow-style: none;
+   scrollbar-width: 5px;
+   background-color: rgba(255, 255, 255, 0.8)
 }
-.main::-webkit-scrollbar{
-    width: 5px;
-    height: 0px;
-    
- }
- .main::-webkit-scrollbar-thumb{
-    background-color: #e01e14;
-    box-shadow:  0 0 30px white,
-    
- }
- @media (max-width:600px) {
-    .main {
-       width: 90%;
-    }
+
+.main::-webkit-scrollbar {
+   width: 5px;
+   height: 0px;
+
+}
+
+.main::-webkit-scrollbar-thumb {
+   background-color: #e01e14;
+   box-shadow: 0 0 30px white,
+
+}
+
+.text h1 {
+   text-align: center;
+}
+
+.mono {
+   display: flex;
+   justify-content: center;
+   grid-area: mono;
+}
+
+.paypal {
+   display: flex;
+   justify-content: center;
+   grid-area: paypal;
+}
+
+.qr {
+   display: grid;
+   grid-template-areas:
+      "mono paypal"
+   ;
+   grid-template-columns: 1fr 1fr;
+}
+
+.qr h4 {
+   margin-bottom: 0;
+   text-align: center;
+}
+
+@media (max-width:600px) {
+   .main {
+      width: 90%;
+      min-width: 0;
+   }
+
+   .qr {
+      grid-template-areas:
+         "mono"
+         "paypal"
+      ;
+      grid-template-columns: 1fr;
+   }
 
 }
