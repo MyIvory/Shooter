@@ -1,0 +1,17 @@
+.main{
+    padding: 10px 30px 10px 30px;
+    width: auto;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    height: 90%;
+}
+.main::-webkit-scrollbar {
+    width: 5px;
+    height: 0px;
+
+}
+.main::-webkit-scrollbar-thumb {
+    background-color: #e01e14;
+    box-shadow: 0 0 30px white,
+
+}

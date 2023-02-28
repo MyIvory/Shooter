@@ -1,11 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:wght@300;400;600;800&display=swap');
 
 .main {
     padding: 10px 30px 10px 30px;
     width: auto;
     overflow: scroll;
-    font-size: 18px;
-    font-family: 'Inter', sans-serif;
     -ms-overflow-style: none;
     height: 90%;
     display: grid;
@@ -14,6 +11,11 @@
 .main::-webkit-scrollbar {
     width: 5px;
     height: 0px;
+
+}
+.main::-webkit-scrollbar-thumb {
+    background-color: #e01e14;
+    box-shadow: 0 0 30px white,
 
 }
 
@@ -30,11 +32,6 @@
     margin-top: 0;
 }
 
-.main::-webkit-scrollbar-thumb {
-    background-color: #e01e14;
-    box-shadow: 0 0 30px white,
-
-}
 
 .img_des h4 {
     text-align: center;

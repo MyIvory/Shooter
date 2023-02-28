@@ -6,57 +6,78 @@ import { Button, Divider, Image } from "antd";
 const Weapons = (props) => {
   const { t } = useTranslation();
   return (
-    <>
-      <div className={s.main}>
-        <div className={s.block}>
-          <p>{toStrong(t("search.weapons.p1"), 0)}</p>
-          <p>{toStrong(t("search.weapons.p2"), 1,2,3)}</p>
-        </div>
-        <p>{t("search.weapons.l1h")}</p>
-        <div className={s.block}>
-          <div className={s.img} style={{ float: 'right' }}>
-            <Image width={350} src="/img/pages/weapons/w2.jpg" />
-          </div>
-
-           <ul>
-             <li>{toStrong(t("search.weapons.l1p1"),0)}</li>
-            <li>{toStrong(t("search.weapons.l1p2"),0)}</li>
-            <li>{toStrong(t("search.weapons.l1p3"),0)}</li> 
-          </ul> 
-        </div>
-        <div className={s.block}>
-          <div className={s.img} style={{ float: "left" }}>
-            <Image width={350} src="/img/pages/weapons/w1.jpg" />
-          </div>
-          <p>{toStrong(t("search.weapons.p3"), 0)}</p>
-          <p>{toStrong(t("search.weapons.p4"), 0)}</p>
-        </div>
-        <div className={s.block}>
-          <p>{t("search.weapons.l2h")}</p>
-          <div className={s.img} style={{ float: "right" }}>
-            <Image width={350} src="/img/pages/weapons/w3.jpg" />
-          </div>
-          <ul>
-            <li>{toStrong(t("search.weapons.l2p1"),0)}</li>
-            <li>{toStrong(t("search.weapons.l2p2"),0)}</li>
-            <li>{toStrong(t("search.weapons.l2p3"),0)}</li>
-            <li>{toStrong(t("search.weapons.l2p4"),0)}</li>
-            <li>{toStrong(t("search.weapons.l2p5"),0)}</li>
-            <li>{toStrong(t("search.weapons.l2p6"),0)}</li>
-            <li>{toStrong(t("search.weapons.l2p7"),0)}</li>
-            <li>{toStrong(t("search.weapons.l2p8"),0)}</li>
-            <li>{toStrong(t("search.weapons.l2p9"),0)}</li>
-          </ul>
-        </div>
+    <div className={s.main}>
+      <div className={s.block}>
+        <figure className={s.img} style={{ float: "left", width: 350 }}>
+          <Image
+            className={s.antImg}
+            src="/img/pages/weapons/w1.jpg"
+            alt={t("search.weapons.ides0")}
+          />
+        </figure>
+        <p>{t("search.weapons.p1")}</p>
+        <p>{t("search.weapons.p2")}</p>
       </div>
-    </>
+      <div className={s.block}>
+        <p>{t("search.weapons.p3")}</p>
+        <p>
+          <strong>{t("search.weapons.l1h")}</strong>
+        </p>
+        <ol>
+          <li>{t("search.weapons.l1p1")}</li>
+          <li>{t("search.weapons.l1p2")}</li>
+          <li>{t("search.weapons.l1p3")}</li>
+        </ol>
+
+        <p>
+          <strong>{t("search.weapons.l2h")}</strong>
+        </p>
+        <ol>
+          <li>{t("search.weapons.l2p1")}</li>
+          <li>{t("search.weapons.l2p2")}</li>
+          <li>{t("search.weapons.l2p3")}</li>
+          <li>{t("search.weapons.l2p4")}</li>
+          <li>{t("search.weapons.l2p5")}</li>
+        </ol>
+        <p>
+          <strong>{t("search.weapons.l3h")}</strong>
+        </p>
+        <ol>
+          <li>{t("search.weapons.l3p1")}</li>
+          <li>{t("search.weapons.l3p2")}</li>
+        </ol>
+        <p>{t("search.weapons.p4")}</p>
+      </div>
+      <div className={s.block}>
+        <p>
+          <strong>{t("search.weapons.l4h")}</strong>
+        </p>
+        <ol>
+          <li>{t("search.weapons.l4p1")}</li>
+          <li>{t("search.weapons.l4p2")}</li>
+          <li>{t("search.weapons.l4p3")}</li>
+          <li>{t("search.weapons.l4p4")}</li>
+          <li>{t("search.weapons.l4p5")}</li>
+        </ol>
+        <p>
+          <strong>{t("search.weapons.l5h")}</strong>
+        </p>
+        <ol>
+          <li>{t("search.weapons.l5p1")}</li>
+          <li>{t("search.weapons.l5p2")}</li>
+          <li>{t("search.weapons.l5p3")}</li>  
+          <li>{t("search.weapons.l5p4")}</li>        
+        </ol>
+        <p>{t("search.weapons.p5")}</p>
+      </div>
+    </div>
   );
 };
 
 export default Weapons;
 
 function toStrong(str, ...indexs) {
-  return str.split("/s").map((item,index) => {
-   return indexs.includes(index)?<strong>{item}</strong>:item
-  })
+  return str.split("/s").map((item, index) => {
+    return indexs.includes(index) ? <strong>{item}</strong> : item;
+  });
 }

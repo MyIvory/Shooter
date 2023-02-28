@@ -470,7 +470,6 @@ const LeftMenu = (props) => {
       }
     }
     const latestOpenKey = keys.find((key) => openKeys.indexOf(key) === -1);
-    console.log(submenuLevels)
     //----------------------
     // loop1: for (let i = 0; i < submenuLevels.length; i++) {
     //   if (submenuLevels[i].indexOf(latestOpenKey) === -1) {
