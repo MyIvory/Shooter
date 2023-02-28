@@ -237,14 +237,6 @@ const WeaponsRifled = (props) => {
           </figure>
 
           <p>{t("search.rifled-weapons.p54")}</p>
-          {/* <figure className={s.img} style={{ float: "right", width: 250 }}>
-            <Image className={s.antImg}
-
-              src="/img/pages/rifled_weapons/rw14.jpg"
-              alt={t("search.rifled-weapons.ides9")}
-            />
-            <figcaption className={s.img_des}><h4>{t("search.rifled-weapons.ides9")}</h4></figcaption>
-          </figure> */}
           <p>{t("search.rifled-weapons.p55")}</p>
           <div>
           <VideoPlayer id="jnYYrdX1F0k" />
