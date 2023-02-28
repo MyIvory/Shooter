@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:wght@300;400;600;800&display=swap');
 
 .main {
-   height: 65vh;
+   height: 100%;
    overflow: scroll;
    max-width: 1000px;
    min-width: 600px;
