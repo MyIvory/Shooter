@@ -52,7 +52,7 @@ const WeaponsRifled = (props) => {
           <p>{t("search.rifled-weapons.p3")}</p>
           <p>{t("search.rifled-weapons.p4")}</p>
           <p>{t("search.rifled-weapons.p5")}</p>
-          <div>
+          <div className={s.video}>
             <VideoPlayer id="M8ODXkYaJo8" />
             <h4><p className={s.headers}>{t("search.rifled-weapons.vdes1")}</p></h4>
           </div>
@@ -192,7 +192,7 @@ const WeaponsRifled = (props) => {
           <p>{toStrong(t("search.rifled-weapons.p37"), 0)}</p>
           <p>{t("search.rifled-weapons.p39")}</p>
           <p>{t("search.rifled-weapons.p40")}</p>
-          <div>
+          <div className={s.video}>
             <VideoPlayer id="ZxdUrDic8nc" />
             <h4><p className={s.headers}>{t("search.rifled-weapons.vdes2")}</p></h4>
           </div>
@@ -217,7 +217,7 @@ const WeaponsRifled = (props) => {
           <p>{toStrong(t("search.rifled-weapons.p45"), 1)}</p>
           <p>{t("search.rifled-weapons.p46")}</p>
           <p>{t("search.rifled-weapons.p47")}</p>
-          <div>
+          <div className={s.video}>
             <VideoPlayer id="exxiDfzoRC0" />
             <h4><p className={s.headers}>{t("search.rifled-weapons.vdes3")}</p></h4>
           </div>
@@ -235,7 +235,7 @@ const WeaponsRifled = (props) => {
           <p>{t("search.rifled-weapons.p50")}</p>
           <p>{t("search.rifled-weapons.p51")}</p>
           <p>{t("search.rifled-weapons.p52")}</p>
-          <div>
+          <div className={s.video}>
             <VideoPlayer id="VsWfeIc92dE" />
             <h4><p className={s.headers}>{t("search.rifled-weapons.vdes4")}</p></h4>
           </div>
@@ -253,7 +253,7 @@ const WeaponsRifled = (props) => {
 
           <p>{t("search.rifled-weapons.p54")}</p>
           <p>{t("search.rifled-weapons.p55")}</p>
-          <div>
+          <div className={s.video}>
           <VideoPlayer id="jnYYrdX1F0k" />
           <h4><p className={s.headers}>{t("search.rifled-weapons.vdes5")}</p></h4>
           </div>

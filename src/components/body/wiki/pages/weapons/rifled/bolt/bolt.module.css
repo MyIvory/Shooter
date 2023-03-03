@@ -13,20 +13,40 @@
     height: 0px;
 
 }
-
 .main::-webkit-scrollbar-thumb {
     background-color: #e01e14;
     box-shadow: 0 0 30px white,
 
 }
-
-
-
-.img {
-    margin: 20px;
+.video{
+    margin:30px 0 30px 0;
 }
-.block{
-    margin-bottom: 20px;
+.block {
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.block p {
+    margin: 5px;;
+}
+
+.block h4 {
+    margin-top: 0;
+}
+
+
+.img_des h4 {
+    text-align: center;
+    margin: 5px;
+}
+
+.headers {
+    text-align: center;
+}
+
+.groupImg {
+    width: auto;
 }
 
 @media (max-width:600px) {
@@ -53,6 +73,17 @@
     .block p {
         padding: 0 5px 0 5px;
         margin: 20px 0 20px 0;
+    }
+
+    .groupImg {
+        margin: 0;
+        width: 100%;
+    }
+
+    .groupImg div {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
     }
 
 }

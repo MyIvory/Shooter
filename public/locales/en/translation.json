@@ -271,6 +271,31 @@
           "author": "Alexey Potapov"
         }
       ]
+    },
+    "rifled-bolt": {
+      "title": "Bolt action",
+      "h1": "The structure and principle of operation of a bolted gate",
+      "p1": "Bolt-action rifles are rifles with a longitudinally-sliding bolt of direct or rotating locking.",
+      "p2": "The longitudinally-sliding bolt is a mechanism that opens and closes the barrel channel by the linear translational movement of the bolt along the axis of the barrel.",
+      "p3": "Not all rifles with longitudinally-sliding bolts are considered bolt-action rifles, for example, rifles with the Henry system have a longitudinally-sliding bolt with a crank-slider locking mechanism. There are rifles with longitudinally-sliding bolts capable of automatic and semi-automatic fire. For example, the Swiss SIG SG 550 assault rifle or the well-known Kalashnikov assault rifle",
+      "p4": "The main criterion for determining a bolt-action rifle is precisely the presence of the bolt - the bolt with which the shooter interacts manually.",
+      "p5": "The bolt-action rifle was invented in the late 19th century and was the result of a long process of development in rifle technology that began in the 17th century.",
+      "p6": "The first rifles were relatively simple and had a slow rate of fire. However, during the American Civil War and the Franco-Prussian War in the mid-19th century, more complex firing systems began to emerge, such as improved rifles with miniature bolts.",
+      "p7": "In 1885, German gunsmith Paul Mauser created a bolt-action rifle that was adopted by the German army and named the Mauser Gewehr 98. It was so successful that it became one of the most famous rifles in history.",
+      "p8": "The Mauser rifle was equipped with a longitudinally-sliding bolt that allowed the shooter to quickly and easily prepare for the next shot. The bolt also provided reliable protection against dirt and dust entering the mechanism, making the rifle reliable in extreme conditions.",
+      "p9": "Later, bolt-action rifles were adopted by many armies around the world. They were used during the First and Second World Wars, as well as in other armed conflicts.",
+      "p10": "The bolt is opened by turning it upwards around its axis using the bolt handle. At this moment, the striker spring of the internal mechanism located inside the bolt is cocked, and the bolt lugs come out of the corresponding notches in the receiver, unlocking the barrel channel. The bolt is then manually pulled back along the barrel channel, extracting the spent cartridge case held by the extractor in the bolt head. At the end of the bolt's stroke, the ejector is actuated, ejecting the spent case. During the forward stroke, the bolt's front part, also called the bolt body, picks up a new cartridge from the magazine and feeds it into the chamber. The shooter then turns the bolt down, fixing the cartridge in the bolt head and chamber and engaging the bolt lugs in the receiver notches, closing the barrel channel. When the trigger is pulled, the striker spring is released, causing the firing pin to move along the bolt shank. The firing pin strikes the primer through a hole in the bolt face, igniting the powder and firing the round.",
+      "p11": "As can be seen, a whole series of complex processes takes place with each reciprocating motion performed by the shooter.",
+      "p12": "A straight-pull bolt action does not require the shooter to rotate the bolt to open or close the barrel channel. To complete the full cycle, the shooter only needs to move the bolt along the barrel channel. The bolt rotation occurs automatically through its sliding movement in an inclined groove. These systems are more complex but have several advantages over systems with rotating locks. The main advantage is the quick return to the aiming point after reloading compared to rotating bolt actions, where manual rotation of the bolt can significantly move the barrel channel aside. As a result, it is possible to conduct more intense fire while retaining all the advantages of a bolt-action rifle. Such systems are widely used in Blaser rifles.",
+      "p13": "Bolt-action rifles are currently the most accurate among all firearms. This is achieved through the consistent placement of the cartridge in the chamber from shot to shot, as well as the absence of powder gas breakthroughs in the barrel chamber. Powerful bolt action supports allow for greater pressure during firing, and as a result, the use of larger calibers. Such weapons are also much simpler in design and, therefore, much more reliable than automatic or semi-automatic weapons. Manufacturing and maintaining bolt-action rifles is also much simpler.",
+      "p14": "The main drawback of bolt-action rifles is their rate of fire. All bolt-action rifles can only fire single shots. Also, the return to the aiming point of bolt-action rifles is much slower than that of semi-automatics due to the need for manual reloading after each shot. The need to structurally ensure a large longitudinal stroke of the bolt - not less than the length of the cartridge - leads to an increase in the overall length of the barrel chamber, and therefore, the weapon as a whole, an increase in weight, and metal consumption.",
+      "p15":"Bolt-action rifles are widely used in hunting, precision shooting sports, as well as by police and military snipers.",
+      "ides1":"Bolt Action Rifle",
+      "ides2":"Henry rifle",
+      "ides3":"Rifle Mauser Gewehr 98",
+      "ides4":"Turning latch lock (bolt)",
+      "vdes1":"The principle of operation of the rotating bolt action lock using the example of the Karabiner 98k rifle",
+      "vdes2":"The principle of operation of a direct locking bolt action on the example of a rifle Beretta BRX1"
     }
   }
 }
