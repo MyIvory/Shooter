@@ -1,10 +1,9 @@
-import { Button, Input, message, Modal } from 'antd';
-import $ from "jquery"
-import { useTranslation } from 'react-i18next';
-import { useLocation } from 'react-router-dom';
+import { Button, Input, message, Modal } from "antd";
+import $ from "jquery";
+import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 
 const { TextArea } = Input;
-
 
 const EditModal = (props) => {
     const { t } = useTranslation();
