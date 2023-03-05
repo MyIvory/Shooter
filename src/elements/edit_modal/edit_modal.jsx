@@ -11,7 +11,7 @@ const EditModal = (props) => {
     const loc = useLocation()
     return (
         <>
-            <Modal title={`${props.data.header} ${ t(`search.${loc.pathname.split("/").pop()}.title`)}`}
+            <Modal title={`${props.data.header} ${t(`search.${loc.pathname.split("/").pop()}.title`)}`}
                 open={props.isModalOpen}
                 closable={false}
                 footer={[
@@ -27,12 +27,25 @@ const EditModal = (props) => {
                         key="send"
                         type="primary"
                         onClick={() => {
-                            let val = $("#edit_text_area").val()                         
+                            let val = $("#edit_text_area").val()
                             if (val) {
-                                console.log(`SEND_MESSAGE->${val}`)  
-                                props.closeModal()
-                                message.info(props.data.message_ok)
-                            }else{
+                                $.ajax({
+                                    type: "POST",
+                                    url: "/backend/send_mail.php",
+                                    data: {
+                                        message: val,
+                                        page: t(`search.${loc.pathname.split("/").pop()}.title`)
+                                    },
+                                    success: function (data) {
+                                        if (data === "OK") {
+                                            props.closeModal()
+                                            message.info(props.data.message_ok)
+                                        } else {
+                                            message.error("Error send mail")
+                                        }
+                                    }
+                                })
+                            } else {
                                 message.info(props.data.message_fail)
                             }
 
@@ -47,5 +60,5 @@ const EditModal = (props) => {
         </>
     )
 }
-
+//step
 export default EditModal;
