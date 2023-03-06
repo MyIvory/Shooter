@@ -291,6 +291,20 @@
         }
       ]
     },
+    "nonautomatic-rifled":{
+      "title":"Non automatic rifled weapons",
+      "p1":"These days, automatic firearms are becoming increasingly common. However, there is also non-automatic firearms, which can be an interesting choice for those looking for more traditional options.",
+      "p2":"Non-automatic firearms require manual reloading after each shot. However, this also means that the shooter can control the number of shots and the accuracy of each shot.",
+      "p3":"Thanks to its design, non-automatic firearms are more accurate and therefore more effective at longer distances. In addition, thanks to the breechblock design, non-automatic firearms can use larger calibers.",
+      "p4":"It should be noted that non-automatic firearms are simpler in design, cheaper and easier to manufacture, which affects their cost. They are also easier to maintain.",
+      "p5":"There are currently many different types of non-automatic firearms, including rifles, pistols, sniper rifles, and others. Each type of weapon has its own characteristics, and the choice depends on personal preferences and tasks.",
+      "p6":"In addition, using non-automatic firearms can be safer, as the control over the weapon is more simple and accurate. This can be especially important when using firearms for hunting or sports events.",
+      "p7":"The topic of non-automatic firearms is vast. We have divided it into the following categories, which we invite you to explore in detail:",
+      "l1":"Bolt-action",
+      "l2":"Lever-action",
+      "l3":"Break-action",
+      "l4":"Revolver-action"
+    },   
     "rifled-bolt-action": {
       "title": "Bolt action",
       "h1": "The structure and principle of operation of a bolted gate",
