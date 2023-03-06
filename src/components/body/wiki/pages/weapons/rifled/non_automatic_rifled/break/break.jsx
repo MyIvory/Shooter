@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SemiAutomaticRifled = props => {
+const RifledBreakAction = props => {
     return (
         <div>
-            <h1>SemiAutomaticRifled</h1>
+            <h1>RifledBreakAction</h1>
         </div>
     );
 };
 
 
-export default SemiAutomaticRifled;
+
+export default RifledBreakAction;

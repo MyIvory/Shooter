@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import s from "./bolt.module.css";
 import { useTranslation } from "react-i18next";
 import { Image } from "antd";
-import VideoPlayer from "../../../../../../../elements/youtube_player/youtube_player";
-const WeaponsRifledBolt = (props) => {
+import VideoPlayer from "../../../../../../../../elements/youtube_player/youtube_player";
+const RifledBoltAction = (props) => {
   const { t } = useTranslation();
   return (
     <div className={s.main}>
@@ -92,4 +92,4 @@ const WeaponsRifledBolt = (props) => {
   );
 };
 
-export default WeaponsRifledBolt;
+export default RifledBoltAction;

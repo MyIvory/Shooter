@@ -30,7 +30,7 @@ const LeftMenu = (props) => {
         "weapons",
         <GiAk47 style={{ fontSize: "25px" }} className={active} />,
         [
-          getItem(
+          getItem( //rifled-weapons
             <NavLink to="rifled-weapons" className={active}>
               <h4 className={s.item_level_1}>
                 {t("left_menu.weapons.rifled.title")}
@@ -39,33 +39,119 @@ const LeftMenu = (props) => {
             "rifled_weapons",
             null,
             [
-              getItem(
-                <NavLink to="rifled-bolt" className={active}>
-                  <h4 className={s.item_level_2}>
-                    {t("left_menu.weapons.rifled.bolt")}
-                  </h4>
+              getItem( //nonautomatic-rifled
+                <NavLink to="nonautomatic-rifled" className={active}>
+                  <h4 className={s.item_level_1}>{t("left_menu.weapons.rifled.nonautomatic.title")}</h4>
                 </NavLink>,
-                "bolt"
+                "na_rifled",
+                null,
+                [
+                  getItem(
+                    <NavLink to="rifled-bolt-action" className={active}>
+                      <h4 className={s.item_level_2}>{t("left_menu.weapons.rifled.nonautomatic.bolt-action")}</h4>
+                    </NavLink>,
+                    "bolt"
+                  ),
+                  getItem(
+                    <NavLink to="rifled-lever-action" className={active}>
+                      <h4 className={s.item_level_2}>{t("left_menu.weapons.rifled.nonautomatic.lever-action")}</h4>
+                    </NavLink>,
+                    "lever-action"
+                  ),
+                  getItem(
+                    <NavLink to="rifled-break-action" className={active}>
+                      <h4 className={s.item_level_2}>{t("left_menu.weapons.rifled.nonautomatic.break-action")}</h4>
+                    </NavLink>,
+                    "break-action"
+                  ),
+                  getItem(
+                    <NavLink to="revolver" className={active}>
+                      <h4 className={s.item_level_2}>{t("left_menu.weapons.rifled.nonautomatic.revolver")}</h4>
+                    </NavLink>,
+                    "revolver"
+                  ),
+                ]
               ),
-              getItem(
-                <NavLink to="rifled-semi-automatic" className={active}>
-                  <h4 className={s.item_level_2}>
-                    {t("left_menu.weapons.rifled.sa_rifle")}
+              getItem( //automatic-rifled
+                <NavLink to="automatic-rifled" className={active}>
+                  <h4 className={s.item_level_1}>
+                    {t("left_menu.weapons.rifled.automatic.title")}
                   </h4>
                 </NavLink>,
-                "sa_rifled"
-              ),
-              getItem(
-                <NavLink to="rifled-automatic" className={active}>
-                  <h4 className={s.item_level_2}>
-                    {t("left_menu.weapons.rifled.a_rifle")}
-                  </h4>
-                </NavLink>,
-                "a_rifle"
+                "a_rifled",
+                null,
+                [
+                  getItem(
+                    <NavLink to="bolt-recoil" className={active}>
+                      <h4 className={s.item_level_2}> {t("left_menu.weapons.rifled.automatic.bolt-recoil")}</h4>
+                    </NavLink>,
+                    "bolt-recoil"
+                  ),
+                  getItem(
+                    <NavLink to="barrel-recoil" className={active}>
+                      <h4 className={s.item_level_2}> {t("left_menu.weapons.rifled.automatic.barrel-recoil")}</h4>
+                    </NavLink>,
+                    "barrel-recoil"
+                  ),
+                  getItem(
+                    <NavLink to="energy-gases" className={active}>
+                      <h4 className={s.item_level_2}>{t("left_menu.weapons.rifled.automatic.energy-gases")}</h4>
+                    </NavLink>,
+                    "energy-gases"
+                  ),
+                  getItem(
+                    <NavLink to="free-bolt" className={active}>
+                      <h4 className={s.item_level_2}>{t("left_menu.weapons.rifled.automatic.free-bolt")}</h4>
+                    </NavLink>,
+                    "free-bolt"
+                  ),
+                  getItem(
+                    <NavLink to="semi-free-bolt" className={active}>
+                      <h4 className={s.item_level_2}>{t("left_menu.weapons.rifled.automatic.semi-free-bolt")}</h4>
+                    </NavLink>,
+                    "semi-free-bolt"
+                  ),
+                  getItem(
+                    <NavLink to="latch-wedge" className={active}>
+                      <h4 className={s.item_level_2}>{t("left_menu.weapons.rifled.automatic.latch-wedge")}</h4>
+                    </NavLink>,
+                    "latch-wedge"
+                  ),
+                  getItem(
+                    <NavLink to="tilting-barrel" className={active}>
+                      <h4 className={s.item_level_2}>{t("left_menu.weapons.rifled.automatic.tilting-barrel")}</h4>
+                    </NavLink>,
+                    "tilting-barrel"
+                  ),
+                  getItem(
+                    <NavLink to="tilting-bolt" className={active}>
+                      <h4 className={s.item_level_2}>{t("left_menu.weapons.rifled.automatic.tilting-bolt")}</h4>
+                    </NavLink>,
+                    "tilting-bolt"
+                  ),
+                  getItem(
+                    <NavLink to="barrel-rotation" className={active}>
+                      <h4 className={s.item_level_2}>{t("left_menu.weapons.rifled.automatic.barrel-rotation")}</h4>
+                    </NavLink>,
+                    "barrel-rotation"
+                  ),
+                  getItem(
+                    <NavLink to="lever-articulated" className={active}>
+                      <h4 className={s.item_level_2}>{t("left_menu.weapons.rifled.automatic.lever-articulated")}</h4>
+                    </NavLink>,
+                    "lever-articulated"
+                  ),
+                  getItem(
+                    <NavLink to="rotation-bolt" className={active}>
+                      <h4 className={s.item_level_2}>{t("left_menu.weapons.rifled.automatic.rotation-bolt")}</h4>
+                    </NavLink>,
+                    "rotation-bolt"
+                  ),
+                ]
               ),
             ]
           ),
-          getItem(
+          getItem( //smooth-weapons
             <NavLink to="smooth-weapons" className={active}>
               <h4 className={s.item_level_1}>
                 {t("left_menu.weapons.smooth.title")}
@@ -74,7 +160,7 @@ const LeftMenu = (props) => {
             "smooth_weapons",
             null,
             [
-              getItem(
+              getItem( 
                 <NavLink to="smooth-semi-automatic" className={active}>
                   <h4 className={s.item_level_2}>
                     {t("left_menu.weapons.smooth.sa_rifle")}
@@ -357,8 +443,14 @@ const LeftMenu = (props) => {
             "cases",
             null,
             [
-              getItem(t("left_menu.ammunition.cases.geometry"), "cases_geometry"),
-              getItem(t("left_menu.ammunition.cases.material"), "cases_material"),
+              getItem(
+                t("left_menu.ammunition.cases.geometry"),
+                "cases_geometry"
+              ),
+              getItem(
+                t("left_menu.ammunition.cases.material"),
+                "cases_material"
+              ),
             ]
           ),
           getItem(
@@ -369,7 +461,10 @@ const LeftMenu = (props) => {
             null,
             [
               getItem(t("left_menu.ammunition.primers.open"), "primers_open"),
-              getItem(t("left_menu.ammunition.primers.closed"), "primers_closed"),
+              getItem(
+                t("left_menu.ammunition.primers.closed"),
+                "primers_closed"
+              ),
             ]
           ),
           getItem(
@@ -438,7 +533,8 @@ const LeftMenu = (props) => {
           getItem("Option 20", "20"),
         ]
       ),
-    ])];
+    ]),
+  ];
 
   const submenu = {
     submenuLevel_0: ["menu"],
@@ -451,18 +547,27 @@ const LeftMenu = (props) => {
       "primers",
       "powder",
     ],
-    submenuLevel_3: ["bullets_types"],
-    submenuLevel_4: ["bullets_types_rifled", "bullets_types_smooth"],
+    submenuLevel_3: ["bullets_types", "na_rifled", "a_rifled"],
+    submenuLevel_4: [
+      "bullets_types_rifled",
+      "bullets_types_smooth",
+      "bolt",
+      "lever-action",
+      "break-action",
+      "revolver",
+    ],
     submenuLevel_5: [
       "bullets_types_smooth_caliber",
       "bullets_types_smooth_subcaliber",
       "bullets_types_smooth_paradox",
-    ]
+    ],
   };
   //!--------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-  const [openKeys, setOpenKeys] = useState(window.screen.availWidth > 600 ? ["menu"] : []);
+  const [openKeys, setOpenKeys] = useState(
+    window.screen.availWidth > 600 ? ["menu"] : []
+  );
   const onOpenChange = (keys, submenu) => {
-    const submenuLevels = []
+    const submenuLevels = [];
     for (let i = 0; i < Object.keys(submenu).length; i++) {
       const key = `submenuLevel_${i}`;
       if (key in submenu) {
@@ -499,7 +604,14 @@ const LeftMenu = (props) => {
               } else {
                 setOpenKeys(
                   latestOpenKey
-                    ? [keys[0], keys[1], keys[2], keys[3], keys[4], latestOpenKey]
+                    ? [
+                        keys[0],
+                        keys[1],
+                        keys[2],
+                        keys[3],
+                        keys[4],
+                        latestOpenKey,
+                      ]
                     : [keys[0]]
                 );
               }
@@ -512,11 +624,15 @@ const LeftMenu = (props) => {
             }
           } else {
             setOpenKeys(
-              latestOpenKey ? [keys[0], keys[1], keys[2], latestOpenKey] : [keys[0]]
+              latestOpenKey
+                ? [keys[0], keys[1], keys[2], latestOpenKey]
+                : [keys[0]]
             );
           }
         } else {
-          setOpenKeys(latestOpenKey ? [keys[0], keys[1], latestOpenKey] : [keys[0]]);
+          setOpenKeys(
+            latestOpenKey ? [keys[0], keys[1], latestOpenKey] : [keys[0]]
+          );
         }
       } else {
         setOpenKeys(latestOpenKey ? [keys[0], latestOpenKey] : [keys[0]]);
@@ -524,7 +640,6 @@ const LeftMenu = (props) => {
     } else {
       setOpenKeys(latestOpenKey ? [latestOpenKey] : [keys[0]]);
     }
-
   };
   //!---------------------------------------------------------
   const mob_menu = (
@@ -542,7 +657,6 @@ const LeftMenu = (props) => {
         color: "red",
         fontSize: "16px",
         textTransform: "uppercase",
-
       }}
     />
   );
@@ -560,7 +674,7 @@ const LeftMenu = (props) => {
       onClick={selectPage}
       openKeys={openKeys}
       onOpenChange={(keys) => onOpenChange(keys, submenu)}
-    //onOpenChange={onOpenChange}
+      //onOpenChange={onOpenChange}
     />
   );
   //!---------------------------------------------------------

@@ -59,5 +59,4 @@ const EditModal = (props) => {
         </>
     )
 }
-//step
 export default EditModal;

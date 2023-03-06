@@ -11,9 +11,28 @@
       "title": "Weapons",
       "rifled": {
         "title": "Rifled weapons",
-        "bolt": "Bolt action",
-        "sa_rifle": "Semi-automatic",
-        "a_rifle": "Automatic"
+        "automatic":{
+          "title":"Automatic",
+          "bolt-recoil":"Bolt recoil",
+          "barrel-recoil":"Barrel recoil",
+          "energy-gases":"Energy of gases",
+          "free-bolt":"Free bolt",
+          "semi-free-bolt":"Semi-free bolt",
+          "latch-wedge":"Latch or wedge",
+          "tilting-barrel":"Tilting barrel",
+          "tilting-bolt":"Tilting bolt",
+          "barrel-rotation":"Barrel rotation",
+          "lever-articulated":"Lever-articulated",
+          "rotation-bolt":"Rotation bolt"
+        },
+        "nonautomatic":{
+          "title":"Non automatic",
+          "bolt-action": "Bolt action",
+          "lever-action":"Lever action",
+          "break-action":"Break action",
+          "revolver":"Revolvers"
+        }
+        
       },
       "smooth": {
         "title": "Smooth-bore",
@@ -272,7 +291,7 @@
         }
       ]
     },
-    "rifled-bolt": {
+    "rifled-bolt-action": {
       "title": "Bolt action",
       "h1": "The structure and principle of operation of a bolted gate",
       "p1": "Bolt-action rifles are rifles with a longitudinally-sliding bolt of direct or rotating locking.",
