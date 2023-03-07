@@ -1,15 +1,35 @@
-import React from "react";
+import React, { Suspense } from "react";
 import PropTypes from "prop-types";
 import s from "./bolt.module.css";
 import { useTranslation } from "react-i18next";
 import { Image } from "antd";
 import VideoPlayer from "../../../../../../../../elements/youtube_player/youtube_player";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { RifledBoltModel } from "../../../../../../../../elements/rifled_bolt_model/rifled_bolt_model";
+import { Canvas } from "react-three-fiber";
+import { OrbitControls } from "@react-three/drei";
+//import { OrbitControls } from "three-stdlib";
 const RifledBoltAction = (props) => {
   const { t } = useTranslation();
   return (
     <div className={s.main}>
-      <div className={s.block}>
+      <div style={{ width: "100%",height:"300px"}}>
+        <Canvas camera={{ position: [0, 0, 1],zoom:2 }} style={{width:"100%",height:"300px"}}>
+          <OrbitControls  target={[0, 0, 0]}/>
+        
+          <hemisphereLight intensity={0.35} />
+          <spotLight
+            position={[10, 10, 10]}
+            angle={0.3}
+            penumbra={1}
+            intensity={2}
+            castShadow
+          />
+          <Suspense fallback={null}>
+            <RifledBoltModel/>
+          </Suspense>
+        </Canvas>
+      </div>
+      {/* <div className={s.block}>
         <figure className={s.img}>
           <Image
             className={s.antImg}
@@ -22,7 +42,7 @@ const RifledBoltAction = (props) => {
         </figure>
         <p>{t("search.rifled-bolt-action.p1")}</p>
         <p>{t("search.rifled-bolt-action.p2")}</p>
-      </div>
+      </div> */}
       {/* <div className={s.block}>
         <figure className={s.img} style={{ float: "right", width: 250 }}>
           <Image
