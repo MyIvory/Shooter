@@ -7,7 +7,6 @@ import { RifledBoltModel } from "../../../../../../../../elements/rifled_bolt_mo
 import { Canvas } from "react-three-fiber";
 import { Html, OrbitControls } from "@react-three/drei";
 import { useState, useEffect, useRef } from "react";
-import { Barrett } from "../../../../../../../../elements/rifled_bolt_model/barrett";
 const d_style = {
   width: "100%",
   height: "300px",
@@ -51,8 +50,8 @@ const RifledBoltAction = (props) => {
             castShadow
           />
           <Suspense fallback={null}>
-            {/* <RifledBoltModel /> */}
-            <Barrett/>  
+           
+        <RifledBoltModel/>
           </Suspense>
         </Canvas>
         <div
@@ -72,7 +71,7 @@ const RifledBoltAction = (props) => {
             fontWeight: "bold",
           }}
         >
-          3D Model Barrett MRAD
+          3D Model
         </div>      
       </div>
       {/* <div className={s.block}>
