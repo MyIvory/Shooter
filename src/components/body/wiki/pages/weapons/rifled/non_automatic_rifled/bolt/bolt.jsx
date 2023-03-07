@@ -1,21 +1,47 @@
 import React, { Suspense } from "react";
-import PropTypes from "prop-types";
 import s from "./bolt.module.css";
 import { useTranslation } from "react-i18next";
 import { Image } from "antd";
 import VideoPlayer from "../../../../../../../../elements/youtube_player/youtube_player";
 import { RifledBoltModel } from "../../../../../../../../elements/rifled_bolt_model/rifled_bolt_model";
 import { Canvas } from "react-three-fiber";
-import { OrbitControls } from "@react-three/drei";
-//import { OrbitControls } from "three-stdlib";
+import { Html, OrbitControls } from "@react-three/drei";
+import { useState, useEffect, useRef } from "react";
+import { Barrett } from "../../../../../../../../elements/rifled_bolt_model/barrett";
+const d_style = {
+  width: "100%",
+  height: "300px",
+};
+const m_style = {
+  width: "100%",
+  height: "200px",
+};
 const RifledBoltAction = (props) => {
   const { t } = useTranslation();
+  const canvasRef = useRef(null);
+  const [width, setWidth] = useState(window.innerWidth);
+
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setWidth(window.innerWidth);
+  //   };
+
+  //   window.addEventListener("resize", handleResize);
+
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
+
   return (
     <div className={s.main}>
-      <div style={{ width: "100%",height:"300px"}}>
-        <Canvas camera={{ position: [0, 0, 1],zoom:2 }} style={{width:"100%",height:"300px"}}>
-          <OrbitControls  target={[0, 0, 0]}/>
-        
+      <div style={{ width: "100%", position: "relative" }}>
+        <Canvas
+          // ref={canvasRef}
+          camera={{ position: [0, 0, 2], zoom: 2.5 }}
+          style={window.innerWidth > 600 ? d_style : m_style}
+        >
+          <OrbitControls target={[0, 0, 0]} />
           <hemisphereLight intensity={0.35} />
           <spotLight
             position={[10, 10, 10]}
@@ -25,9 +51,29 @@ const RifledBoltAction = (props) => {
             castShadow
           />
           <Suspense fallback={null}>
-            <RifledBoltModel/>
+            {/* <RifledBoltModel /> */}
+            <Barrett/>  
           </Suspense>
         </Canvas>
+        <div
+          style={{
+            position: "absolute",
+            top: "10px",
+            left: "10px",
+            zIndex: "999",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "white",
+            backgroundColor: "black",
+            padding: "5px",
+            borderRadius: "5px",
+            fontSize: "14px",
+            fontWeight: "bold",
+          }}
+        >
+          3D Model Barrett MRAD
+        </div>      
       </div>
       {/* <div className={s.block}>
         <figure className={s.img}>
@@ -58,6 +104,8 @@ const RifledBoltAction = (props) => {
         <p>{t("search.rifled-bolt.p4")}</p>
       </div> */}
       <div className={s.block}>
+        <p>{t("search.rifled-bolt-action.p5")}</p>
+        <p>{t("search.rifled-bolt-action.p6")}</p>
         <figure className={s.img} style={{ float: "left", width: 250 }}>
           <Image
             className={s.antImg}
@@ -68,8 +116,6 @@ const RifledBoltAction = (props) => {
             <h4>{t("search.rifled-bolt-action.ides3")}</h4>
           </figcaption>
         </figure>
-        <p>{t("search.rifled-bolt-action.p5")}</p>
-        <p>{t("search.rifled-bolt-action.p6")}</p>
         <p>{t("search.rifled-bolt-action.p7")}</p>
         <p>{t("search.rifled-bolt-action.p8")}</p>
         <p>{t("search.rifled-bolt-action.p9")}</p>

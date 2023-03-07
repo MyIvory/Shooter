@@ -1,0 +1,11 @@
+Model Information:
+* title:	Barrett MRAD Sniper Rifle
+* source:	https://sketchfab.com/3d-models/barrett-mrad-sniper-rifle-80fd840273f64af59f44edb07df07bbf
+* author:	Skylar (https://sketchfab.com/itsmeskylar)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Barrett MRAD Sniper Rifle" (https://sketchfab.com/3d-models/barrett-mrad-sniper-rifle-80fd840273f64af59f44edb07df07bbf) by Skylar (https://sketchfab.com/itsmeskylar) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
