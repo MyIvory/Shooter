@@ -13,7 +13,7 @@ const WeaponsRifled = (props) => {
       <div className={s.block}>
           <figure className={s.img} style={{ float: "left", width: 250 }}>
             <Image className={s.antImg}
-              src="/img/pages/rifled_weapons/arquebus.jpg"
+              src="/img/pages/rifled_weapons/arquebus.png"
               alt={t("search.rifled-weapons.ides0")}
             />
             <figcaption className={s.img_des}>

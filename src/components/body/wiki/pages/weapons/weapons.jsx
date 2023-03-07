@@ -8,7 +8,7 @@ const Weapons = (props) => {
   return (
     <div className={s.main}>
       <div className={s.block}>
-        <figure className={s.img} style={{ float: "left", width: 350 }}>
+        <figure className={s.img}>
           <Image
             className={s.antImg}
             src="/img/pages/weapons/w1.jpg"

@@ -82,7 +82,7 @@ let Info = (props) => {
           <Route path="rifled-bolt-action" element={<RifledBoltAction />} />
           <Route path="rifled-lever-action" element={<RifledLeverAction />} /> 
           <Route path="rifled-break-action" element={<RifledBreakAction />} /> 
-          <Route path="rifled-revolver" element={<RifledRevolver />} /> 
+          <Route path="rifled-revolver-action" element={<RifledRevolver />} /> 
           <Route path="rifled-automatic" element={<AutomaticRifled />} />
           <Route path="smooth-weapons" element={<WeaponsSmooth />} />
           <Route

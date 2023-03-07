@@ -1,6 +1,7 @@
 import { Image } from 'antd';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import s from "./non_automatic_rifled.module.css"
 
 
@@ -21,15 +22,15 @@ const NonAutomaticRifled = props => {
                 <p>{t("search.nonautomatic-rifled.p3")}</p>
                 <p>{t("search.nonautomatic-rifled.p4")}</p>
                 <p>{t("search.nonautomatic-rifled.p5")}</p>
-                <p>{t("search.nonautomatic-rifled.p6")}</p>
+                {/* <p>{t("search.nonautomatic-rifled.p6")}</p> */}
             </div>
-            <div>
+            <div className={s.block} style={{marginBottom:50}} >
                 <p>{t("search.nonautomatic-rifled.p7")}</p>
                 <ul className={s.block}>
-                    <li>{t("search.nonautomatic-rifled.l1")}</li>
-                    <li>{t("search.nonautomatic-rifled.l2")}</li>
-                    <li>{t("search.nonautomatic-rifled.l3")}</li>
-                    <li>{t("search.nonautomatic-rifled.l4")}</li>
+                    <li><Link to={"/wiki/rifled-bolt-action"}>{t("search.nonautomatic-rifled.l1").toUpperCase()}</Link> </li>
+                    <li><Link to={"/wiki/rifled-lever-action"}>{t("search.nonautomatic-rifled.l2").toUpperCase()}</Link> </li>
+                    <li><Link to={"/wiki/rifled-break-action"}>{t("search.nonautomatic-rifled.l3").toUpperCase()}</Link> </li>
+                    <li><Link to={"/wiki/rifled-revolver-action"}>{t("search.nonautomatic-rifled.l4").toUpperCase()}</Link> </li>
                 </ul>
             </div>
         </div>

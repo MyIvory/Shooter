@@ -65,7 +65,7 @@ const LeftMenu = (props) => {
                     "break-action"
                   ),
                   getItem(
-                    <NavLink to="revolver" className={active}>
+                    <NavLink to="rifled-revolver-action" className={active}>
                       <h4 className={s.item_level_2}>{t("left_menu.weapons.rifled.nonautomatic.revolver")}</h4>
                     </NavLink>,
                     "revolver"
