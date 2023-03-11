@@ -1,0 +1,11 @@
+Model Information:
+* title:	Rifle
+* source:	https://sketchfab.com/3d-models/rifle-8e67b2941d3b4bc18772fe4665ee94aa
+* author:	Samantha Michelson (https://sketchfab.com/SMich017)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Rifle" (https://sketchfab.com/3d-models/rifle-8e67b2941d3b4bc18772fe4665ee94aa) by Samantha Michelson (https://sketchfab.com/SMich017) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

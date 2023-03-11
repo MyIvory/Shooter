@@ -43,7 +43,14 @@ const RifledBoltAction = (props) => {
           <OrbitControls target={[0, 0, 0]} />
           <hemisphereLight intensity={0.35} />
           <spotLight
-            position={[10, 10, 10]}
+            position={[0, 0, 50]}
+            angle={0.3}
+            penumbra={1}
+            intensity={2}
+            castShadow
+          />
+              <spotLight
+            position={[0, 0, -50]}
             angle={0.3}
             penumbra={1}
             intensity={2}

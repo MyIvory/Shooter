@@ -1,0 +1,11 @@
+Model Information:
+* title:	Winchester Model 1873
+* source:	https://sketchfab.com/3d-models/winchester-model-1873-f1f57078e79e49289e14f0a551b5b60e
+* author:	Tuuttipingu (https://sketchfab.com/Tuuttipingu)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Winchester Model 1873" (https://sketchfab.com/3d-models/winchester-model-1873-f1f57078e79e49289e14f0a551b5b60e) by Tuuttipingu (https://sketchfab.com/Tuuttipingu) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

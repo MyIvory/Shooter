@@ -9,7 +9,7 @@ i18n
     .use(HttpApi)
     .init({
         load: "languageOnly",
-        fallbackLng: "en",
+        fallbackLng: "ua",
         detection: {
             order: [
                 'cookie',

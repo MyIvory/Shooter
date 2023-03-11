@@ -329,6 +329,19 @@
       "ides4":"Turning latch lock (bolt)",
       "vdes1":"The principle of operation of the rotating bolt action lock using the example of the Karabiner 98k rifle",
       "vdes2":"The principle of operation of a direct locking bolt action on the example of a rifle Beretta BRX1"
+    },
+    "rifled-lever-action":{
+      "title": "Lever action",
+      "p1":"Lever-action rifle - a repeating rifle in which reloading during firing is carried out manually by a semicircular movement of the trigger guard (for example, the Spencer guard) around the trigger. Also, such a weapon is called a rifle with a Henry lever.",
+      "p2":"Henry's lever, also known as Henry's brace, is a lever that, in its normal position, is adjacent to the butt of the weapon, so that the hand holding the handle enters with its fingers into an elongated ring for them in the lever itself. Holding the weapon by the forearm, the lever can be pulled down and returned to its place, while reloading will occur, and the hand will lie down again for a comfortable hold of the weapon. Such a device is named after Benjamin Henry.",
+      "p3":"The first lever action weapon was patented on February 14, 1854. It was the Volcanic repeating pistol. The authors of the patent were Horatio Smith and Daniel Wesson, who later founded the world-famous Smith & Wesson company. The first rifle with a lever reload appeared only in 1860. In 1855, Oliver Fisher Winchester acquired the bankrupt arms firm Smith & Wesson, and by modifying and refining the design of the pistol, the famous Winchester model 1866 rifle was born.",
+      "p4":"The principle of operation of such weapons is quite simple. When the lever is pulled down, the firing mechanism of the weapon is cocked, at the same time a new cartridge is picked up from the tubular magazine under the barrel. When the lever returns to its original position, the cartridge is sent into the chamber, while it turns out to be securely locked. Pulling the trigger releases the hammer or firing pin, depending on the design of the weapon, and the shot is fired. Then the process is repeated.",
+      "p5":"While not as common as automatic weapons, lever-action weapons are still popular with hunters and people who appreciate traditional methods. They are also reliable and easy to use, making them a great choice for those who are just getting into hunting or shooting.",
+      "p6":"Modern lever-action rifles such as the Marlin 336 are also very popular. And despite the fact that this type of weapon is not as common today as bolt-action or semi-automatic rifles, they are still popular among hunting and shooting enthusiasts. Their convenience and reliability make them the perfect choice for those looking for the simplicity and efficiency of a rifle.",
+      "ides1":"Volcanic Pistol 41",
+      "ides2":"Winchester Model 1866",
+      "ides3":"Tactical Marlin 336 XLR",
+      "vdes1":"The principle of operation of the lever-action rifle using the example of the Marlin"
     }
   }
 }
