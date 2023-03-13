@@ -1,11 +1,9 @@
 import s from "./controls.module.css";
-import Leng from "./leng/leng";
-import SearchField from "./search/search";
-import Search from "./search/search";
+import LengComponent from "./leng/leng";
 const Controls = (props) => {
   return (
     <div className={s.main}>
-      <Leng />
+      <LengComponent />
     </div>
   );
 };

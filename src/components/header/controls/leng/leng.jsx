@@ -4,28 +4,32 @@ import { Suspense, useRef, useState } from "react";
 import DodecahedronMy from "../../../../elements/dodecahedron/dodecahedron";
 import s from "./leng.module.css";
 import { useTranslation, Trans } from "react-i18next";
+import { useNavigate, useLocation } from "react-router-dom";
 
-const Leng = (props) => {
+const LengComponent = (props) => {
   const { t, i18n } = useTranslation();
   const [anim, setAnim] = useState(true);
+  const navigate = useNavigate();
+  const loc = useLocation();
+
   let defLeng = () => {
     let obj = {};
     if (i18n.language === "ua") {
       obj.en = 0;
       obj.ua = 1;
-    }else{
+    } else {
       obj.en = 1;
       obj.ua = 0;
     }
-    return obj
+    return obj;
   };
   const [colors, setColors] = useState(defLeng());
   const ref = useRef();
   let setColor = (obj) => {
     setColors(obj);
   };
-  let fun = (leng) => {
-    i18n.changeLanguage(leng);
+  let fun = (lang) => {
+    i18n.changeLanguage(lang);
   };
 
   return (
@@ -79,4 +83,4 @@ const Leng = (props) => {
     </div>
   );
 };
-export default Leng;
+export default LengComponent;

@@ -1,5 +1,5 @@
 import { Button, Tooltip } from "antd";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import SearchResultContainer from "../pages/search_result/search_result_container";
 import AutomaticRifled from "../pages/weapons/rifled/automatic_rifled/automatic_rifled";
 import WeaponsRifled from "../pages/weapons/rifled/rifled";
@@ -23,6 +23,7 @@ import RifledBoltAction from "../pages/weapons/rifled/non_automatic_rifled/bolt/
 import RifledLeverAction from "../pages/weapons/rifled/non_automatic_rifled/lever/lever";
 import RifledBreakAction from "../pages/weapons/rifled/non_automatic_rifled/break/break";
 import RifledRevolver from "../pages/weapons/rifled/non_automatic_rifled/revolver/revolver";
+import Home from "../../home/home";
 
 let Info = (props) => {
   const { t } = useTranslation();
@@ -30,9 +31,12 @@ let Info = (props) => {
   const [title, setTitle] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const ref1 = useRef(null);
+  const navigate = useNavigate()
+
   useEffect(() => {
     setTitle(location.pathname.split("/").pop());
   }, [location]);
+
   return (
     <div className={s.main}>
       <EditModal
@@ -75,14 +79,15 @@ let Info = (props) => {
       </div>
       <div className={s.info}>
         <Routes>
+          
           <Route path="/" element={<HomeWiki />} />
           <Route index path="weapons/" element={<Weapons />} />
           <Route path="rifled-weapons" element={<WeaponsRifled />} />
-          <Route path="nonautomatic-rifled" element={<NonAutomaticRifled />} /> 
+          <Route path="nonautomatic-rifled" element={<NonAutomaticRifled />} />
           <Route path="rifled-bolt-action" element={<RifledBoltAction />} />
-          <Route path="rifled-lever-action" element={<RifledLeverAction />} /> 
-          <Route path="rifled-break-action" element={<RifledBreakAction />} /> 
-          <Route path="rifled-revolver-action" element={<RifledRevolver />} /> 
+          <Route path="rifled-lever-action" element={<RifledLeverAction />} />
+          <Route path="rifled-break-action" element={<RifledBreakAction />} />
+          <Route path="rifled-revolver-action" element={<RifledRevolver />} />
           <Route path="rifled-automatic" element={<AutomaticRifled />} />
           <Route path="smooth-weapons" element={<WeaponsSmooth />} />
           <Route
@@ -92,6 +97,7 @@ let Info = (props) => {
           <Route path="smooth-pump" element={<Pump />} />
           <Route path="smooth-automatic" element={<OpeningSmooth />} />
           <Route path="search-result" element={<SearchResultContainer />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
     </div>

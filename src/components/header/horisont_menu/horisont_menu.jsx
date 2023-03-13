@@ -5,14 +5,17 @@ import { Box, ContactShadows, Environment, Sphere } from "@react-three/drei";
 
 import { useNavigate, useLocation } from "react-router-dom";
 import DodecahedronMy from "../../../elements/dodecahedron/dodecahedron";
+import { useTranslation } from "react-i18next";
 
 let HorisontMenu = (props) => {
   const [anim, setAnim] = useState(true);
   const loc = useLocation();
+  const { i18n } = useTranslation();
+  const lang = i18n.language;
   let defColors = () => {
     let obj = {};
 
-    if (loc.pathname === "/") {
+    if (loc.pathname === `/${lang}/`) {
       obj.home = 1;
       obj.wiki = 0;
       obj.contacts = 0;
