@@ -15,7 +15,7 @@ let HorisontMenu = (props) => {
   let defColors = () => {
     let obj = {};
 
-    if (loc.pathname === `/${lang}/`) {
+    if (loc.pathname === "/") {
       obj.home = 1;
       obj.wiki = 0;
       obj.contacts = 0;

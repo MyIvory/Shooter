@@ -7,6 +7,7 @@ import { RifledBoltModel } from "../../../../../../../../elements/rifled_bolt_mo
 import { Canvas } from "react-three-fiber";
 import { Html, OrbitControls } from "@react-three/drei";
 import { useState, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet";
 const d_style = {
   width: "100%",
   height: "300px",
@@ -20,20 +21,17 @@ const RifledBoltAction = (props) => {
   const canvasRef = useRef(null);
   const [width, setWidth] = useState(window.innerWidth);
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setWidth(window.innerWidth);
-  //   };
-
-  //   window.addEventListener("resize", handleResize);
-
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
-
   return (
     <div className={s.main}>
+      <Helmet>
+        <title>Гвинтівка з болтовим затвором - Gid Guns</title>
+        <meta name="description" content="Гвинтівка з болтовим затвором була винайдена в кінці XIX століття. Вона стала результатом тривалого процесу розвитку винтовкової зброї, який почався ще в XVII столітті." />
+        <meta property="og:title" content="Гвинтівка з болтовим затвором - Gid Guns" />
+        <meta property="og:description" content="Гвинтівка з болтовим затвором була винайдена в кінці XIX століття. Вона стала результатом тривалого процесу розвитку винтовкової зброї, який почався ще в XVII столітті." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://gidguns.info/wiki/rifled-bolt-action" />
+        <meta property="og:image" content="http://gidguns.info/img/pages/bolt/b3.png" />
+      </Helmet>
       <div style={{ width: "100%", position: "relative" }}>
         <Canvas
           // ref={canvasRef}
@@ -49,7 +47,7 @@ const RifledBoltAction = (props) => {
             intensity={2}
             castShadow
           />
-              <spotLight
+          <spotLight
             position={[0, 0, -50]}
             angle={0.3}
             penumbra={1}
@@ -57,8 +55,8 @@ const RifledBoltAction = (props) => {
             castShadow
           />
           <Suspense fallback={null}>
-           
-        <RifledBoltModel/>
+
+            <RifledBoltModel />
           </Suspense>
         </Canvas>
         <div
@@ -79,36 +77,8 @@ const RifledBoltAction = (props) => {
           }}
         >
           3D Model
-        </div>      
+        </div>
       </div>
-      {/* <div className={s.block}>
-        <figure className={s.img}>
-          <Image
-            className={s.antImg}
-            src="/img/pages/bolt/b1.png"
-            alt={t("search.rifled-bolt-action.ides1")}
-          />
-          <figcaption className={s.img_des}>
-            <h4>{t("search.rifled-bolt-action.ides1")}</h4>
-          </figcaption>
-        </figure>
-        <p>{t("search.rifled-bolt-action.p1")}</p>
-        <p>{t("search.rifled-bolt-action.p2")}</p>
-      </div> */}
-      {/* <div className={s.block}>
-        <figure className={s.img} style={{ float: "right", width: 250 }}>
-          <Image
-            className={s.antImg}
-            src="/img/pages/bolt/b2.jpg"
-            alt={t("search.rifled-bolt.ides2")}
-          />
-          <figcaption className={s.img_des}>
-            <h4>{t("search.rifled-bolt.ides2")}</h4>
-          </figcaption>
-        </figure>
-        <p>{t("search.rifled-bolt.p3")}</p>
-        <p>{t("search.rifled-bolt.p4")}</p>
-      </div> */}
       <div className={s.block}>
         <p>{t("search.rifled-bolt-action.p5")}</p>
         <p>{t("search.rifled-bolt-action.p6")}</p>

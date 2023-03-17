@@ -2,11 +2,21 @@ import React from "react";
 import s from "./weapons.module.css";
 import { useTranslation } from "react-i18next";
 import { Button, Divider, Image } from "antd";
+import { Helmet } from "react-helmet";
 
 const Weapons = (props) => {
   const { t } = useTranslation();
   return (
     <div className={s.main}>
+      <Helmet>
+        <title>Стрілецька зброя - Gid Guns</title>
+        <meta name="description" content="Стрілецька зброя - це широкий клас зброї, призначений для поразки цілі шляхом вистрілу кулею, снарядом або іншим боєприпасом, запущеним з ствола." />
+        <meta property="og:title" content="Стрілецька зброя - Gid Guns" />
+        <meta property="og:description" content="Стрілецька зброя - це широкий клас зброї, призначений для поразки цілі шляхом вистрілу кулею, снарядом або іншим боєприпасом, запущеним з ствола." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://gidguns.info/wiki/weapons" />
+        <meta property="og:image" content="http://gidguns.info/img/pages/weapons/w1.jpg" />
+      </Helmet>
       <div className={s.block}>
         <figure className={s.img}>
           <Image

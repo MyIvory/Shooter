@@ -6,6 +6,7 @@ import { Canvas } from 'react-three-fiber';
 import { OrbitControls } from '@react-three/drei';
 import { Image } from 'antd';
 import VideoPlayer from '../../../../../../../../elements/youtube_player/youtube_player';
+import { Helmet } from 'react-helmet';
 
 const d_style = {
     width: "100%",
@@ -19,9 +20,17 @@ const RifledLeverAction = props => {
     const { t } = useTranslation();
     return (
         <div className={s.main}>
+            <Helmet>
+                <title>Гвинтівка важільного типу - Gid Guns</title>
+                <meta name="description" content="Гвинтівка важільного типу- багатозарядна гвинтівка, в якій перезаряджання при стрільбі здійснюється вручну півколовим рухом спускової скоби (наприклад, скоби Спенсера) навколо спускового гачка. Також таку зброю називають гвинтівкою зі скобою Генрi" />
+                <meta property="og:title" content="Гвинтівка важільного типу - Gid Guns" />
+                <meta property="og:description" content="Гвинтівка важільного типу- багатозарядна гвинтівка, в якій перезаряджання при стрільбі здійснюється вручну півколовим рухом спускової скоби (наприклад, скоби Спенсера) навколо спускового гачка. Також таку зброю називають гвинтівкою зі скобою Генрi." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="http://gidguns.info/wiki/rifled-lever-action" />
+                <meta property="og:image" content="http://gidguns.info/img/pages/lever/model-1866.png" />
+            </Helmet>
             <div style={{ width: "100%", position: "relative" }}>
                 <Canvas
-                    // ref={canvasRef}
                     camera={{ position: [0, 0, 15], zoom: 2 }}
                     style={window.innerWidth > 600 ? d_style : m_style}
                 >

@@ -14,12 +14,12 @@ const LengComponent = (props) => {
 
   let defLeng = () => {
     let obj = {};
-    if (i18n.language === "ua") {
+    if (i18n.language === "uk") {
       obj.en = 0;
-      obj.ua = 1;
+      obj.uk = 1;
     } else {
       obj.en = 1;
-      obj.ua = 0;
+      obj.uk = 0;
     }
     return obj;
   };
@@ -57,11 +57,11 @@ const LengComponent = (props) => {
           <group ref={ref}>
             <DodecahedronMy
               elPos={[-4, 1, -1]}
-              link="ua"
+              link="uk"
               textPos={[-4.8, 3, 0.5]}
               anim={props.anim}
               colors={colors}
-              fun={() => fun("ua")}
+              fun={() => fun("uk")}
               setColor={setColor}
               ar={[2.2, 2.2, 1.5, 6]}
               textSize={1.5}

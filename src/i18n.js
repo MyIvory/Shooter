@@ -1,4 +1,4 @@
-import i18n from "i18next";
+import i18n, { init } from "i18next";
 import HttpApi from 'i18next-http-backend';
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next, useTranslation } from 'react-i18next';
@@ -9,7 +9,7 @@ i18n
     .use(HttpApi)
     .init({
         load: "languageOnly",
-        fallbackLng: "ua",
+        fallbackLng: "uk",
         detection: {
             order: [
                 'cookie',
@@ -20,7 +20,7 @@ i18n
             ],
             caches: ['cookie']
         },
-        backend: { loadPath: '/locales/{{lng}}/translation.json' }
+        backend: {loadPath: '/locales/{{lng}}/translation.json' }
 
     }, (error, t) => {
         if (error)
