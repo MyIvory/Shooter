@@ -17,18 +17,17 @@ const DodecahedronMy = ({ time, ...props }) => {
   const { t, i18n } = useTranslation();
   const ref = useRef();
   const [hovered, setHovered] = useState(false);
+  //////////////
   useFrame(() => {
-    if (!hovered) {
-      let xrot = 0
-      ref.current.rotation.x = 1.7;
-      ref.current.rotation.y -= 0.01;
-      ref.current.scale.x = 1;
-      ref.current.scale.y = 1;
-      ref.current.scale.z = 1;
-    } else {
+    if (hovered) {
+      ref.current.rotation.z -= 0.01;
       ref.current.scale.x = 1.1;
       ref.current.scale.y = 1.1;
       ref.current.scale.z = 1.1;
+    } else {
+      ref.current.scale.x = 1;
+      ref.current.scale.y = 1;
+      ref.current.scale.z = 1;
     }
   });
   useCursor(hovered);
@@ -55,10 +54,10 @@ const DodecahedronMy = ({ time, ...props }) => {
         onPointerOver={() => setHovered(true)}
         onPointerOut={() => setHovered(false)}
       >
-        <Cylinder args={props.ar}>
+        <Cylinder args={props.ar} rotation = {[ 1.6,0,0]}>
           
           <meshStandardMaterial
-            roughness={0.4}
+            roughness={0.5}
             metalness={0.5}
             blur={[300, 100]}
             mixBlur={1}
@@ -69,6 +68,7 @@ const DodecahedronMy = ({ time, ...props }) => {
             color={props.colors[props.link] === 1 ? "#e01e14" : "#f5f0f0"}
             wireframe={false}
             flatShading
+            
           />
         </Cylinder>
       </mesh>

@@ -13,7 +13,7 @@ let Home = (props) => {
         <meta property="og:title" content="Онлайн-бібліотека про стрілецьку зброю - Gid Guns" />
         <meta property="og:description" content="Gid Guns - онлайн-бібліотека, що пропонує широкий вибір статей про різні види стрілецької зброї, її історію, технологію та використання. Наша бібліотека відкрита для всіх, і ми пишаємося тим, що можемо надати безкоштовний доступ до нашої колекції статей." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://gidguns.info/" />
+        <meta property="og:url" content="http://gidguns.info"/>
         <meta property="og:image" content="http://gidguns.info/static/media/logo.dcd3c55c7b1b70652af7.png" />
       </Helmet>
       <div className={s.text}>
@@ -55,6 +55,3 @@ let Home = (props) => {
 };
 export default Home;
 
-let fun = (c, i) => {
-  return new Array(c).fill(i).join(" ");
-};

@@ -8,6 +8,7 @@ import DodecahedronMy from "../../../elements/dodecahedron/dodecahedron";
 import { useTranslation } from "react-i18next";
 
 let HorisontMenu = (props) => {
+  
   const [anim, setAnim] = useState(true);
   const loc = useLocation();
   const { i18n } = useTranslation();
@@ -44,7 +45,7 @@ let HorisontMenu = (props) => {
       <Suspense fallback={null}>
         <Canvas
           shadows
-          camera={{ position: [0, 0, 7] }}
+          camera={{ position: [0, 0, 6.5] }}
           onPointerOver={() => {
             setAnim(false);
           }}
@@ -52,20 +53,21 @@ let HorisontMenu = (props) => {
             setAnim(true);
           }}
         >
-          <ambientLight intensity={0.6} />
+          <ambientLight intensity={0.1}/> 
+          <pointLight position={[0,10,10]}/>
           <Environment preset="dawn" />
-          <ContactShadows
+           <ContactShadows
             position={[0, -1, 0]}
             opacity={0.5}
-            scale={10}
+            scale={15}
             blur={1.5}
-            far={1}
-          />
+            
+          /> 
           <group ref={ref}>
             <DodecahedronMy
-              elPos={[-5, 1, -1]}
+              elPos={[-6, 1, -1]}
               link="home"
-              textPos={[-5.5, 2.2, 0.5]}
+              textPos={lang ==="uk"?[-6.7, 2.4, 0.5]:[-5.9, 2.4, 0.5]}
               anim={props.anim}
               colors={colors}
               fun={() => fun("/")}
@@ -73,10 +75,11 @@ let HorisontMenu = (props) => {
               ar={[1.5, 1.5, 1, 6]}
               textSize={0.5}
             />
+            
             <DodecahedronMy
-              elPos={[0, 0.8, -3]}
+              elPos={[0, 1, 1]}
               link="wiki"
-              textPos={[-1.8, 2.2, -1.4]}
+              textPos={lang ==="uk"?[-2, 2.6, 1.6]:[-1.4, 2.6, 1.6]}
               anim={props.anim}
               colors={colors}
               fun={() => fun("wiki")}
@@ -85,9 +88,9 @@ let HorisontMenu = (props) => {
               textSize={0.5}
             />
             <DodecahedronMy
-              elPos={[4, 1, 1]}
+              elPos={[6, 1, -1]}
               link="contacts"
-              textPos={[1.6, 2.2, 2.5]}
+              textPos={lang ==="uk"?[3, 2.4, 0.5]:[3, 2.4, 0.5]}
               anim={props.anim}
               colors={colors}
               fun={() => fun("contacts")}

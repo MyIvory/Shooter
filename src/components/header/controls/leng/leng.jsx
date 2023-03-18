@@ -50,15 +50,15 @@ const LengComponent = (props) => {
           <ContactShadows
             position={[0, -1, 0]}
             opacity={0.5}
-            scale={10}
+            scale={15}
             blur={1.5}
             far={1}
           />
           <group ref={ref}>
             <DodecahedronMy
-              elPos={[-4, 1, -1]}
+              elPos={[-4, 1.5, -3]}
               link="uk"
-              textPos={[-4.8, 3, 0.5]}
+              textPos={[-4.8, 4,-1.4]}
               anim={props.anim}
               colors={colors}
               fun={() => fun("uk")}

@@ -9,6 +9,30 @@
 }
 @media (max-width:600px) {
     .header{
+        position: relative;
+        width: auto;
+    }
+    .logo{
+        position: absolute;
+        top:0;
+        right:0;
+    }
+    .logo img{
+        width: 70px;
+        height: 70px;
+    }
+    .menu{
+        position: absolute;
+        top:30px;
+        left:0;
+        width: 100%;
+    }
+    .con{
+        position: absolute;
+        top:0;
+        left:-40px;
+    }
+    /* .header{
         justify-content: center;
         display: grid;
         grid-template-areas:
@@ -16,6 +40,6 @@
         "controls",
         "horisont_menu"
         ;
-    }
+    } */
     
 }
