@@ -1,19 +1,28 @@
-.main{
+.main {
     height: 65vh;
     overflow: scroll;
     width: 80%;
     margin: auto;
-     -ms-overflow-style: none;
-    scrollbar-width: 5px;background-color: rgba(255,255,255,0.5)
+    -ms-overflow-style: none;
+    scrollbar-width: 5px;
+    background-color: rgba(255, 255, 255, 0.5)
 }
-.main::-webkit-scrollbar{
+
+.main::-webkit-scrollbar {
     width: 5px;
     height: 0px;
-    
- }
- .main::-webkit-scrollbar-thumb{
+
+}
+
+.main::-webkit-scrollbar-thumb {
     background-color: #e01e14;
-    box-shadow:  0 0 30px white,
-    
- }
- 
+    box-shadow: 0 0 30px white,
+
+}
+
+.qr {
+    margin-top: 50px;
+    display: flex;
+    column-gap: 50px;
+    justify-content: center;
+}

@@ -29,7 +29,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+.suspense{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .ant-menu> .ant-menu-submenu:hover,
 .ant-menu> .ant-menu-submenu-open{
   border-left: 1px solid red;
