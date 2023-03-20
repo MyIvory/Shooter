@@ -1,17 +1,21 @@
 .main{
-    display: block;
+    display: flex;
     height: 150px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
     grid-area: logo;
+    width: 262px;
 }
 .image{
     height: 150px;
+    margin: auto;
 } 
 @media (max-width:600px) {
     .main{
        margin:0 auto 0 auto;
+       width: auto;
     }
     .image{
         height: 100px;
+        margin: 0;
     } 
 }

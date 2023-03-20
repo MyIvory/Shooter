@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import {
   Cylinder,
@@ -17,19 +17,25 @@ const DodecahedronMy = ({ time, ...props }) => {
   const { t, i18n } = useTranslation();
   const ref = useRef();
   const [hovered, setHovered] = useState(false);
-  //////////////
-  useFrame(() => {
+  useEffect(() => {
+    let anim;
     if (hovered) {
-      ref.current.rotation.z -= 0.01;
-      ref.current.scale.x = 1.1;
-      ref.current.scale.y = 1.1;
-      ref.current.scale.z = 1.1;
-    } else {
+      anim = setInterval(() => {
+        ref.current.rotation.z -= 0.01;
+        ref.current.scale.x = 1.1;
+        ref.current.scale.y = 1.1;
+        ref.current.scale.z = 1.1;
+      }, 10);
+     
+    }
+    return () => {
+      clearInterval(anim);
+      ref.current.rotation.z = 0;
       ref.current.scale.x = 1;
       ref.current.scale.y = 1;
       ref.current.scale.z = 1;
-    }
-  });
+    };
+  }, [hovered])
   useCursor(hovered);
   return (
     <group>
@@ -51,11 +57,11 @@ const DodecahedronMy = ({ time, ...props }) => {
           }
           props.setColor(obj);
         }}
-        onPointerOver={() => setHovered(true)}
-        onPointerOut={() => setHovered(false)}
+        onPointerOver={() =>  setHovered(true)}
+        onPointerOut={() =>  setHovered(false)}
       >
-        <Cylinder args={props.ar} rotation = {[ 1.6,0,0]}>
-          
+        <Cylinder args={props.ar} rotation={[1.6, 0, 0]}>
+
           <meshStandardMaterial
             roughness={0.5}
             metalness={0.5}
@@ -65,16 +71,15 @@ const DodecahedronMy = ({ time, ...props }) => {
             depthScale={1.2}
             minDepthThreshold={0.4}
             maxDepthThreshold={1.4}
-            color={props.colors[props.link] === 1 ? "#e01e14" : "#f5f0f0"}
+            color={props.colors[props.link] === 1 ? "#e01e14" : "#A9A9A9"} //"#f5f0f0"
             wireframe={false}
             flatShading
-            
+
           />
         </Cylinder>
       </mesh>
       <Text3D
         {...props}
-        onClick={() => console.log(props)}
         height={0.05}
         lineHeight={0.2}
         letterSpacing={0.03}

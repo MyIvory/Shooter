@@ -1,55 +1,44 @@
 import { Button, Drawer, QRCode, theme } from "antd";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { FaFacebookF, FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
 import EmailForm from "../../../elements/emailForm/emailForm";
 import s from "./contacts.module.css";
 let Contacts = (props) => {
+  const { t } = useTranslation()
   const [emailDrawerVisible, setEmailDrawerVisible] = useState(false);
-  const [textDrawerVisible, setTextDrawerVisible] = useState(false);
+  const [socialDrawerVisible, setSocialtDrawerVisible] = useState(false);
 
   const showEmailDrawer = () => {
     setEmailDrawerVisible(true);
   };
 
-  const showTextDrawer = () => {
-    setTextDrawerVisible(true);
+  const showSocialDrawer = () => {
+    setSocialtDrawerVisible(true);
   };
 
   const onCloseEmailDrawer = () => {
     setEmailDrawerVisible(false);
   };
 
-  const onCloseTextDrawer = () => {
-    setTextDrawerVisible(false);
-  };
-
-  const containerStyle = {
-    position: "relative",
-    height: "65vh",
-    width: "80%",
-    padding: 48,
-    overflow: "hidden",
-    textAlign: "center",
-    margin: "auto",
+  const onCloseSocialDrawer = () => {
+    setSocialtDrawerVisible(false);
   };
 
   return (
-    <div style={containerStyle}>
-      <div>
-        <Button type="primary" onClick={showEmailDrawer}>
-          Open Email Drawer
+    <div className={s.main}>
+      <div style={{display:"flex" ,columnGap:10,justifyContent:"center"}}>
+        <Button type="primary" htmlType="submit" className={s.formButton} style={{ width:150 }} onClick={showEmailDrawer}>
+          {t("forms.message")}
         </Button>
-        <Button style={{ marginLeft: 16 }} onClick={showTextDrawer}>
-          Open Text Drawer
+        <Button type="primary" htmlType="submit" className={s.formButton} style={{ width:150  }} onClick={showSocialDrawer}>
+          {t("forms.networks")}
         </Button>
       </div>
       <div className={s.qr}>
-        {/* <h4>{t("home_page.qr_link")}</h4> */}
-        {/* <Space> */}
         <a href="https://send.monobank.ua/jar/6cqUaLsQkT" target="_blank" className={s.mono}>
           <QRCode
-
             value="https://send.monobank.ua/jar/6cqUaLsQkT"
-            //  color={"red"}
             style={{ marginBottom: 16, backgroundColor: "inherit" }}
             icon="/img/mono.jpeg"
             size={200}
@@ -58,7 +47,6 @@ let Contacts = (props) => {
         </a>
         <a href="https://www.paypal.com/donate/?hosted_button_id=T2V5DEPFHHWT6" target="_blank" className={s.paypal}>
           <QRCode
-
             value="https://www.paypal.com/donate/?hosted_button_id=T2V5DEPFHHWT6"
             color={"#001f6a"}
             style={{ marginBottom: 16, backgroundColor: "inherit" }}
@@ -67,12 +55,11 @@ let Contacts = (props) => {
             iconSize={40}
           />
         </a>
-        {/* </Space> */}
       </div>
       <Drawer
-        title="Отправить сообщение"
-        placement="left"
-        closable={false}
+        title={t("forms.mail_form.title")}
+        placement={window.innerWidth > 600 ? "left" : "top"}
+        closable={true}
         open={emailDrawerVisible}
         onClose={onCloseEmailDrawer}
         getContainer={false}
@@ -81,15 +68,20 @@ let Contacts = (props) => {
         <EmailForm />
       </Drawer>
       <Drawer
-        title="Text Drawer"
-        placement="right"
-        closable={false}
-        open={textDrawerVisible}
-        onClose={onCloseTextDrawer}
+        title="Social"
+        placement={window.innerWidth > 600 ? "right" : "top"}
+        closable={true}
+        open={socialDrawerVisible}
+        onClose={onCloseSocialDrawer}
         getContainer={false}
         size="large"
       >
-        <div style={{ padding: "32px" }}>SOME TEXT</div>
+        <div style={{display:"flex",justifyContent:"space-around",height:"100%",alignItems:"center" }}>
+          <FaTelegramPlane style={{fontSize:64}}/>
+          <FaFacebookF style={{fontSize:64}}/>
+          <FaWhatsapp style={{fontSize:64}}/>
+
+        </div>
       </Drawer>
     </div>
   );
