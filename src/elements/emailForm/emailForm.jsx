@@ -2,10 +2,11 @@ import React from "react";
 import { Form, Input, Button } from "antd";
 import s from "./emailForm.module.css";
 import { useForm } from "antd/es/form/Form";
+import { useTranslation } from "react-i18next";
 
 const { TextArea } = Input;
-
 const EmailForm = () => {
+  const {t}=useTranslation()
   const [form] = useForm();
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
@@ -16,8 +17,7 @@ const EmailForm = () => {
   return (
     <div className={s.formContainer}>
       <p className={s.formDescription}>
-        Пожалуйста, заполните форму ниже и нажмите кнопку "Отправить", чтобы
-        отправить сообщение на нашу электронную почту.
+      {t("forms.mail_form.description")}
       </p>
       <Form
         form={form}
@@ -30,28 +30,28 @@ const EmailForm = () => {
           <Form.Item
             name="firstName"
             rules={[
-              { required: true, message: "Пожалуйста, введите ваше имя!" },
+              { required: true, message: t("forms.mail_form.rules_name") },
             ]}
             style={{ flex: 1, marginRight: "10px" }}
           >
-            <Input placeholder="Имя" />
+            <Input placeholder={t("forms.mail_form.name")}/>
           </Form.Item>
 
           <Form.Item
             name="lastName"
             rules={[
-              { required: true, message: "Пожалуйста, введите вашу фамилию!" },
+              { required: true, message: t("forms.mail_form.rules_lastName") },
             ]}
             style={{ flex: 1 }}
           >
-            <Input placeholder="Фамилия" />
+            <Input placeholder={t("forms.mail_form.surname")} />
           </Form.Item>
         </div>
 
         <Form.Item
           name="email"
           rules={[
-            { required: true, message: "Пожалуйста, введите ваш email!" },
+            { required: true, message: t("forms.mail_form.rules_mail") },
           ]}
         >
           <Input placeholder="Email" />
@@ -60,19 +60,19 @@ const EmailForm = () => {
         <Form.Item
           name="message"
           rules={[
-            { required: true, message: "Пожалуйста, введите ваше сообщение!" },
+            { required: true, message: t("forms.mail_form.rules_message") },
           ]}
         >
-          <TextArea rows={4} placeholder="Сообщение" />
+          <TextArea rows={4} placeholder={t("forms.mail_form.message")} />
         </Form.Item>
 
         <Form.Item>
           <div style={{ display: "flex",columnGap:10}}>
             <Button type="primary" htmlType="submit" className={s.formButton} style={{ flex: 1 }}>
-              Отправить
+            {t("forms.mail_form.but_send")}
             </Button>
             <Button type="primary" htmlType="submit" className={s.formButton} onClick={onReset} style={{ flex: 1 }}>
-              Очистить
+            {t("forms.mail_form.but_clear")}
             </Button>
           </div>
         </Form.Item>

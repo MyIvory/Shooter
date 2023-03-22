@@ -8,23 +8,20 @@ import DodecahedronMy from "../../../elements/dodecahedron/dodecahedron";
 import { useTranslation } from "react-i18next";
 
 let HorisontMenu = (props) => {
-  
-  const [anim, setAnim] = useState(true);
   const loc = useLocation();
   const { i18n } = useTranslation();
   const lang = i18n.language;
-  let defColors = () => {
+  function defColors(){
     let obj = {};
-
     if (loc.pathname === "/") {
       obj.home = 1;
       obj.wiki = 0;
       obj.contacts = 0;
-    } else if(loc.pathname.concat("wiki")) {
+    } else if(loc.pathname.includes("wiki")) {
       obj.home = 0;
       obj.wiki = 1;
       obj.contacts = 0;
-    }else if(loc.pathname.concat("contacts")){
+    }else if(loc.pathname.includes("contacts")){
       obj.home = 0;
       obj.wiki = 0;
       obj.contacts = 1;
@@ -46,15 +43,9 @@ let HorisontMenu = (props) => {
         <Canvas
           shadows
           camera={{ position: [0, 0, 6.5] }}
-          onPointerOver={() => {
-            setAnim(false);
-          }}
-          onPointerOut={() => {
-            setAnim(true);
-          }}
         >
           <ambientLight intensity={0.1}/> 
-          <pointLight position={[0,10,10]}/>
+          <pointLight position={[10,10,10]}/>
           <Environment preset="dawn" />
            <ContactShadows
             position={[0, -1, 0]}

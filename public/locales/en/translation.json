@@ -140,9 +140,24 @@
       "message_fail":"Text field must not be empty",
       "header":"Edit page"
     },
+    "mail_form":{
+      "title":"Send a message",
+      "description":"Please fill out the form below and click the 'Send' button to send your message to our email.",
+      "name":"Name",
+      "surname":"Last Name",
+      "message":"Your message",
+      "but_send":"Send",
+      "but_clear":"Clear",
+      "rules_name":"Please enter your name",
+      "rules_lastName":"Please enter your last name",
+      "rules_mail":"Please enter your email",
+      "rules_message":"Please enter your message"
+    },
     "search":"Library search",
     "input_search":"Start entering text for search",
-    "not_found":"Nothing found"
+    "not_found":"Nothing found",
+    "message":"Message",
+    "networks":"Networks"
   },
   "home_page":{
     "p1":"Welcome to the online library about small arms Gid Guns!",
