@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 const Weapons = (props) => {
   const { t } = useTranslation();
   return (
-    <div className={s.main}>
+    <div className={`${s.main} article_main`}>
       <Helmet>
         <title>Стрілецька зброя - Gid Guns</title>
         <meta name="description" content="Стрілецька зброя - це широкий клас зброї, призначений для поразки цілі шляхом вистрілу кулею, снарядом або іншим боєприпасом, запущеним з ствола." />
@@ -17,10 +17,10 @@ const Weapons = (props) => {
         <meta property="og:url" content="http://gidguns.info/wiki/weapons" />
         <meta property="og:image" content="http://gidguns.info/img/pages/weapons/w1.jpg" />
       </Helmet>
-      <div className={s.block}>
-        <figure className={s.img}>
+      <div className={`${s.block} article_block`}>
+        <figure className={`${s.img} article_img`}>
           <Image
-            className={s.antImg}
+            className={`${s.antImg} article_ant_img`}
             src="/img/pages/weapons/w1.jpg"
             alt={t("search.weapons.ides0")}
           />
@@ -28,7 +28,7 @@ const Weapons = (props) => {
         <p>{t("search.weapons.p1")}</p>
         <p>{t("search.weapons.p2")}</p>
       </div>
-      <div className={s.block}>
+      <div className={`${s.block} article_block`}>
         <p>{t("search.weapons.p3")}</p>
         <p>
           <strong>{t("search.weapons.l1h")}</strong>
@@ -58,7 +58,7 @@ const Weapons = (props) => {
         </ol>
         <p>{t("search.weapons.p4")}</p>
       </div>
-      <div className={s.block}>
+      <div className={`${s.block} article_block`}>
         <p>
           <strong>{t("search.weapons.l4h")}</strong>
         </p>

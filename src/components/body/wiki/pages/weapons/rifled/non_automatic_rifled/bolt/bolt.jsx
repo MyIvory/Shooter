@@ -22,7 +22,7 @@ const RifledBoltAction = (props) => {
   const [width, setWidth] = useState(window.innerWidth);
 
   return (
-    <div className={s.main}>
+    <div className={`${s.main} article_main`}>
       <Helmet>
         <title>Гвинтівка з болтовим затвором - Gid Guns</title>
         <meta name="description" content="Гвинтівка з болтовим затвором була винайдена в кінці XIX століття. Вона стала результатом тривалого процесу розвитку винтовкової зброї, який почався ще в XVII столітті." />
@@ -55,40 +55,23 @@ const RifledBoltAction = (props) => {
             castShadow
           />
           <Suspense fallback={null}>
-
             <RifledBoltModel />
           </Suspense>
         </Canvas>
-        <div
-          style={{
-            position: "absolute",
-            top: "10px",
-            left: "10px",
-            zIndex: "999",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            color: "white",
-            backgroundColor: "black",
-            padding: "5px",
-            borderRadius: "5px",
-            fontSize: "14px",
-            fontWeight: "bold",
-          }}
-        >
+        <div className="Model3dLebel">
           3D Model
         </div>
       </div>
-      <div className={s.block}>
+      <div className={`${s.block} article_block`}>
         <p>{t("search.rifled-bolt-action.p5")}</p>
         <p>{t("search.rifled-bolt-action.p6")}</p>
-        <figure className={s.img} style={{ float: "left", width: 250 }}>
+        <figure className={`${s.img} article_img`} style={{ float: "left", width: 250 }}>
           <Image
-            className={s.antImg}
+            className={`${s.antImg} article_ant_img`}
             src="/img/pages/bolt/b3.png"
             alt={t("search.rifled-bolt-action.ides3")}
           />
-          <figcaption className={s.img_des}>
+          <figcaption className={`${s.img_des} article_img_des`}>
             <h4>{t("search.rifled-bolt-action.ides3")}</h4>
           </figcaption>
         </figure>
@@ -96,37 +79,37 @@ const RifledBoltAction = (props) => {
         <p>{t("search.rifled-bolt-action.p8")}</p>
         <p>{t("search.rifled-bolt-action.p9")}</p>
       </div>
-      <div className={s.block}>
+      <div className={`${s.block} article_block`}>
         <h2>
-          <p className={s.headers}>{t("search.rifled-bolt-action.h1")}</p>
+          <p className={`${s.headers} article_headers`}>{t("search.rifled-bolt-action.h1")}</p>
         </h2>
-        <figure className={s.img} style={{ float: "right", width: 350 }}>
+        <figure className={`${s.img} article_img`} style={{ float: "right", width: 350 }}>
           <Image
-            className={s.antImg}
+            className={`${s.antImg} article_ant_img`}
             src="/img/pages/bolt/b4.jpg"
             alt={t("search.rifled-bolt.ides4")}
           />
-          <figcaption className={s.img_des}>
+          <figcaption className={`${s.img_des} article_img_des`}>
             <h4>{t("search.rifled-bolt-action.ides4")}</h4>
           </figcaption>
         </figure>
         <p>{t("search.rifled-bolt-action.p10")}</p>
         <p>{t("search.rifled-bolt-action.p11")}</p>
-        <div className={s.video}>
+        <div className={`${s.video} article_video`}>
           <VideoPlayer id="igNcDEEl5to" />
           <h4>
-            <p className={s.headers}>{t("search.rifled-bolt-action.vdes1")}</p>
+            <p className={`${s.headers} article_headers`}>{t("search.rifled-bolt-action.vdes1")}</p>
           </h4>
         </div>
         <p>{t("search.rifled-bolt-action.p12")}</p>
-        <div className={s.video}>
+        <div className={`${s.video} article_video`}>
           <VideoPlayer id="geBXTguwkd8" />
           <h4>
-            <p className={s.headers}>{t("search.rifled-bolt-action.vdes2")}</p>
+            <p className={`${s.headers} article_headers`}>{t("search.rifled-bolt-action.vdes2")}</p>
           </h4>
         </div>
       </div>
-      <div className={s.block}>
+      <div className={`${s.block} article_block`}>
         <p>{t("search.rifled-bolt-action.p13")}</p>
         <p>{t("search.rifled-bolt-action.p14")}</p>
       </div>

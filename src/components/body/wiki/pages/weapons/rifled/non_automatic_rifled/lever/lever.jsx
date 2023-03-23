@@ -19,7 +19,7 @@ const m_style = {
 const RifledLeverAction = props => {
     const { t } = useTranslation();
     return (
-        <div className={s.main}>
+        <div className={`${s.main} article_main`}>
             <Helmet>
                 <title>Гвинтівка важільного типу - Gid Guns</title>
                 <meta name="description" content="Гвинтівка важільного типу- багатозарядна гвинтівка, в якій перезаряджання при стрільбі здійснюється вручну півколовим рухом спускової скоби (наприклад, скоби Спенсера) навколо спускового гачка. Також таку зброю називають гвинтівкою зі скобою Генрi" />
@@ -55,74 +55,58 @@ const RifledLeverAction = props => {
                         <RifledLeverModel />
                     </Suspense>
                 </Canvas>
-                <div
-                    style={{
-                        position: "absolute",
-                        top: "10px",
-                        left: "10px",
-                        zIndex: "999",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        color: "white",
-                        backgroundColor: "black",
-                        padding: "5px",
-                        borderRadius: "5px",
-                        fontSize: "14px",
-                        fontWeight: "bold",
-                    }}
-                >
+                <div className = "Model3dLebel" >
                     3D Model
                 </div>
-            </div>
-            <div className={s.block}>
+            </div> 
+            <div className={`${s.block} article_block`}>
                 <p>{t("search.rifled-lever-action.p1")}</p>
                 <p>{t("search.rifled-lever-action.p2")}</p>
             </div>
-            <div className={s.block}>
-                <figure className={s.img} style={{ float: "left", width: 250 }}>
+            <div className={`${s.block} article_block`}>
+                <figure className={`${s.img} article_img`} style={{ float: "left", width: 250 }}>
                     <Image
-                        className={s.antImg}
+                        className={`${s.antImg} article_ant_img`}
                         src="/img/pages/lever/volcanic.png"
                         alt={t("search.rifled-lever-action.ides1")}
                     />
-                    <figcaption className={s.img_des}>
+                    <figcaption className={`${s.img_des} article_img_des`}>
                         <h4>{t("search.rifled-lever-action.ides1")}</h4>
                     </figcaption>
                 </figure>
                 <p>{t("search.rifled-lever-action.p3")}</p>
             </div>
-            <div className={s.block}>
-                <figure className={s.img} style={{ float: "right", width: 250 }}>
+            <div className={`${s.block} article_block`}>
+                <figure className={`${s.img} article_img`} style={{ float: "right", width: 250 }}>
                     <Image
-                        className={s.antImg}
+                        className={`${s.antImg} article_ant_img`}
                         src="/img/pages/lever/model-1866.png"
                         alt={t("search.rifled-lever-action.ides2")}
                     />
-                    <figcaption className={s.img_des}>
+                    <figcaption className={`${s.img_des} article_img_des`}>
                         <h4>{t("search.rifled-lever-action.ides2")}</h4>
                     </figcaption>
                 </figure>
                 <p>{t("search.rifled-lever-action.p4")}</p>
             </div>
-            <div className={s.block}>
-                <figure className={s.img} style={{ float: "left", width: 250 }}>
+            <div className={`${s.block} article_block`}>
+                <figure className={`${s.img} article_img`} style={{ float: "left", width: 250 }}>
                     <Image
-                        className={s.antImg}
+                        className={`${s.antImg} article_ant_img`}
                         src="/img/pages/lever/marlin-336.png"
                         alt={t("search.rifled-lever-action.ides3")}
                     />
-                    <figcaption className={s.img_des}>
+                    <figcaption className={`${s.img_des} article_img_des`}>
                         <h4>{t("search.rifled-lever-action.ides3")}</h4>
                     </figcaption>
                 </figure>
                 <p>{t("search.rifled-lever-action.p5")}</p>
                 <p>{t("search.rifled-lever-action.p6")}</p>
             </div>
-            <div className={s.video}>
+            <div className={`${s.video} article_video`}>
                 <VideoPlayer id="58LbxVd4buo" />
                 <h4>
-                    <p className={s.headers}>{t("search.rifled-lever-action.vdes1")}</p>
+                    <p className={`${s.headers} article_headers`}>{t("search.rifled-lever-action.vdes1")}</p>
                 </h4>
             </div>
         </div >
